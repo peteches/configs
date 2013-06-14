@@ -1,0 +1,49 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+(
+	/usr/bin/svn update ~/.peteches-configs/
+) &> /dev/null
+disown -a
+
+# additional files kept in ~/.bash/
+for i in ~/.bash/*;do
+	. $i
+done
+
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# remove CTRL-S bindiong for stop
+# enables CTRL-S in surround.vim
+stty stop ""
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+declare -x HISTIGNORE="&:ls:cd:[ \t]:exit:"
+declare -x HISTFILESIZE=2147483647
+declare -x HISTSIZE=2147483647
+declare -x LESSOPTS="-REFi"
+declare -x MANPAGER="/usr/bin/less ${LESSOPTS}"
+declare -x GLOBIGNORE=".:.."
+
+declare -x SVN_EDITOR=/usr/bin/vim
+declare -x EDITOR=/usr/bin/vim
+declare -x LESS="-eIF"
+
+declare -x GREP_OPTIONS="--exclude-dir=.svn --color=auto"
+
+declare -x PS4='+ $LINENO: '
+
+declare -x CDPATH="$CDPATH:$HOME:/etc/:/media/"
+declare -x PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:$HOME/scripts:$HOME/bin"
+
+if [[ -x /usr/bin/fortune && -x /usr/bin/cowsay ]];then
+	cowfiles=($(cowsay -l 2> /dev/null | sed 1d))
+	fortune | cowsay -f ${cowfiles[$(( $RANDOM % ${#cowfiles[@]} ))]} -W $(( $( /bin/stty size </dev/tty | cut -f2 -d" " ) - 10 ))
+fi

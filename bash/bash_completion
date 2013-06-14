@@ -1,0 +1,5 @@
+if [[ -r $bash_completion_script ]];then
+	. $bash_completion_script
+fi
+
+unset bash_completion_script
