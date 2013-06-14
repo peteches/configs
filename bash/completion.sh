@@ -32,8 +32,8 @@
 {
   # These declarations must go within braces in order to be able to silence
   # readonly variable errors.
-  BASH_COMPLETION="${BASH_COMPLETION:-$HOME/.peteches-config/bash/completion.sh}"
-  BASH_COMPLETION_DIR="${BASH_COMPLETION_DIR:=$HOME/.peteches-config/bash/completions.d}"
+  BASH_COMPLETION="${BASH_COMPLETION:-$HOME/.peteches-configs/bash/completion.sh}"
+  BASH_COMPLETION_DIR="${BASH_COMPLETION_DIR:=$HOME/.peteches-configs/bash/completions.d}"
 } 2>/dev/null || :
 readonly BASH_COMPLETION BASH_COMPLETION_DIR
 
