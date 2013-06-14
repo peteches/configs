@@ -1,0 +1,14 @@
+_tmux(){
+
+	local cur
+	COMPREPLY=( )
+	cur=${COMP_WORDS[$COMP_CWORD]}
+	cmd=${COMP_WORDS[1]}
+
+	if [[ ${#COMP_WORDS[@]} -le 2 ]]; then
+		COMPREPLY=($( compgen -W "$( /usr/bin/tmux start-server \; list-commands | /bin/awk '{print $1}' )" -- $cur ))
+		return
+	fi
+}
+
+complete -F _tmux tmux

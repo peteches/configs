@@ -5,16 +5,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-(
-	/usr/bin/svn update ~/.peteches-configs/
-) &> /dev/null
-disown -a
 
 # additional files kept in ~/.bash/
 for i in ~/.bash/*;do
-	. $i
+	[[ ! -d $i ]] && . $i
 done
-
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
