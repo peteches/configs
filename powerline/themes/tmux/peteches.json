@@ -28,6 +28,7 @@
 			},
 			{
 				"name": "system_load",
+				"highlight_group": "system_load:divider",
 				"priority": 50
 			},
 			{
@@ -40,7 +41,7 @@
 			{
 				"name": "date",
 				"args": {
-					"format": "%H:%M",
+					"format": "%H:%M:%S",
 					"istime": true
 				}
 			},
