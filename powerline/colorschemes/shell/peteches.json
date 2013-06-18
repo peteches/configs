@@ -1,19 +1,64 @@
 {
 	"name": "Peteches color scheme for shell prompts",
 	"groups": {
-		"user": { "fg": "black", "bg": "darkestgreen", "attr": ["bold"] },
-		"superuser": { "fg": "white", "bg": "brightred", "attr": ["bold"] },
-		"virtualenv": { "fg": "white", "bg": "darkcyan" },
-		"branch": { "fg": "gray9", "bg": "gray2" },
-		"branch_dirty": { "fg": "brightyellow", "bg": "gray2" },
-		"branch_clean": { "fg": "gray9", "bg": "gray2" },
-		"cwd": { "fg": "gray9", "bg": "gray4" },
-		"cwd:current_folder": { "fg": "gray10", "bg": "gray4", "attr": ["bold"] },
-		"cwd:divider": { "fg": "gray7", "bg": "gray4" },
-		"date": { "fg": "brightgreen", "bg": "black" },
-		"hostname": { "fg": "mediumpurple", "bg": "darkestpurple" },
-		"exit_fail": { "fg": "white", "bg": "darkestred" },
-		"exit_success": { "fg": "white", "bg": "darkestgreen" },
-		"environment": { "fg": "white", "bg": "darkestgreen" }
+		"user": {
+			"fg": "colour255",
+			"bg": "colour053",
+			"attr": ["bold"]
+		},
+		"superuser": {
+			"fg": "white",
+			"bg": "brightred",
+			"attr": ["bold"]
+		},
+		"virtualenv": {
+			"fg": "white",
+			"bg": "darkcyan"
+		},
+		"branch": {
+			"fg": "gray9",
+			"bg": "colour052"
+		},
+		"branch_dirty": {
+			"fg": "brightyellow",
+			"bg": "colour052"
+		},
+		"branch_clean": {
+			"fg": "colour255",
+			"bg": "colour052"
+		},
+		"cwd": {
+			"fg": "colour255",
+			"bg": "colour054" },
+
+		"cwd:current_folder": {
+			"fg": "colour255",
+			"bg": "colour055",
+			"attr": ["bold"]
+		},
+		"cwd:divider": {
+			"fg": "colour255",
+			"bg": "colour055"
+		},
+		"date": {
+			"fg": "colour255",
+			"bg": "black"
+		},
+		"hostname": {
+			"fg": "colour255",
+			"bg": "colour057"
+		},
+		"exit_fail": {
+			"fg": "white",
+			"bg": "darkestred"
+		},
+		"exit_success": {
+			"fg": "white",
+			"bg": "darkestgreen"
+		},
+		"environment": {
+			"fg": "white",
+			"bg": "darkestgreen"
+		}
 	}
 }

@@ -22,16 +22,13 @@
 				"name": "last_status"
 			},
 			{
-				"name": "date",
+				"name": "branch",
 				"args": {
-					"format": "%H:%M:%S"
+					"status_colors": "true"
 				}
 			},
 			{
 				"name": "user"
-			},
-			{
-				"name": "hostname"
 			},
 			{
 				"name": "virtualenv"
@@ -39,20 +36,14 @@
 			{
 				"name": "cwd",
 				"args": {
-					"dir_shorten_len": 2
+					"dir_limit_depth": 2
 				}
 			}
 		],
 		"right": [
 			{
-				"name": "system_load"
-			},
-			{
 				"module": "powerline.segments.shell",
 				"name": "last_pipe_status"
-			},
-			{
-				"name": "branch"
 			}
 		]
 	}
