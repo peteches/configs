@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if ! [[ -n $TMUX ]]; then
+	/usr/bin/tmux -2  attach-session -t "main" || tmux -2 new-session -s "main"
+	exit
+fi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
