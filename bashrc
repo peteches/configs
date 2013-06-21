@@ -2,13 +2,20 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-if ! [[ -n $TMUX ]]; then
-	/usr/bin/tmux -2  attach-session -t "main" || tmux -2 new-session -s "main"
-	exit
-fi
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+#set up tmux
+TMUX_SOCKET=/tmp/tmux-$UID/default.sock
+if [[ -z $TMUX ]]; then
+	if { /usr/bin/tmux -S $TMUX_SOCKET  has-session -t "main"; }; then
+		/usr/bin/tmux -2 -S $TMUX_SOCKET attach-session -t "main"
+		exit
+	else
+		/usr/bin/tmux -2 -S $TMUX_SOCKET new-session -s "main"
+		exit
+	fi
+fi
 
 
 # additional files kept in ~/.bash/
