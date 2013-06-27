@@ -8,7 +8,7 @@
 #set up tmux
 TMUX_SOCKET=/tmp/tmux-$UID/default.sock
 if [[ -z $TMUX ]]; then
-	if { /usr/bin/tmux -S $TMUX_SOCKET  has-session -t "main"; }; then
+	if { /usr/bin/tmux -S $TMUX_SOCKET  has-session -t "main"; } &> /dev/null ; then
 		/usr/bin/tmux -2 -S $TMUX_SOCKET attach-session -t "main"
 		exit
 	else
