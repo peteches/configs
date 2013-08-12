@@ -7,12 +7,17 @@
 
 #set up tmux
 TMUX_SOCKET=/tmp/tmux-$UID/default.sock
+## ensure the dir for the socet exists.
+if [[ ! -d $( dirname $TMUX_SOCKET ) ]]; then
+	mkdir $( dirname $TMUX_SOCKET ) -p
+fi
+
 if [[ -z $TMUX ]]; then
-	if { /usr/bin/tmux -S $TMUX_SOCKET  has-session -t "main"; } &> /dev/null ; then
-		/usr/bin/tmux -2 -S $TMUX_SOCKET attach-session -t "main"
+	if { /usr/bin/tmux -2 -S $TMUX_SOCKET start-server\; has-session -t "main"; } &> /dev/null ; then
+		/usr/bin/tmux -2 -S $TMUX_SOCKET start-server\; attach-session -t "main"
 		exit
 	else
-		/usr/bin/tmux -2 -S $TMUX_SOCKET new-session -s "main"
+		/usr/bin/tmux -2 -S $TMUX_SOCKET start-server\;  new-session -s "main"
 		exit
 	fi
 fi
