@@ -116,10 +116,10 @@ autocmd FileType c source ~/.vim/c.vim
 autocmd FileType cpp source ~/.vim/cpp.vim
 autocmd FileType spec source ~/.vim/spec.vim
 augroup SHELL
-autocmd FileType sh source ~/.vim/shell.vim
+	autocmd FileType sh source ~/.vim/shell.vim
 augroup END
 augroup PERL
-autocmd FileType *.p[lm] source ~/.vim/perl.vim
+	autocmd FileType *.p[lm] source ~/.vim/perl.vim
 augroup END
 endif
 
