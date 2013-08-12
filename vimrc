@@ -21,6 +21,7 @@ set ruler
 set scrolloff=30
 set shiftwidth=4
 set showcmd
+set showmatch
 set noshowmode
 set smartcase
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
