@@ -58,7 +58,7 @@ if [[ -n $_install ]]; then
 fi
 
 [[ -f ~/.fonts ]] && rm -f ~/.fonts
-if [[ -n $_install]];then
+if [[ -n $_install ]];then
 	ln -s ${config_dir}/powerline/fonts ~/.fonts
 	fc-cache -fv ~/.fonts
 fi
