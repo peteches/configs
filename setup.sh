@@ -57,6 +57,11 @@ if [[ -n $_install ]]; then
 	ln -s ${config_dir}/X-configs/Xdefaults ~/.Xdefaults
 fi
 
+[[ -f ~/.fonts ]] && rm -f ~/.fonts
+if [[ -n $_install]];then
+	ln -s ${config_dir}/powerline/fonts ~/.fonts
+fi
+
 [[ -d ~/.config/powerline || -L ~/.config/powerline ]] && rm -rf ~/.config/powerline
 if [[ -n $_install ]]; then
 	ln -s ${config_dir}/powerline ~/.config/powerline
