@@ -34,3 +34,9 @@
 [submodule "powerline/fonts"]
 	path = powerline/fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "powerline-srcs/powerline"]
+	path = powerline-srcs/powerline
+	url = https://github.com/Lokaltog/powerline
+[submodule "powerline-daemon"]
+	path = powerline-daemon
+	url = https://github.com/kovidgoyal/powerline-daemon.git
