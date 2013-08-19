@@ -25,6 +25,7 @@ config_dir=$(dirname $(readlink -e $0))
 [[ -d ~/.vim ]] && rm -rf ~/.vim
 if [[ -n $_install ]]; then
 	ln -s ${config_dir}/vim/ ~/.vim
+	ln -s ${config_dir}/powerline-srcs/powerline/powerline/bindings/vim/ ~/.vim/bundle/powerline
 fi
 
 [[ -w ~/.vimrc ]] && rm -f ~/.vimrc

@@ -1,61 +1,20 @@
-"ensure not compatible
-set nocompatible
-
-"required for Vundle.
-"Will be reenabled later
-filetype off
-
-"set up env for vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-"let vundle manage itself
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-fugitive'
-"" UltiSnip stuff
-Bundle 'SirVer/ultisnips'
-let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/UltiSnips-2.2/UltiSnips/"
-let g:UltiSnipsExpandTrigger= '<tab>'
-let g:UltiSnipsListSnippets = '<C-L>'
-let g:UltiSnipsJumpForwardTrigger= '<C-J>'
-let g:UltiSnipsJumpBackwardTrigger= '<C-K>'
-nmap <LEADER>es :UltiSnipsEdit<CR>
-
-Bundle 'klen/python-mode'
-" will add settings to this later
-
-"" powerline stuff
-Bundle 'Lokaltog/powerline'
-set rtp+=$HOME/.vim/bundle/powerline
-let g:powerline_config_path = expand("$HOME/.config/powerline")
-
-" Nerdtree Stuff
-Bundle 'scrooloose/nerdtree'
-let NERDTreeQuitOnOpen=1
-
-" Tabularize
-Bundle 'godlygeek/tabular'
-
-" reset the filetype stuff.
+"call pathogen to organise plugins
+call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
-
 
 set autoindent
 set cmdheight=2
 set confirm
-set expandtab
-set foldclose=all
 set foldcolumn=2
 set foldopen=hor,insert,jump,mark,search,tag,undo
+set foldclose=all
 set ignorecase
 set incsearch
 set laststatus=2
 set list
 set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 set nohls
-set noshowmode
 set notimeout ttimeout ttimeoutlen=200
 set number
 set pastetoggle=<F2>
@@ -64,8 +23,9 @@ set scrolloff=30
 set shiftwidth=4
 set showcmd
 set showmatch
+set noshowmode
 set smartcase
-set softtabstop=4
+"set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set tabpagemax=100
 set textwidth=1000
 set tildeop
@@ -73,6 +33,37 @@ set title
 set ts=4
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
+
+"" powerline stuff
+set rtp+=~/.vimrc/bundle/powerline
+let g:powerline_config_path = expand("$HOME/.config/powerline")
+
+"" UltiSnip stuff
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/UltiSnips-2.2/UltiSnips/"
+let g:UltiSnipsExpandTrigger= '<tab>'
+let g:UltiSnipsListSnippets = '<C-L>'
+let g:UltiSnipsJumpForwardTrigger= '<C-J>'
+let g:UltiSnipsJumpBackwardTrigger= '<C-K>'
+nmap <LEADER>es :UltiSnipsEdit<CR>
+
+"" Rainbow parenthesis
+let g:niji_match_all_filetypes = 1
+let g:niji_dark_colours = [['brown', 'RoyalBlue3'],
+                            \ ['Darkblue', 'SeaGreen3'],
+                            \ ['darkgray', 'DarkOrchid3'],
+                            \ ['darkgreen', 'firebrick3'],
+                            \ ['darkcyan', 'RoyalBlue3']]
+let g:niji_light_colours = g:niji_dark_colours
+
+"" Tagbar stuff
+let g:tagbar_ctags_bin = "/usr/bin/ctags"
+let g:tagbar_compact = 1
+let g:tagbar_indent = 2
+
+let NERDTreeQuitOnOpen=1
+let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
+
 abbr slef self
 abbr resutl result
 abbr fro for
