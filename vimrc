@@ -85,8 +85,8 @@ imap <LEADER>w' <ESC>viwS'Ea
 imap <LEADER>w2 <ESC>viwS"Ea
 nmap <LEADER>+x <ESC>:!chmod +x %<CR>
 
-nmap <LEADER>er :vsplit ~/.vim/vimrc<CR>
-nmap <LEADER>sr :so ~/.vim/vimrc<CR>
+nmap <LEADER>er :vsplit ~/.vimrc<CR>
+nmap <LEADER>sr :so ~/.vimrc<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
