@@ -1,7 +1,10 @@
+
+filetype off
 "call pathogen to organise plugins
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
+syntax on
 
 set autoindent
 set cmdheight=2
@@ -64,6 +67,8 @@ let g:tagbar_indent = 2
 let NERDTreeQuitOnOpen=1
 let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
 
+
+
 abbr slef self
 abbr resutl result
 abbr fro for
@@ -89,6 +94,12 @@ nmap <LEADER>er :vsplit ~/.vimrc<CR>
 nmap <LEADER>sr :so ~/.vimrc<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
+
+"learn not to use arrow keys!
+map <LEFT> nop
+map <RIGHT> nop
+map <UP> nop
+map <DOWN> nop
 
 " window mappings
 map <C-LEFT> <c-w>h
