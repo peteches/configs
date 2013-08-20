@@ -6,6 +6,7 @@ endif
 let colors_name = 'peteches'
 hi Comment       ctermfg=darkred
 hi Constant      ctermfg=magenta
+hi ColorColumn   ctermfg=None                        ctermbg=233
 hi Cursor        ctermfg=green
 hi DiffAdd       ctermfg=none                        ctermbg=darkblue             cterm=none
 hi DiffChange    ctermfg=none                        ctermbg=magenta              cterm=none

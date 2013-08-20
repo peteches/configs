@@ -6,18 +6,22 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+
+"set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
 set cmdheight=2
 set confirm
+set expandtab
+set foldclose=all
 set foldcolumn=2
 set foldopen=hor,insert,jump,mark,search,tag,undo
-set foldclose=all
 set ignorecase
 set incsearch
 set laststatus=2
 set list
 set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 set nohls
+set noshowmode
 set notimeout ttimeout ttimeoutlen=200
 set number
 set pastetoggle=<F2>
@@ -26,9 +30,8 @@ set scrolloff=30
 set shiftwidth=4
 set showcmd
 set showmatch
-set noshowmode
 set smartcase
-"set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
+set softtabstop=4
 set tabpagemax=100
 set textwidth=1000
 set tildeop
@@ -36,7 +39,6 @@ set title
 set ts=4
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
-
 "" powerline stuff
 set rtp+=~/.vimrc/bundle/powerline
 let g:powerline_config_path = expand("$HOME/.config/powerline")
@@ -96,10 +98,15 @@ inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
 "learn not to use arrow keys!
-map <LEFT> nop
-map <RIGHT> nop
-map <UP> nop
-map <DOWN> nop
+imap <LEFT> <NOP>
+imap <RIGHT> <NOP>
+imap <UP> <NOP>
+imap <DOWN> <NOP>
+
+nmap <LEFT> <NOP>
+nmap <RIGHT> <NOP>
+nmap <UP> <NOP>
+nmap <DOWN> <NOP>
 
 " window mappings
 map <C-LEFT> <c-w>h
@@ -120,8 +127,12 @@ imap <S-RIGHT> <ESC>gt
 "file completion
 imap <C-f> <C-x><C-f>
 
+execute "set colorcolumn=" . join(range(80,335), ',')
+
 cmap W w
 cmap Q q
+
+cnoremap help vert help
 
 if has("autocmd")
 autocmd BufNewFile * call LoadTemplate()
