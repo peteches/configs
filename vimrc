@@ -45,7 +45,7 @@ let g:powerline_config_path = expand("$HOME/.config/powerline")
 
 "" UltiSnip stuff
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/UltiSnips-2.2/UltiSnips/"
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips/"
 let g:UltiSnipsExpandTrigger= '<tab>'
 let g:UltiSnipsListSnippets = '<C-L>'
 let g:UltiSnipsJumpForwardTrigger= '<C-J>'
