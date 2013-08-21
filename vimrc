@@ -39,9 +39,10 @@ set title
 set ts=4
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
+
 "" powerline stuff
-set rtp+=~/.vimrc/bundle/powerline
-let g:powerline_config_path = expand("$HOME/.config/powerline")
+"set rtp+=~/.vimrc/bundle/powerline
+"let g:powerline_config_path = expand("$HOME/.config/powerline")
 
 "" UltiSnip stuff
 let g:UltiSnipsEditSplit = "vertical"
@@ -82,8 +83,7 @@ map Y y$
 " <F2> pasteToggle
 map <F3> <ESC>:set nu! list! foldenable!<CR>
 map <F4> <ESC>:NERDTreeToggle<CR>
-map <F5> <ESC>/\(done\)\@<! TODO<CR>
-map <F9> <Esc>:%w ! diff -u --label="saved" % --label="buffer" - <CR>
+map <F5> <ESC>:GundoToggle<CR>
 
 imap <LEADER>.. <LEADER>2, 
 imap <LEADER>' <ESC>viWS'Ea
@@ -92,10 +92,12 @@ imap <LEADER>w' <ESC>viwS'Ea
 imap <LEADER>w2 <ESC>viwS"Ea
 nmap <LEADER>+x <ESC>:!chmod +x %<CR>
 
-nmap <LEADER>er :vsplit ~/.vimrc<CR>
-nmap <LEADER>sr :so ~/.vimrc<CR>
+nmap <LEADER>er :vsplit $MYVIMRC<CR>
+nmap <LEADER>sr :so $MYVIMRC<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
+
+map one iteo
 
 "learn not to use arrow keys!
 imap <LEFT> <NOP>
