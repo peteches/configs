@@ -19,7 +19,8 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
+set listchars=tab:⇛▸,trail:◈,extends:>,precedes:<,eol:$,nbsp:-
+"set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 set nohls
 set noshowmode
 set notimeout ttimeout ttimeoutlen=200
@@ -96,8 +97,6 @@ nmap <LEADER>er :vsplit $MYVIMRC<CR>
 nmap <LEADER>sr :so $MYVIMRC<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
-
-map one iteo
 
 "learn not to use arrow keys!
 imap <LEFT> <NOP>
