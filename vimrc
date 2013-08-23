@@ -47,7 +47,8 @@ set visualbell
 
 "" UltiSnip stuff
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips/"
+let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
+let g:UltiSnipsSnippetDirectories=['snippets']
 let g:UltiSnipsExpandTrigger= '<tab>'
 let g:UltiSnipsListSnippets = '<C-L>'
 let g:UltiSnipsJumpForwardTrigger= '<C-J>'
