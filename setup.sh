@@ -60,6 +60,7 @@ function install_config {
 }
 
 config_matrix=(
+    "${config_dir}/awesome ${HOME}/.config/awesome"
     "${config_dir}/vim ${HOME}/.vim"
     "${config_dir}/vimrc ${HOME}/.vimrc"
     "${config_dir}/powerline-srcs/powerline/powerline/bindings/vim/ ${HOME}/.vim/bundle/powerline"
