@@ -9,3 +9,4 @@ Session.vim
 # ignore python bytecode files
 *py[oc]
 backups
+.ropeproject
