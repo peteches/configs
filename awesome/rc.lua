@@ -38,7 +38,7 @@ end
 beautiful.init("/home/peteches/.config/awesome/themes/peteches/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "terminator"
+terminal = "konsole"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
