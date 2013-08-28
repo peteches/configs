@@ -78,4 +78,9 @@ config_matrix=(
 for args in "${config_matrix[@]}"; do
     install_config ${config_matrix[0]}
 done
+
+if [[ $_install == 'true'  ]]; then
+    echo "initialising submodules"
+    cd ${config_dir} && git submodule init && git submodule update
+fi
 exit $?
