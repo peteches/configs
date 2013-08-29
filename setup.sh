@@ -76,7 +76,7 @@ config_matrix=(
 )
 
 for args in "${config_matrix[@]}"; do
-    install_config ${config_matrix[0]}
+    install_config $args
 done
 
 if [[ $_install == 'true'  ]]; then
