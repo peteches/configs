@@ -6,10 +6,7 @@
 			"before": "⇑  "
 		},
 		"external_ip": {
-			"before": "ⓦ  "
-		},
-		"date": {
-			"before": "⌚ "
+			"before": "⌬  "
 		}
 	},
 	"segments": {
@@ -24,11 +21,14 @@
 			},
 			{
 				"name": "network_load",
-				"priority": 50
+				"priority": 50,
+				"args": {
+					"sent_format": "⌃{value:>8} ",
+					"recv_format": "⌄{value:>8} "
+				}
 			},
 			{
 				"name": "system_load",
-				"highlight_group": "system_load:divider",
 				"priority": 50
 			},
 			{
