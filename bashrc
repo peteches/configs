@@ -6,22 +6,23 @@
 [ -z "$PS1" ] && return
 
 #set up tmux
-TMUX_SOCKET=/tmp/tmux-$UID/default.sock
-## ensure the dir for the socet exists.
-if [[ ! -d $( dirname $TMUX_SOCKET ) ]]; then
-	mkdir $( dirname $TMUX_SOCKET ) -p
-fi
+if { type -P tmux; } &>/dev/null; then
+    TMUX_SOCKET=/tmp/tmux-$UID/default.sock
+    ## ensure the dir for the socet exists.
+    if [[ ! -d $( dirname $TMUX_SOCKET ) ]]; then
+        mkdir $( dirname $TMUX_SOCKET ) -p
+    fi
 
-if [[ -z $TMUX ]]; then
-	if { /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; has-session -t "main"; } &> /dev/null ; then
-		/usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; attach-session -t "main"
-		exit
-	else
-		/usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\;  new-session -s "main"
-		exit
-	fi
+    if [[ -z $TMUX ]]; then
+        if { /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; has-session -t "main"; } &> /dev/null ; then
+            /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; attach-session -t "main"
+            exit
+        else
+            /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\;  new-session -s "main"
+            exit
+        fi
+    fi
 fi
-
 
 # additional files kept in ~/.bash/
 for i in ~/.bash/*;do
