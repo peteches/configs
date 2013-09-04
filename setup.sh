@@ -72,6 +72,8 @@ config_matrix=(
     "${config_dir}/tmux.conf ${HOME}/.tmux.conf"
     "${config_dir}/bashrc ${HOME}/.bashrc"
     "${config_dir}/bash ${HOME}/.bash"
+    "${config_dir}/mutt ${HOME}/.mutt"
+    "${config_dir}/mutt/muttrc ${HOME}/.muttrc"
     "${config_dir}/vimrc ${HOME}/.vimrc"
 )
 
