@@ -60,22 +60,26 @@ function install_config {
 }
 
 config_matrix=(
-    "${config_dir}/awesome ${HOME}/.config/awesome"
-    "${config_dir}/vim ${HOME}/.vim"
-    "${config_dir}/vimrc ${HOME}/.vimrc"
-    "${config_dir}/powerline-srcs/powerline/powerline/bindings/vim/ ${HOME}/.vim/bundle/powerline"
-    "${config_dir}/powerline ${HOME}/.config/powerline"
-    "${config_dir}/powerline/fonts ${HOME}/.fonts"
     "${config_dir}/X-configs/Xdefaults ${HOME}/.Xdefaults"
     "${config_dir}/X-configs/xsession ${HOME}/.xsession"
-    "${config_dir}/tmux ${HOME}/.tmux"
-    "${config_dir}/tmux.conf ${HOME}/.tmux.conf"
-    "${config_dir}/bashrc ${HOME}/.bashrc"
+    "${config_dir}/awesome ${HOME}/.config/awesome"
     "${config_dir}/bash ${HOME}/.bash"
+    "${config_dir}/bashrc ${HOME}/.bashrc"
     "${config_dir}/mutt ${HOME}/.mutt"
     "${config_dir}/mutt/muttrc ${HOME}/.muttrc"
+    "${config_dir}/powerline ${HOME}/.config/powerline"
+    "${config_dir}/powerline-srcs/powerline/powerline/bindings/vim/ ${HOME}/.vim/bundle/powerline"
+    "${config_dir}/powerline/fonts ${HOME}/.fonts"
+    "${config_dir}/tmux ${HOME}/.tmux"
+    "${config_dir}/tmux.conf ${HOME}/.tmux.conf"
+    "${config_dir}/vim ${HOME}/.vim"
+    "${config_dir}/vimrc ${HOME}/.vimrc"
     "${config_dir}/vimrc ${HOME}/.vimrc"
 )
+
+for script in ${config_dir}/scripts/*; do
+    config_matrix+=( "${script} ${HOME}/bin/$( basename ${script} )" )
+done
 
 for args in "${config_matrix[@]}"; do
     install_config $args
