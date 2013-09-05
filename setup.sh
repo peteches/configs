@@ -3,6 +3,17 @@
 ## Setup script links in all configs found in ~/.peteches_configs to their
 ## expected locations. deleted any existing configs found.
 
+# usage()
+#	prints usage
+#
+# inputs	-
+# outputs	- usage message
+# return value	- 0 if successfull
+# side effects	-
+usage()
+{
+    echo "Usage: $0 [ install | uninstall | update ]"
+}
 
 if ! [[ -x $( type -P readlink ) ]]; then
 	echo "Must install readlink for setup to work" >&2
@@ -10,26 +21,22 @@ if ! [[ -x $( type -P readlink ) ]]; then
 fi
 
 if [[ $# -ne 1 ]]; then
-	echo "Usage: $0 [ install | uninstall ]"
+    usage
 	exit 1
 fi
 
 case $1 in
     install )
-        _install=true
-        ;;
+        ;&
+    update )
+        ;&
     uninstall )
-        _install=false
+        _action=$1
         ;;
     * )
-        while [[ ${REPLY^^} != 'Y' || ${REPLY^^} != 'N' ]]; do
-            read -p "install?[y/N] Ctrl-C to quit" REPLY
-        done
-        if [[ ${REPLY^^} == 'Y' ]]; then
-            _install=true
-        elif [[ ${REPLY^^} == 'N' ]]; then
-            _install=false
-        fi
+        usage
+        exit 1
+        ;;
 esac
 
 config_dir=$(dirname $(readlink -e $0))
@@ -40,23 +47,35 @@ backup_dir=${config_dir}/backups
 function install_config {
     target=$1
     dest=$2
-    if [[ $_install == true ]]; then
-        if [[ -e ${dest} ]]; then
-            [[  -d ${backup_dir} ]] || mkdir -p ${backup_dir}
-            mv --backup=numbered ${dest} ${backup_dir}
-        fi
-        ln -s ${target} ${dest}
-    elif [[ $_install == false ]]; then
-        if [[ ! -L ${dest} ]]; then
-            read -p "${dest} is not a symlink really delete? [y/N]: " delete
-        fi
-        if [[ ${delete^^} == 'N' ]]; then
-            echo "exiting"
-            exit 0
-        fi
-        rm -f ${dest}
-        mv ${backup_dir}/$( basename ${dest} ) ${dest}
-    fi
+
+    case $_action in
+        update )
+            if [[ -e ${dest} ]]; then
+                return
+            fi
+            ;&  # execute the install code block as well
+        install )
+            if [[ -e ${dest} ]]; then
+                [[  -d ${backup_dir} ]] || mkdir -p ${backup_dir}
+                mv --backup=numbered ${dest} ${backup_dir}
+            fi
+            # ensure target dir exists.
+            [[ -d $( dirname ${dest} ) ]] || mkdir --parents $( dirname ${dest} )
+            ln -s ${target} ${dest}
+            ;;
+        uninstall )
+            if [[ ! -L ${dest} ]]; then
+                read -p "${dest} is not a symlink really delete? [y/N]: " delete
+            fi
+            if [[ ${delete^^} == 'N' ]]; then
+                echo "exiting"
+                exit 0
+            fi
+            rm -f ${dest}
+            mv ${backup_dir}/$( basename ${dest} ) ${dest}
+            ;;
+    esac
+
 }
 
 config_matrix=(
@@ -77,6 +96,7 @@ config_matrix=(
     "${config_dir}/vimrc ${HOME}/.vimrc"
 )
 
+# add scripts individually so as to keep locally generated scripts.
 for script in ${config_dir}/scripts/*; do
     config_matrix+=( "${script} ${HOME}/bin/$( basename ${script} )" )
 done
@@ -85,7 +105,7 @@ for args in "${config_matrix[@]}"; do
     install_config $args
 done
 
-if [[ $_install == 'true'  ]]; then
+if [[ $_action == install ]]; then
     echo "initialising submodules"
     cd ${config_dir} && git submodule init && git submodule update
 fi
