@@ -7,6 +7,7 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- volume widget
+require("volume")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
