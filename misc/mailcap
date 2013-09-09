@@ -1,0 +1,22 @@
+application/msword;             \
+    /usr/bin/antiword %s;       \
+    copiousoutput;              \
+    description=Word Document;  \
+    test=f=%s && [[ ! $f =~ docx$ ]];
+
+application/pdf;                     \
+    /usr/bin/pdftotext -layout %s -; \
+    copiousoutput;                   \
+    description=PDF Document;
+
+text/html;                     \
+    /usr/bin/links -dump %s;   \
+    copiousoutput;             \
+    description=HTML Document;
+
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; \
+    ${HOME}/bin/docx2txt.pl %s - ;                                       \
+    copiousoutput;                                                       \
+    description=Word Document;                                           \
+    test=f=%s && [[ $f =~ docx$ ]];
+
