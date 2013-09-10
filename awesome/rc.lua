@@ -7,7 +7,8 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- volume widget
-require("volume")
+require("widgets/volume")
+require("widgets/battery")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -182,6 +183,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         volume_widget,
+        battery_widget,
         mytextclock,
         s == 1 and mysystray or nil,
         mytasklist[s],
