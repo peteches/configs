@@ -83,7 +83,7 @@ config_matrix=(
     "${config_dir}/X-configs/xsession ${HOME}/.xsession"
     "${config_dir}/awesome ${HOME}/.config/awesome"
     "${config_dir}/bash ${HOME}/.bash"
-    "${config_dir}/bashrc ${HOME}/.bashrc"
+    "${config_dir}/bash/bashrc ${HOME}/.bashrc"
     "${config_dir}/misc/mailcap ${HOME}/.mailcap"
     "${config_dir}/mutt ${HOME}/.mutt"
     "${config_dir}/mutt/muttrc ${HOME}/.muttrc"
@@ -91,10 +91,9 @@ config_matrix=(
     "${config_dir}/powerline-srcs/powerline/powerline/bindings/vim/ ${HOME}/.vim/bundle/powerline"
     "${config_dir}/powerline/fonts ${HOME}/.fonts"
     "${config_dir}/tmux ${HOME}/.tmux"
-    "${config_dir}/tmux.conf ${HOME}/.tmux.conf"
+    "${config_dir}/tmux/tmux.conf ${HOME}/.tmux.conf"
     "${config_dir}/vim ${HOME}/.vim"
-    "${config_dir}/vimrc ${HOME}/.vimrc"
-    "${config_dir}/vimrc ${HOME}/.vimrc"
+    "${config_dir}/vim/vimrc ${HOME}/.vimrc"
 )
 
 # add scripts individually so as to keep locally generated scripts.
