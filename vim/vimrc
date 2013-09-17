@@ -72,7 +72,8 @@ let g:tagbar_indent = 2
 let NERDTreeQuitOnOpen=1
 let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
 
-
+" Gundo stuff
+let g:gundo_preview_bottom = 1
 
 abbr slef self
 abbr resutl result
