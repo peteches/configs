@@ -1,4 +1,4 @@
--- Standard awesome library
+
 require("awful")
 require("awful.autofocus")
 require("awful.rules")
@@ -8,7 +8,10 @@ require("beautiful")
 require("naughty")
 -- volume widget
 require("widgets/volume")
+-- battery widget
 require("widgets/battery")
+-- wifi widget
+require("widgets/wifi")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -182,6 +185,7 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
+        wifiwidget,
         volume_widget,
         battery_widget,
         mytextclock,
