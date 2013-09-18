@@ -4,7 +4,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = 'peteches'
-hi Comment       ctermfg=darkred
+hi Comment       ctermfg=52
 hi Constant      ctermfg=magenta
 hi ColorColumn   ctermfg=None                        ctermbg=233
 hi Cursor        ctermfg=green
@@ -14,12 +14,12 @@ hi DiffDelete    ctermfg=blue                        ctermbg=cyan
 hi DiffText      ctermfg=none                        ctermbg=red                  cterm=bold
 hi Directory     ctermfg=cyan
 hi ErrorMsg      ctermfg=white                       ctermbg=darkred
-hi FoldColumn    ctermfg=darkgreen                   ctermbg=none
-hi Folded        ctermfg=darkgreen                   ctermbg=none
+hi FoldColumn    ctermfg=53                   ctermbg=none
+hi Folded        ctermfg=57                   ctermbg=none
 hi Identifier    ctermfg=cyan                                                    cterm=none
 hi Ignore        ctermfg=blue
 hi IncSearch     ctermfg=darkblue                    ctermbg=gray
-hi LineNr        ctermfg=green                                                    cterm=none
+hi LineNr        ctermfg=52                                                    cterm=none
 hi ModeMsg       ctermfg=lightblue
 hi MoreMsg       ctermfg=darkgreen
 hi NonText       ctermfg=darkgrey                    guifg=darkgrey
@@ -38,10 +38,10 @@ hi TablineSel    ctermfg=green                       ctermbg=darkgrey           
 hi Title         ctermfg=magenta                                                  cterm=bold
 hi Todo          ctermfg=red                         ctermbg=darkblue
 hi Underlined    ctermfg=none                                                     cterm=underline
-hi VertSplit     ctermfg=black                       ctermbg=gray                 cterm=none
+hi VertSplit     ctermfg=57                          ctermbg=52                 cterm=none
 hi Visual        ctermfg=white                       ctermbg=darkgrey             cterm=reverse
 hi VisualNOS     ctermfg=white                       ctermbg=darkgrey             cterm=reverse,underline
-hi WarningMsg    ctermfg=red
+hi WarningMsg    ctermfg=252                          ctermbg=52
 hi WildMenu      ctermfg=yellow                      ctermbg=black                cterm=none
 hi lCursor       ctermfg=black                       ctermbg=white
 hi type          ctermfg=green                                                    cterm=none

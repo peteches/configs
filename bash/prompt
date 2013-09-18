@@ -48,4 +48,4 @@ else
 	PS1='[\j] \u@\h \$ '
 fi
 
-PS4='\$LINENO +'
+export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
