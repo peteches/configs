@@ -7,10 +7,12 @@ filetype plugin indent on
 syntax on
 
 
+"set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
 set cmdheight=2
 set confirm
+set cursorline
 set expandtab
 set foldclose=all
 set foldcolumn=2
@@ -20,7 +22,6 @@ set incsearch
 set laststatus=2
 set list
 set listchars=tab:⇛▸,trail:◈,extends:>,precedes:<,eol:$,nbsp:-
-"set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 set nohls
 set noshowmode
 set notimeout ttimeout ttimeoutlen=200
