@@ -9,7 +9,7 @@ save-hook '~C linux-ha@lists.linux-ha.org' +lists/linux-ha
 
 set assumed_charset   = "iso-8859-1"
 set check_new         = yes
-set editor            = "vim -c 'set syntax = mail ft = mail enc = utf-8'"
+set editor            = "/usr/bin/vim '+set ft=mail' '+set spell' '+set enc=utf8' '+set syntax=mail'"
 set from              = "pete@petemccabe.gb.net"
 set index_format      = "%4C %Z %(%a %b %e %H:%M) %-20.20n (%4l) %s"
 set menu_scroll       = yes

@@ -12,6 +12,7 @@ syntax on
 set autoindent
 set cmdheight=2
 set confirm
+set spelllang=en_gb
 set cursorline
 set expandtab
 set foldclose=all
@@ -139,16 +140,34 @@ cmap Q q
 cnoremap help vert help
 
 if has("autocmd")
-autocmd BufNewFile * call LoadTemplate()
-autocmd FileType c source ~/.vim/c.vim
-autocmd FileType cpp source ~/.vim/cpp.vim
-autocmd FileType spec source ~/.vim/spec.vim
-augroup SHELL
-	autocmd FileType sh source ~/.vim/shell.vim
-augroup END
-augroup PERL
-	autocmd FileType *.p[lm] source ~/.vim/perl.vim
-augroup END
+    augroup TEMPLATES
+        autocmd!
+        autocmd BufNewFile * call LoadTemplate()
+    augroup END
+    augroup C_FILES
+        autocmd!
+        autocmd FileType c source ~/.vim/c.vim
+    augroup END
+    augroup CPP_FILES
+        autocmd!
+        autocmd FileType cpp source ~/.vim/cpp.vim
+    augroup END
+    augroup RPM_SPEC_FILES
+        autocmd!
+        autocmd FileType spec source ~/.vim/spec.vim
+    augroup END
+    augroup BASH_FILES
+        autocmd!
+        autocmd FileType sh source ~/.vim/shell.vim
+    augroup END
+    augroup MAIL
+        autocmd!
+        autocmd FileType mail source ~/.vim/mail.vim | source ~/.vim/syntax/mail.vim
+    augroup END
+    augroup PERL
+        autocmd!
+        autocmd FileType *.p[lm] source ~/.vim/perl.vim
+    augroup END
 endif
 
 colorscheme peteches
