@@ -25,6 +25,76 @@ alias vless="vim --cmd 'let no_plugin_maps = 1' -c 'runtime! macros/less.vim' -"
 
 #
 #Functions
+
+
+# get_cursor_row()
+#	returns the row cursor on
+#
+# inputs	-
+# outputs	- number
+# return value	- 0 if successfull
+# side effects	-
+get_cursor_row()
+{
+    exec < /dev/tty
+    oldstty=$(stty -g)
+    stty raw -echo min 0
+    # on my system, the following line can be replaced by the line below it
+    echo -en "\033[6n" > /dev/tty
+    # tput u7 > /dev/tty    # when TERM=xterm (and relatives)
+    IFS=';' read -r -d R -a pos
+    stty $oldstty
+    # change from one-based to zero based so they work with: tput cup $row $col
+    row=$((${pos[0]:2} - 1))    # strip off the esc-[
+
+    echo $row
+}
+
+# display_title()
+#	Displays string
+#
+# inputs	- string
+# outputs	- string
+# return value	- 0 if successfull
+# side effects	- sets variable error to 0
+display_title()
+{
+    msg="$*"
+    num_dots=$( bc <<< $( tput cols )-13-${#msg} )
+
+    printf "%s " "$msg"
+    eval printf "%c" .{1..$num_dots}
+    error=0
+    tput sc
+    echo ""
+}
+
+# display_status()
+#	Description
+#
+# inputs	- message string
+# outputs	-
+# return value	- 0 if successfull
+# side effects	-
+display_status()
+{
+    red=$( tput setaf 1 )
+    green=$( tput setaf 2 )
+    norm=$( tput setaf 9 )
+
+    r=$( get_cursor_row )
+
+    tput rc
+
+    if [[ $error -eq 0 ]]; then
+        echo -e "${green}[ Success! ]${norm}"
+    else
+        echo -e "${red}[ Failure! ]${norm}"
+    fi
+    
+    tput cup $r 0
+}
+
 yum() {
 	if [[ "${1}" == "search" ]];then
 		sudo yum -y "${@}" | sed -e '$ d' -e '1,/^=\+ N\/S Matched/ d' | column -t -s:
