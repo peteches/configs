@@ -21,6 +21,7 @@ color bold       brightyellow  default
 # mark imortant messages
 color index    color52      default "~s \"^(warning|urgent|important)\""
 
+color index     color165    default "~N"
 
 ###################
 #  inside Reader  #
