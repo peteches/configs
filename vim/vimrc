@@ -132,12 +132,18 @@ imap <S-RIGHT> <ESC>gt
 "file completion
 imap <C-f> <C-x><C-f>
 
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 execute "set colorcolumn=" . join(range(80,335), ',')
 
 cmap W w
 cmap Q q
 
 cnoremap help vert help
+
+
 
 if has("autocmd")
     augroup TEMPLATES
@@ -170,7 +176,7 @@ if has("autocmd")
     augroup END
 endif
 
-colorscheme peteches
+colorscheme ghost
 
 function! LoadTemplate()
 	silent! 0r ~/.vim/skel/template.%:e

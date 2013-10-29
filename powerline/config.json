@@ -24,15 +24,15 @@
 			}
 		},
 		"shell": {
-			"colorscheme": "peteches",
+			"colorscheme": "ghost",
 			"theme": "peteches"
 		},
 		"tmux": {
-			"colorscheme": "peteches",
+			"colorscheme": "ghost",
 			"theme": "peteches"
 		},
 		"vim": {
-			"colorscheme": "peteches",
+			"colorscheme": "ghost",
 			"theme": "peteches",
 			"local_themes": {
 				"cmdwin": "cmdwin",
