@@ -6,6 +6,10 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+" set runtime to include man page lookups
+source ~/.vim/ftplugin/man.vim
+com! -nargs=1 ManV :vnew | set ft=man | Man <args>
+com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
