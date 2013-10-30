@@ -138,9 +138,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 execute "set colorcolumn=" . join(range(80,335), ',')
 
-cmap W w
-cmap Q q
-
 cnoremap help vert help
 
 
