@@ -69,9 +69,9 @@ snip.rv = complete(t[1], includes)
 endsnippet
 
 snippet func "function" b
-${1}`!p snip.rv = complete(t[1], [ 'int', 'double', 'float', 'char', 'void', 'enum' ])` ${2:func_name}(${3})
+${1}`!p snip.rv = complete(t[1], [ 'int', 'struct', 'double', 'float', 'char', 'void', 'enum' ])` ${2:func_name}(${3})
 {
-	${4:/*code*/}
+	${4:${VISUAL:\/*code*\/}}
 
 error:
 	${5:/*cleanup*/}
