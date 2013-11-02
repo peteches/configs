@@ -20,9 +20,11 @@ set sort              = threads
 set sort_aux          = "reverse-date-received"
 set strict_threads    = yes
 set use_envelope_from = yes
+set certificate_file  = ~/.mutt/certificates
 set signature         = ~/.mutt/signature
 source                  ~/.mutt/aliases
 source                  ~/.mutt/colours
+source                  ~/.mutt/crypto
 
 
 set mail_check=60
