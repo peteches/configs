@@ -103,6 +103,7 @@ nmap <LEADER>+x <ESC>:!chmod +x %<CR>
 
 nmap <LEADER>er :vsplit $MYVIMRC<CR>
 nmap <LEADER>sr :so $MYVIMRC<CR>
+nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
@@ -142,9 +143,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 execute "set colorcolumn=" . join(range(80,335), ',')
 
-cmap W w
-cmap Q q
-
 cnoremap help vert help
 
 
@@ -153,30 +151,6 @@ if has("autocmd")
     augroup TEMPLATES
         autocmd!
         autocmd BufNewFile * call LoadTemplate()
-    augroup END
-    augroup C_FILES
-        autocmd!
-        autocmd FileType c source ~/.vim/c.vim
-    augroup END
-    augroup CPP_FILES
-        autocmd!
-        autocmd FileType cpp source ~/.vim/cpp.vim
-    augroup END
-    augroup RPM_SPEC_FILES
-        autocmd!
-        autocmd FileType spec source ~/.vim/spec.vim
-    augroup END
-    augroup BASH_FILES
-        autocmd!
-        autocmd FileType sh source ~/.vim/shell.vim
-    augroup END
-    augroup MAIL
-        autocmd!
-        autocmd FileType mail source ~/.vim/mail.vim | source ~/.vim/syntax/mail.vim
-    augroup END
-    augroup PERL
-        autocmd!
-        autocmd FileType *.p[lm] source ~/.vim/perl.vim
     augroup END
 endif
 
