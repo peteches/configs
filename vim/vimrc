@@ -152,6 +152,9 @@ if has("autocmd")
         autocmd!
         autocmd BufNewFile * call LoadTemplate()
     augroup END
+    augroup MAN
+	autocmd!
+	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
 endif
 
 colorscheme ghost
