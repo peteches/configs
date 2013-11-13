@@ -41,3 +41,4 @@ set crypt_verify_sig=yes
 # set header to locate my public key
 set my_hdr="X-PGP-Key: http://pgp.mit.edu:11371/pks/lookup?search=pete@petemccabe.gb.net&op=index&exact=on"
 
+send-hook Rebecca.McCabe@bradford.gov.uk set crypt_autosign=no
