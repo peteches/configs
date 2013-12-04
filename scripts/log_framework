@@ -1,0 +1,57 @@
+#! /bin/bash -
+
+----------------------------------------------------------------------------------------------------
+
+coproc logging (
+	log_std_out {
+		while read line <$1 ;do
+			echo "std-out" $line > $2
+		done
+	}
+
+	log_std_err {
+		while read line <$1 ;do
+			echo "std-Err" $line > $2
+		done
+	}
+
+	log_cmd{
+		trap "rm -f $stderr $stdout" EXIT HUP INT TERM
+		log=$4
+		opts=$3
+		stderr=$2
+		stdout=$1
+		cmd=${@:4}
+
+		echo $cmd > $log
+		if [[ "$opts" =~ o ]] ;then
+			mkfifo $stdout
+			log_std_out $stdout $log &
+		fi
+		if [[ "$opts" =~ e ]] ;then
+			mkfifo $stderr
+			log_std_err $stderr $log &
+		fi
+		eval $@ >$stdout 2>$stderr
+		echo $?
+	}
+
+	while read cmd;do
+		out=$( mktemp -u )
+		err=$( mktemp -u )
+		log_cmd $out $err $cmd
+		rm -f $out $err
+	done
+)
+
+
+run_cmd {
+	echo $@ >${logging[1]}
+	read retval <&{logging[0]}
+	return $retval
+}
+
+-e = log std err
+-o = log std out
+
+runcmd -eo <logfile> hostname
