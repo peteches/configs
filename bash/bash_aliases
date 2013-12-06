@@ -98,7 +98,7 @@ display_status()
 
 yum(){
 	if [[ "${1}" == "search" ]];then
-		sudo yum -y "${@}" | sed -e '$ d' -e '1,/^=\+ d/ d' | column -t -s:
+		sudo yum -y "${@}" | sed -r -e '$ d' -e '1,/^=+/ d' | column -t -s:
 	else
 		sudo yum -y "${@}"
 	fi

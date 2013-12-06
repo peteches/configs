@@ -136,6 +136,11 @@ imap <S-RIGHT> <ESC>gt
 "file completion
 imap <C-f> <C-x><C-f>
 
+" for when editing files I don't have permission to write
+command W w :execute ':silent w ! sudo tee % >/dev/null' | edit! 
+command Wq w :execute ':silent w ! sudo tee % >/dev/null' | quit
+command WQ w :execute ':silent w ! sudo tee % >/dev/null' | quit! 
+
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
