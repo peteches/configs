@@ -99,9 +99,15 @@ case ${1:pattern}:
 $0
 endsnippet
 
-snippet ifdef "#ifndef ... #define ... #endif"
-#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
-#define ${1:SYMBOL} ${2:value}
+snippet ifdef "#ifdef ... #define ... #endif"
+#ifdef ${1:var}
+${2:${VISUAL:\/*code*\/}}
+#endif
+endsnippet
+
+snippet ifndef "#ifndef ... #define ... #endif"
+#ifndef ${1:var}
+${2:${VISUAL:\/*code*\/}}
 #endif
 endsnippet
 
@@ -159,16 +165,20 @@ snippet check "check macro (see dbg.h)" b
 check(${1:check}, "${2:msg}"${3});${4}
 endsnippet
 
-snippet log "log_info(string)" b
+snippet logi "log_info(string)" b
 log_info("${1:msg}"${2});${3}
 endsnippet
 
-snippet log "log_debug(string)" b
+snippet logd "log_debug(string)" b
 log_debug("${1:msg}"${2});${3}
 endsnippet
 
-snippet log "log_warn(string)" b
+snippet logw "log_warn(string)" b
 log_warn("${1:msg}"${2});${3}
+endsnippet
+
+snippet loge "log_warn(string)" b
+log_err("${1:msg}"${2});${3}
 endsnippet
 
 snippet once "Include header once only guard"
