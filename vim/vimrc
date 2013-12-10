@@ -94,9 +94,8 @@ map <F3> <ESC>:set nu! list! foldenable!<CR>
 map <F4> <ESC>:NERDTreeToggle<CR>
 map <F5> <ESC>:GundoToggle<CR>
 
-imap <LEADER>.. <LEADER>2, 
 imap <LEADER>' <ESC>viWS'Ea
-imap <LEADER>2 <ESC>viWS"Ea
+imap <LEADER>.. <ESC>viWS"Ea
 imap <LEADER>w' <ESC>viwS'Ea
 imap <LEADER>w2 <ESC>viwS"Ea
 nmap <LEADER>+x <ESC>:!chmod +x %<CR>
@@ -157,6 +156,9 @@ if has("autocmd")
         autocmd!
         autocmd BufNewFile * call LoadTemplate()
     augroup END
+    augroup MAN
+	autocmd!
+	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
 endif
 
 colorscheme ghost
