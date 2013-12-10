@@ -24,6 +24,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias vless="vim --cmd 'let no_plugin_maps = 1' -c 'runtime! macros/less.vim' -"
 
+alias virsh='sudo virsh'
 #
 #Functions
 
