@@ -84,10 +84,9 @@ switch(${1:var}) {
 	case ${2:pattern}:
 		${3:/* code */}
 		break;
-
 	${4}
 	default:
-		sentinel("${5:msg}")
+		sentinel("${5:msg}");
 }$0
 endsnippet
 
@@ -95,7 +94,6 @@ snippet case "case part of switch" b
 case ${1:pattern}:
 	${2:/* code */}
 	break;
-
 $0
 endsnippet
 
@@ -162,23 +160,23 @@ endsnippet
 
 ## debug macros
 snippet check "check macro (see dbg.h)" b
-check(${1:check}, "${2:msg}"${3});${4}
+check(${1:check}, "${2:%s}"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
 snippet logi "log_info(string)" b
-log_info("${1:msg}"${2});${3}
+log_info("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
 snippet logd "log_debug(string)" b
-log_debug("${1:msg}"${2});${3}
+log_debug("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
 snippet logw "log_warn(string)" b
-log_warn("${1:msg}"${2});${3}
+log_warn("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
-snippet loge "log_warn(string)" b
-log_err("${1:msg}"${2});${3}
+snippet loge "log_err(string)" b
+log_err("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
 snippet once "Include header once only guard"
