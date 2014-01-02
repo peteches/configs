@@ -1,0 +1,17 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Linux man pages</os:ShortName>
+<os:Description>Linux man pages</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0klEQVQ4jc2TIQ6DQBBFaQ9BgkLDaUi4RMGSEAQJV2hq8GAwBA+iDotm9wA7FgGK5FdBIC1LKaZixEyyL3/m/1Vu1wuO1Dj0q175P0BkGmiKAh0JjEOPcejRkUDmOvuAzHVAjIMYR2Qa8zz3A3Qk8Hzc5QBiHG1VbsqfVH0E1EkKYly6v6dq2wBiHLFt/X7EcegR6vo5wCkFbVVKD7gLmKySPc79QG5jUxRvGVi6JLVxuQoxPifPUzUQ4+hIINT17/5CbFuok3SOcp2kK5W7gCP1As833dnQQ8Y1AAAAAElFTkSuQmCC</os:Image>
+<SearchForm>http://linux.die.net/man/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.die.net/search/">
+  <os:Param name="q" value="{searchTerms}"/>
+  <os:Param name="sa" value="Search"/>
+  <os:Param name="ie" value="ISO-8859-1"/>
+  <os:Param name="cx" value="partner-pub-5823754184406795%3A54htp1rtx5u"/>
+  <os:Param name="cof" value="FORID%3A9"/>
+  <os:Param name="siteurl" value="linux.die.net%2Fman%2F"/>
+  <os:Param name="ref" value="linux.die.net%2Fman%2F1%2Ftmux"/>
+  <os:Param name="ss" value=""/>
+</os:Url>
+</SearchPlugin>
