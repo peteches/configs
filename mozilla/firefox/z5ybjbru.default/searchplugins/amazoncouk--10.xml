@@ -1,7 +1,0 @@
-<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
-<os:ShortName>Amazon.co.uk           </os:ShortName>
-<os:Description>Amazon.co.uk</os:Description>
-<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVQ4jZWTP0vDQBTAD2z6BRw1H0Cnmt1Js4uYfAPr7pAPIKJQEJQGVyGLXVoLLoKtu3qDg0LiYoc0BQctqTo49OdwMfZfaH3wOO7de7/35+4EkAeOgJDZJUxi8gI4HD0NggDHcdiyLCzbxvO8LFBJAJ1Bi5SSOU0jN6KO40wCdATQHbQUd3bIaRrrponv++l+UdcnAbpjgCiKkFLSbDa5qNexbDutYiZAEAQUDGOshZkBvxkLhkEURZRd93+AX+f9gwMAtovF1BbH8XRAYWUlDVg3zaEbKbtuBuAzSi1SShZ0nZymsaDrlF2XLdtmzTTpvXXo+x7c7SpNAZfL8O5P6nFYbjZV4MMenIsBQLsBFQG3u9CLsgEfbXipqmTV+ZEZtGoKUhFwtaqyPB3D4zE8ncDNhsraqkG7oc4TwN9Tfr1XjhWhnM8F/WTlcgnCa+X3HStNnnJprNR3H57P/ioIG1lNlQTqO58CX9OnmMpXEpP/AWTQTUDpCM9IAAAAAElFTkSuQmCC</os:Image>
-<os:Url type="text/html" method="GET" template="https://www.amazon.co.uk/s/">
-</os:Url>
-</SearchPlugin>
