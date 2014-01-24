@@ -85,6 +85,7 @@ config_matrix=(
     "${config_dir}/bash ${HOME}/.bash"
     "${config_dir}/bash/bashrc ${HOME}/.bashrc"
     "${config_dir}/misc/mailcap ${HOME}/.mailcap"
+    "${config_dir}/mozilla ${HOME}/.mozilla"
     "${config_dir}/mutt ${HOME}/.mutt"
     "${config_dir}/mutt/muttrc ${HOME}/.muttrc"
     "${config_dir}/powerline ${HOME}/.config/powerline"
