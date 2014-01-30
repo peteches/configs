@@ -71,6 +71,7 @@ def write_docstring_args(args, snip):
 
     for arg in args:
         snip += format_arg(arg, style)
+        snip.rv +=  '\n' + snip.mkline(":type %s: @todo" % arg)
 
 
 def write_init_body(args, parents, snip):
@@ -343,7 +344,7 @@ style = get_style(snip)
 snip += format_return(style)
 snip.rv += '\n' + snip.mkline('', indent='')
 snip += "'''" `
-	${0:pass}
+	${0:${VISUAL:pass}}
 
 
 endsnippet
