@@ -17,7 +17,6 @@ set autoindent
 set cmdheight=2
 set confirm
 set spelllang=en_gb
-set cursorline
 set expandtab
 set foldclose=all
 set foldcolumn=2
