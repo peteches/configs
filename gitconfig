@@ -1,0 +1,10 @@
+[user]
+	name = Pete \"Peteches\" McCabe
+	email = git@petemccabe.gb.net
+[push]
+	default = current
+[color]
+	diff = always
+[core]
+	pager = less -r
+[alias]

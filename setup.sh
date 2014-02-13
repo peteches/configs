@@ -85,7 +85,6 @@ config_matrix=(
     "${config_dir}/bash ${HOME}/.bash"
     "${config_dir}/bash/bashrc ${HOME}/.bashrc"
     "${config_dir}/misc/mailcap ${HOME}/.mailcap"
-    "${config_dir}/mozilla ${HOME}/.mozilla"
     "${config_dir}/mutt ${HOME}/.mutt"
     "${config_dir}/mutt/muttrc ${HOME}/.muttrc"
     "${config_dir}/powerline ${HOME}/.config/powerline"
@@ -95,11 +94,17 @@ config_matrix=(
     "${config_dir}/tmux/tmux.conf ${HOME}/.tmux.conf"
     "${config_dir}/vim ${HOME}/.vim"
     "${config_dir}/vim/vimrc ${HOME}/.vimrc"
+    "${config_dir}/gitconfig ${HOME}/.gitconfig"
 )
 
 # add scripts individually so as to keep locally generated scripts.
 for script in ${config_dir}/scripts/*; do
     config_matrix+=( "${script} ${HOME}/bin/$( basename ${script} )" )
+done
+
+# Also add kde things seperately to keep local scripts in tact.
+for file in $( find ${config_dir}/kde -type f -printf "%P "); do
+    config_matrix+=( "${config_dir}/kde/${file}" ${HOME}/.kde/${file})
 done
 
 for args in "${config_matrix[@]}"; do
