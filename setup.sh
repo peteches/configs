@@ -50,7 +50,7 @@ function install_config {
 
     case $_action in
         update )
-            if [[ -e ${dest} ]]; then
+            if [[ -L ${dest} ]]; then
                 return
             fi
             ;&  # execute the install code block as well
@@ -104,7 +104,7 @@ done
 
 # Also add kde things seperately to keep local scripts in tact.
 for file in $( find ${config_dir}/kde -type f -printf "%P "); do
-    config_matrix+=( "${config_dir}/kde/${file}" ${HOME}/.kde/${file})
+    config_matrix+=( "${config_dir}/kde/${file} ${HOME}/.kde/${file}")
 done
 
 for args in "${config_matrix[@]}"; do
