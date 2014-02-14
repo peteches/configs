@@ -1,5 +1,5 @@
 <SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
-<os:ShortName>Linux man pages</os:ShortName>
+<os:ShortName>man</os:ShortName>
 <os:Description>Linux man pages</os:Description>
 <os:InputEncoding>UTF-8</os:InputEncoding>
 <os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0klEQVQ4jc2TIQ6DQBBFaQ9BgkLDaUi4RMGSEAQJV2hq8GAwBA+iDotm9wA7FgGK5FdBIC1LKaZixEyyL3/m/1Vu1wuO1Dj0q175P0BkGmiKAh0JjEOPcejRkUDmOvuAzHVAjIMYR2Qa8zz3A3Qk8Hzc5QBiHG1VbsqfVH0E1EkKYly6v6dq2wBiHLFt/X7EcegR6vo5wCkFbVVKD7gLmKySPc79QG5jUxRvGVi6JLVxuQoxPifPUzUQ4+hIINT17/5CbFuok3SOcp2kK5W7gCP1As833dnQQ8Y1AAAAAElFTkSuQmCC</os:Image>

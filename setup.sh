@@ -139,7 +139,7 @@ for file in $( find "${config_dir}/firefox" -type f -printf "%P "); do
 
     dst_path=${dst}/${file#*/} #strip profile name
 
-    config_matrix+=("${file} ${dst_path}")
+    config_matrix+=("${config_dir}/firefox/${file} ${dst_path}")
 done
 
 
