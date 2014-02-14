@@ -1,0 +1,11 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>vimdoc</os:ShortName>
+<os:Description>vimdoc</os:Description>
+<os:InputEncoding>windows-1252</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVQ4jZ2SMU7EQAxFLQpqljINVKGhAUfUKSKqqZG22Qr5AtNQbkGReiUK95wgF9gL+AK5QK7xKSYzIZvZLMKSlZEm/439baL1wJgXA957iEhKZoY7etDXE87dzwDDMMDMUooIis6Bvl9A7/fZ+0UFfd/DzKCq4QUd0xXoui6JVRVN0yxaS6+IyCRWRi1uBj/nSxawED/fZAEo6nIB+C02M/C2Dp6MxiaxO3oUwjNAFIvI5IkvQ2UnENBuA3q9XTitqlPPUawM+nwAVVfzKujuOjsq5jAFEQFv6/BtqjjG9V1Q1fCjLwPwQ2BmaNsWZrYOiOXz3oH3LpzfqgQdW8uPMfYdp8HM4KYCM6e2TjcxbWPqe7cBHR6zhv01AuSf4glyQfwDoTiYVYsNhB0AAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://vimdoc.sourceforge.net/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://vimdoc.sourceforge.net/search.php">
+  <os:Param name="search" value="{searchTerms}"/>
+  <os:Param name="docs" value="help"/>
+</os:Url>
+</SearchPlugin>

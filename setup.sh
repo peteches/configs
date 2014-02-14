@@ -107,6 +107,42 @@ for file in $( find ${config_dir}/kde -type f -printf "%P "); do
     config_matrix+=( "${config_dir}/kde/${file} ${HOME}/.kde/${file}")
 done
 
+# and the same for firefox things, although more complicated as the 
+# profile directory will have a random 8 character string infrom of the
+# profile name.
+
+for file in $( find "${config_dir}/firefox" -type f -printf "%P "); do
+    # potentially this could match multiple paths, old profiles backups etc.
+    profile=$( echo $file | cut -d/ -f1)
+    dst_paths=($(find "${HOME}/.mozilla/firefox" \
+                    -maxdepth 1 \
+                    -type d -name \*.${profile} \
+                    -print))
+    if [[ ${#dst_paths[@]} -gt 1 ]]; then
+        # we did find multiple profiles
+        for i in ${!dst_paths[@]}; do
+            if [[ $i -eq ${#dst_paths[@]} ]];then
+                break  # no element i+1 now, need to vamoose before we error.
+            fi
+
+            # here we chaeck to see which is newer and assume that the most
+            # recent is the correct one.
+            if [[ ${dst_paths[$i]} -nt ${dst_paths[$i+1]} ]]; then
+                dst=${dst_paths[$i]} 
+            else
+                dst=${dst_paths[$i+1]} 
+            fi
+        done
+    else
+        dst=${dst_paths[0]}
+    fi 
+
+    dst_path=${dst}/${file#*/} #strip profile name
+
+    config_matrix+=("${file} ${dst_path}")
+done
+
+
 for args in "${config_matrix[@]}"; do
     install_config $args
 done
