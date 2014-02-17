@@ -61,6 +61,9 @@ function install_config {
             fi
             # ensure target dir exists.
             [[ -d $( dirname ${dest} ) ]] || mkdir --parents $( dirname ${dest} )
+            if [[ $SETUP_V ]]; then
+                echo "linking ${target} to ${dest}"
+            fi
             ln -s ${target} ${dest}
             ;;
         uninstall )
