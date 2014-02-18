@@ -5,6 +5,8 @@ Session.vim
 .netrwhist
 *~
 
+#ignore symlink added by setup
+vim/bundle/powerline
 
 # ignore python bytecode files
 *py[oc]
