@@ -1,0 +1,13 @@
+[Event/Activity]
+Action=
+Execute=
+KTTS=
+Logfile=
+Sound=
+
+[Event/BellVisible]
+Action=
+Execute=
+KTTS=
+Logfile=
+Sound=
