@@ -14,11 +14,11 @@ if { type -P tmux; } &>/dev/null; then
     fi
 
     if [[ -z ${session} ]]; then
-        session=$( basename $( ps -hp $PPID -o cmd ) 2>/dev/null )
+        session=$( basename $( ps -hp $PPID -o cmd &>/dev/null ) 2>/dev/null || echo "base" )
     fi
 
     if [[ -z $TMUX ]]; then
-        if { /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; has-session -t "${session}"; } &> /dev/null ; then
+        if { /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; has-session -t "${session}"; } ; then
             /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; attach-session -t "${session}"
             exit
         else
