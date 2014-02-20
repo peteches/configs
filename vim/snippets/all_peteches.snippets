@@ -1,0 +1,21 @@
+extends all.snippets
+
+#########################
+#  posix regex classes  #
+#########################
+snippet [: "provdes all posix character clases" i
+[:${1}`!p snip.rv = complete(t[1], [ 'alnum', 'alpha', 'ascii', 'blank', 'cntrl', 'digit', 'graph', 'lower', 'print', 'punct', 'space', 'upper', 'word', 'xdigit' ])`:]
+endsnippet
+
+################
+#  todo snips  #
+################
+snippet todo "todo"
+`!p
+import time
+b,m,e,i = _get_comment_format()
+date = time.strftime(" %a %b %x %X :: ")
+snip.rv = b + " TODO:" + date`  ${1:task}
+endsnippet
+
+# vim:ft=snippets:
