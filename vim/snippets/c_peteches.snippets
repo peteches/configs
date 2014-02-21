@@ -1,0 +1,195 @@
+extends c.snippets
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+global !p
+import os, re
+
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) ==1:
+		return opts[0]
+	return "(" + " | ".join(opts) + ")"
+
+def listfiles(args):
+	tmp = []
+	for dir in args:
+		for root, d, files in os.walk(dir):
+			for f in files:
+				if not f in tmp:
+					tmp.append(os.path.join(root[len(dir)+1:], f))
+
+	flist = []
+	for path in tmp:
+		if not os.path.split(path)[1] in flist:
+			flist.append(path)
+
+	return flist
+
+def extract_includes(makefile):
+	includes = []
+	cflagsline = re.compile(r"CFLAGS")
+	includefile = re.compile(r"-I([-/._a-zA-Z0-9]+)")
+	f = open(makefile, "r")
+	for line in f:
+		if cflagsline.match(line):
+			for inc in includefile.findall(line):
+				includes.append(inc)
+	return includes
+
+def find_include_dirs(path):
+	inc_dirs = [ '/usr/include' ]
+
+	directories = []
+	makefile = ''
+
+	while( not os.path.exists(makefile)):
+		path = os.path.split(path)[0]
+		makefile = os.path.join(path, 'Makefile')
+
+
+	if os.path.exists(makefile):
+		x = extract_includes(makefile)
+		for i in x:
+			if not i.startswith(r"/"):
+				i = os.path.join(os.path.dirname(makefile), i)
+			inc_dirs.append(i)
+
+	return inc_dirs
+endglobal
+
+snippet inc "#include <> (inc)" b!
+#include <${1}`!p 
+includedirs = find_include_dirs(os.path.abspath(path))
+includes = [ m for m in listfiles(includedirs) if m.endswith('.h') ]
+snip.rv = complete(t[1], includes)
+`>
+endsnippet
+
+snippet func "function" b
+${1}`!p snip.rv = complete(t[1], [ 'int', 'struct', 'double', 'float', 'char', 'void', 'enum' ])` ${2:func_name}(${3})
+{
+	${4:${VISUAL:\/*code*\/}}
+
+error:
+	${5:/*cleanup*/}
+}
+$0
+endsnippet
+
+snippet switch "switch statement" b
+switch(${1:var}) {
+	case ${2:pattern}:
+		${3:/* code */}
+		break;
+	${4}
+	default:
+		sentinel("${5:msg}");
+}$0
+endsnippet
+
+snippet case "case part of switch" b
+case ${1:pattern}:
+	${2:/* code */}
+	break;
+$0
+endsnippet
+
+snippet ifdef "#ifdef ... #define ... #endif"
+#ifdef ${1:var}
+${2:${VISUAL:\/*code*\/}}
+#endif
+endsnippet
+
+snippet def "#define" b!
+#define ${1:sym} ${2:val}
+endsnippet
+
+snippet main "main() (main)" b!
+int main(int argc, char *argv[])
+{
+	${0:/* code */}
+
+	return 0;
+error:
+	return -1;
+}
+endsnippet
+
+snippet for "for int loop (fori)"
+for(${2:i} = 0; $2 < ${1:count}; ${3:$2++}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+snippet forx "for loop with non-simple loop."
+for(${1:initiate};
+	${2:check};
+	${3:increment})
+{
+	${4:/*code*/}
+}$0
+endsnippet
+
+## debug macros
+snippet check "check macro (see dbg.h)" b
+check(${1:check}, "${2:%s}"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet logi "log_info(string)" b
+log_info("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet logd "log_debug(string)" b
+log_debug("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet logw "log_warn(string)" b
+log_warn("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet loge "log_err(string)" b
+log_err("${1:%s}"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet once "Include header once only guard" b!
+#ifndef ${1:`!p snip.rv = '__' + snip.basename + '_h_'`}
+#define $1
+
+${0}
+
+#endif /* end of include guard: $1 */
+
+endsnippet
+
+snippet do "do...while loop (do)" !
+do {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+} while(${1:/* condition */});
+endsnippet
+
+snippet wh "while (cond)" b!
+while(${1:/*cond*/}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}$0
+endsnippet
+
+snippet if "if .. (if)" !
+if(${1:/* condition */}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}$0
+endsnippet
+
+snippet If "if() one line" b
+if(${1:/*cond*/}) ${2:${VISUAL:\/*code*\/}}`!p if not ( t[2].endswith(';')):
+	snip.rv = ';'`$0
+endsnippet
+
+snippet pr "printf .. (printf)"
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+# vim:ft=snippets:

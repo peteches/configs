@@ -1,0 +1,88 @@
+extends sh.snippets
+
+snippet dt "display_title" b
+display_title "${1:title}"
+${2:${VISUAL:## code}} || error=$?
+display_status
+$0
+endsnippet
+
+snippet func "function def and proto" b
+# ${1:func_name}()
+#	${2:Description}
+#
+# inputs	-${3}
+# outputs	-${4}
+# return value	-${5: 0 if successfull}
+# side effects	-${6}
+$1()
+{
+	${7:${VISUAL:## code}}
+}$0
+endsnippet
+
+snippet case "case .. esac (case)" b!
+case ${1:word} in
+	${2:pattern} )
+		${3:## code}
+	;;
+
+	$0
+esac
+endsnippet
+
+snippet pat "pattern for case statement" !b
+${1:pattern} )
+	${2:${VISUAL:## code}}
+${3:;;}
+
+$0
+endsnippet
+
+snippet elif "elif .. (elif)" !b
+elif ${2:[[ ${1:condition} ]]}; then
+	${0:${VISUAL:## code}}
+endsnippet
+
+snippet fori "for ... done (for)"
+for (( i = 0; i < ${1:10}; i++ )); do
+	${2:${VISUAL:## code}}
+done
+$0
+endsnippet
+
+snippet for "for ... in ... done (forin)" !b
+for ${1:i}${2/.+/ in /}${2:words}; do
+	${3:${VISUAL:## code}}
+done
+$0
+endsnippet
+
+snippet if "if ... then (if)" !b
+if ${2:[[ ${1:condition} ]]}; then
+	${3:${VISUAL:## code}}
+fi
+$0
+endsnippet
+
+snippet elif "elif .. (elif)" !b
+elif ${2:[[ ${1:condition} ]]}; then
+	${3:#statements}
+$0
+endsnippet
+
+snippet until "until ... (done)" !b
+until ${2:[[ ${1:condition} ]]}; do
+	${3:${VISUAL:## code}}
+done
+$0
+endsnippet
+
+snippet while "while ... (done)" !b
+while ${2:[[ ${1:condition} ]]}; do
+	${3:${VISUAL:## code}}
+done
+$0
+endsnippet
+
+# vim:ft=snippets:

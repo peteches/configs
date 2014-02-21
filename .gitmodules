@@ -52,3 +52,30 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-abolish"]
+	path = vim/bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+[submodule "vim/bundle/vim-afterimage"]
+	path = vim/bundle/vim-afterimage
+	url = https://github.com/tpope/vim-afterimage.git
+[submodule "vim/bundle/vim-scriptease"]
+	path = vim/bundle/vim-scriptease
+	url = https://github.com/tpope/vim-scriptease.git
+[submodule "vim/bundle/vim-ragtag"]
+	path = vim/bundle/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git
+[submodule "vim/bundle/vim-tbone"]
+	path = vim/bundle/vim-tbone
+	url = https://github.com/tpope/vim-tbone.git
+[submodule "vim/bundle/vim-obsession"]
+	path = vim/bundle/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/bundle/vim-sleuth"]
+	path = vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
