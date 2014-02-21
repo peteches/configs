@@ -14,7 +14,12 @@ if { type -P tmux; } &>/dev/null; then
     fi
 
     if [[ -z ${session} ]]; then
-        session=$( basename $( ps -hp $PPID -o cmd &>/dev/null ) 2>/dev/null || echo "base" )
+        parent_cmd=$( ps hp $PPID -o cmd )
+        if { readlink -e ${parent_cmd} &>/dev/null; }; then
+            session=$( basename $ 2>/dev/null )
+        else
+            session=$( grep -oP '^[\w\d]+' <<< ${parent_cmd} )
+        fi
     fi
 
     if [[ -z $TMUX ]]; then
