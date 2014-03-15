@@ -29,6 +29,7 @@ source                  ~/.mutt/crypto
 
 set mail_check=60
 set imap_keepalive=300
+source ~/.mutt/imap_passwd
 
 set folder=imaps://peteches@mail.petemccabe.gb.net/
 set spoolfile=imaps://peteches@mail.petemccabe.gb.net/
