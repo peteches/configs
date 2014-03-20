@@ -8,6 +8,9 @@ Session.vim
 #ignore symlink added by setup
 vim/bundle/powerline
 
+#ignore mutt imap password file. Don't really ant that visible in public internets ;)
+mutt/imap_passwd
+
 # ignore python bytecode files
 *py[oc]
 backups

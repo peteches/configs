@@ -64,6 +64,7 @@ _k_friendly_name=khotkeys
 
 [klipper]
 _k_friendly_name=Klipper
+clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
 cyclePrevAction=none,none,Previous History Item

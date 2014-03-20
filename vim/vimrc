@@ -52,7 +52,7 @@ set visualbell
 
 "" UltiSnip stuff
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetDirectories=['snippets', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories=['snips', 'UltiSnips']
 let g:UltiSnipsExpandTrigger= '<tab>'
 let g:UltiSnipsListSnippets = '<C-L>'
 let g:UltiSnipsJumpForwardTrigger= '<C-J>'
@@ -105,11 +105,6 @@ inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
 "learn not to use arrow keys!
-imap <LEFT> <NOP>
-imap <RIGHT> <NOP>
-imap <UP> <NOP>
-imap <DOWN> <NOP>
-
 nmap <LEFT> <NOP>
 nmap <RIGHT> <NOP>
 nmap <UP> <NOP>
@@ -134,19 +129,17 @@ imap <S-RIGHT> <ESC>gt
 "file completion
 imap <C-f> <C-x><C-f>
 
-" for when editing files I don't have permission to write
-command W w :execute ':silent w ! sudo tee % >/dev/null' | edit! 
-command Wq w :execute ':silent w ! sudo tee % >/dev/null' | quit
-command WQ w :execute ':silent w ! sudo tee % >/dev/null' | quit! 
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+" for surrounding the character under the cursor with spaces.
+nnoremap <leader>ss i<space><esc>2l.
+nnoremap <leader>as a<space><esc>
+nnoremap <leader>is i<space><esc>
 
 execute "set colorcolumn=" . join(range(80,335), ',')
 
 cnoremap help vert help
 
+"sign off patch
+abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
 
 if has("autocmd")
