@@ -30,11 +30,11 @@ hi Search        ctermfg=white                       ctermbg=darkblue           
 hi Special       ctermfg=brown                                                    cterm=none
 hi SpecialKey    ctermfg=darkgrey                    guifg=darkgrey
 hi Statement     ctermfg=yellow                                                   cterm=none
-hi StatusLine    ctermfg=darkgreen                   ctermbg=darkgrey             cterm=bold
+hi StatusLine    ctermfg=darkgreen                   ctermbg=black             cterm=bold
 hi StatusLineNC  ctermfg=darkgreen                   ctermbg=darkgrey             cterm=none
-hi TabLineFill   ctermfg=darkgrey                    ctermbg=darkgrey
-hi TabLine       ctermfg=darkgreen                   ctermbg=darkgrey
-hi TablineSel    ctermfg=green                       ctermbg=darkgrey             cterm=bold
+hi TabLineFill   ctermfg=black                    ctermbg=black
+hi TabLine       ctermfg=darkgreen                   ctermbg=black
+hi TablineSel    ctermfg=lightgreen                       ctermbg=black             cterm=bold
 hi Title         ctermfg=magenta                                                  cterm=bold
 hi trans         ctermfg=grey
 hi Todo          ctermfg=red                         ctermbg=darkblue
