@@ -30,8 +30,8 @@ hi      Search               ctermfg=white       ctermbg=darkblue  cterm=underli
 hi      Special              ctermfg=brown       ctermbg=none      cterm=none
 hi      SpecialKey           ctermfg=darkgrey    ctermbg=none      cterm=none
 hi      Statement            ctermfg=yellow      ctermbg=none      cterm=none
-hi      StatusLine           ctermfg=black       ctermbg=23        cterm=bold
-hi      StatusLineNC         ctermfg=black       ctermbg=233       cterm=none
+hi      StatusLine           ctermfg=233       ctermbg=23        cterm=bold
+hi      StatusLineNC         ctermfg=23       ctermbg=233       cterm=none
 hi      TabLineFill          ctermfg=black       ctermbg=black     cterm=none
 hi      TabLine              ctermfg=darkgreen   ctermbg=black     cterm=none
 hi      TablineSel           ctermfg=lightgreen  ctermbg=black     cterm=bold
