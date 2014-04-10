@@ -15,3 +15,6 @@ mutt/imap_passwd
 *py[oc]
 backups
 .ropeproject
+
+# ignore istory stuff from vimperator. should be synced through firefox.
+vimperator/info/*/history*
