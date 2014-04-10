@@ -156,5 +156,7 @@ done
 if [[ $_action == install ]]; then
     echo "initialising submodules"
     cd ${config_dir} && git submodule init && git submodule update
+elif [[ $_action == update ]]; then
+    cd ${config_dir} && git submodule update
 fi
 exit $?
