@@ -97,6 +97,7 @@ config_matrix=(
     "${config_dir}/tmux/tmux.conf ${HOME}/.tmux.conf"
     "${config_dir}/vim ${HOME}/.vim"
     "${config_dir}/vim/vimrc ${HOME}/.vimrc"
+    "${config_dir}/vim/gvimrc ${HOME}/.gvimrc"
     "${config_dir}/vimperator ${HOME}/.vimperator"
     "${config_dir}/vimperator/vimperatorrc ${HOME}/.vimperatorrc"
     "${config_dir}/gitconfig ${HOME}/.gitconfig"

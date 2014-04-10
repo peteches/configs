@@ -1,0 +1,6 @@
+set guifont=inconsolata\ for\ powerline\ medium\ 10
+set bg=dark
+set guioptions-=m " remove menu
+set guioptions-=T " remove Toolbar
+set guioptions-=r " remove right hand scrollbar
+set guioptions-=l " remove left hand scrollbar
