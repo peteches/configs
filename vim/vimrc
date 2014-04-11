@@ -46,6 +46,9 @@ set ts=4
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
 
+" let ragtag maps be global
+let g:ragtag_global_maps = 1
+
 "" powerline stuff
 "set rtp+=~/.vimrc/bundle/powerline
 "let g:powerline_config_path = expand("$HOME/.config/powerline")
@@ -150,6 +153,7 @@ if has("autocmd")
     augroup MAN
 	autocmd!
 	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+    augroup END
 endif
 
 colorscheme ghost
