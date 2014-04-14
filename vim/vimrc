@@ -29,7 +29,6 @@ set listchars=tab:❩―,trail:·,extends:>,precedes:<,eol:᚜,nbsp:-
 set nohls
 set noshowmode
 set notimeout ttimeout ttimeoutlen=200
-set number
 set pastetoggle=<F2>
 set ruler
 set scrolloff=30
@@ -45,6 +44,12 @@ set title
 set ts=4
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
+
+if v:version > 703
+    set relativenumber
+else
+    set number
+endif
 
 " let ragtag maps be global
 let g:ragtag_global_maps = 1
