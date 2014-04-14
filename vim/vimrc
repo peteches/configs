@@ -31,7 +31,7 @@ set noshowmode
 set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F2>
 set ruler
-set scrolloff=30
+set scrolloff=10
 set shiftwidth=4
 set showcmd
 set showmatch
@@ -142,7 +142,9 @@ nnoremap <leader>ss i<space><esc>2l.
 nnoremap <leader>as a<space><esc>
 nnoremap <leader>is i<space><esc>
 
-execute "set colorcolumn=" . join(range(80,335), ',')
+if v:version >= 703
+    execute "set colorcolumn=" . join(range(80,335), ',')
+endif
 
 cnoremap help vert help
 
