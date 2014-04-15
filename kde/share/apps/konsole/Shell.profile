@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=BlueOnBlack
-Font=Inconsolata for Powerline,9,-1,5,50,0,0,0,0,0
+Font=Inconsolata-dz for Powerline,9,-1,5,50,0,0,0,0,0
 
 [General]
 Name=Shell
