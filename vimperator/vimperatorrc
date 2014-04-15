@@ -5,6 +5,7 @@ map ]t gt
 nmap <Esc> :stop<Return>
 set defsearch=duckduckgo
 set focuscontent
+colorscheme molokai
 source! /home/peteches/.vimperatorrc.local
 
 " vim: set ft=vimperator:
