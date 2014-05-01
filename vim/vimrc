@@ -17,7 +17,7 @@ set autoindent
 set cmdheight=2
 set confirm
 set spelllang=en_gb
-set expandtab
+set noexpandtab
 set foldclose=all
 set foldcolumn=2
 set foldopen=hor,insert,jump,mark,search,tag,undo
@@ -25,23 +25,23 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:❩―,trail:·,extends:>,precedes:<,eol:᚜,nbsp:-
+set listchars=tab:>-,trail:·,extends:>,precedes:<,eol:᚜,nbsp:-
 set nohls
 set noshowmode
 set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F2>
 set ruler
 set scrolloff=10
-set shiftwidth=4
+set shiftwidth=8
 set showcmd
 set showmatch
 set smartcase
-set softtabstop=4
+set softtabstop=8
 set tabpagemax=100
 set textwidth=1000
 set tildeop
 set title
-set ts=4
+set tabstop=8
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
 
@@ -151,6 +151,13 @@ cnoremap help vert help
 "sign off patch
 abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
+function! MakeTabsConsistent(fileop, tabsize)
+    if a:fileop ==# 'r'
+        execute (has('gui_running') ? '' : 'silent') '% ! unexpand --tabs='. a:tabsize .' --first-only'
+    elseif a:fileop ==# 'w'
+        execute (has('gui_running') ? '' : 'silent') '% ! expand --tabs='. a:tabsize .' --initial'
+    endif
+endfunction
 
 if has("autocmd")
     augroup TEMPLATES
@@ -160,6 +167,21 @@ if has("autocmd")
     augroup MAN
 	autocmd!
 	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+    augroup END
+    augroup RUBYFILE
+	autocmd!
+	autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
+	autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
+    augroup END
+    augroup PYFILE
+	autocmd!
+	autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
+	autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
+    augroup END
+    augroup VIFILE
+	autocmd!
+	autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
+	autocmd BufWritePre *.vim,.vimrc,.gvimrc call MakeTabsConsistent('w', 4)
     augroup END
 endif
 
