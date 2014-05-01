@@ -206,3 +206,18 @@ md(){
 	mkdir -p "$1" && cd "$1"
 }
 
+# ssh()
+#	wrapper for ssh so tmux plays nicely
+#
+# inputs	- as ssh
+# outputs	- as ssh
+# return value	- 0 if successfull
+# side effects	- alters name of tmux window
+ssh()
+{
+  /usr/bin/ssh $*
+  if [[ -n $TMUX ]]; then
+    /usr/bin/tmux set automatic-rename on >& /dev/null
+  fi
+  
+}
