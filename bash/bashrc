@@ -26,7 +26,7 @@ if { type -P tmux; } &>/dev/null; then
     fi
     
     if [[ -z $TMUX ]]; then
-            /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; attach-session -t "${session}"
+            /usr/bin/tmux -2 -u -S $TMUX_SOCKET start-server\; new-session -A -s ${session}
             exit $?
     fi
 fi
