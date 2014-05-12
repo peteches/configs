@@ -1,11 +1,13 @@
 "3.8.2 (created: 2014/02/13 23:52:43)
 
-map [t gT
-map ]t gt
+nnoremap [t gT
+nnoremap ]t gt
 nmap <Esc> :stop<Return>
 set defsearch=duckduckgo
 set focuscontent
 colorscheme molokai
 source! /home/peteches/.vimperatorrc.local
+
+set gui=nonavigation
 
 " vim: set ft=vimperator:
