@@ -1,13 +1,43 @@
 "3.8.2 (created: 2014/02/13 23:52:43)
 
+##########
+#  MAPS  #
+##########
+
 nnoremap [t gT
 nnoremap ]t gt
-nmap <Esc> :stop<Return>
+nnoremap <silent> go b<Space>monitoring.skybet.net<Return>
+nnoremap <silent> gr b<Space>guearundeck.skybet.net<Return>
+nnoremap <silent> gp b<Space>peopleportal.bskyb.com<Return>
+nnoremap <silent> gJ b<space>tools.skybet.net/jira<Return>
+nnoremap <silent> gt b<Space>trello.com<Return>
+nnoremap <silent> gj b<Space>gueaci01.skybet.net<Return>
+nnoremap <Esc> :stop<Return>
+nnoremap Q :emenu Tools.Web Developer.Toggle Tools<CR>
+
+#############
+#  Options  #
+#############
+
 set defsearch=duckduckgo
 set focuscontent
-colorscheme molokai
-source! /home/peteches/.vimperatorrc.local
-
 set gui=nonavigation
 
+##################
+#  colourscheme  #
+##################
+
+colorscheme molokai
+
+##################
+#  Autocommands  #
+##################
+
+autocmd PageLoad pastebin javascript window.content.window.document.getElementById('paste_user').value="Peteches"
+
+##########################
+#  source other scripts  #
+##########################
+
+source! /home/peteches/.vimperatorrc.local
 " vim: set ft=vimperator:
