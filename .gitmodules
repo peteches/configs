@@ -88,3 +88,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/sparkup"]
+	path = vim/bundle/sparkup
+	url = https://github.com/rstacruz/sparkup

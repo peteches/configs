@@ -4,6 +4,7 @@
 #  MAPS  #
 ##########
 
+map <silent> "\\f" <Esc>:js<Space>window.openNewTabWith(window.content.window.document.getElementById('r1-0').querySelector('a.result__a').getAttribute('href'))<Return>
 nnoremap [t gT
 nnoremap ]t gt
 nnoremap <silent> go b<Space>monitoring.skybet.net<Return>
