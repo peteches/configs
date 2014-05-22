@@ -1,8 +1,8 @@
 "3.8.2 (created: 2014/02/13 23:52:43)
 
-##########
-#  MAPS  #
-##########
+""""""""""
+"  MAPS  "
+""""""""""
 
 map <silent> "\\f" <Esc>:js<Space>window.openNewTabWith(window.content.window.document.getElementById('r1-0').querySelector('a.result__a').getAttribute('href'))<Return>
 nnoremap [t gT
@@ -16,29 +16,29 @@ nnoremap <silent> gj b<Space>gueaci01.skybet.net<Return>
 nnoremap <Esc> :stop<Return>
 nnoremap Q :emenu Tools.Web Developer.Toggle Tools<CR>
 
-#############
-#  Options  #
-#############
+"""""""""""""
+"  Options  "
+"""""""""""""
 
 set defsearch=duckduckgo
 set focuscontent
 set gui=nonavigation
 
-##################
-#  colourscheme  #
-##################
+""""""""""""""""""
+"  colourscheme  "
+""""""""""""""""""
 
 colorscheme molokai
 
-##################
-#  Autocommands  #
-##################
+""""""""""""""""""
+"  Autocommands  "
+""""""""""""""""""
 
 autocmd PageLoad pastebin javascript window.content.window.document.getElementById('paste_user').value="Peteches"
 
-##########################
-#  source other scripts  #
-##########################
+""""""""""""""""""""""""""
+"  source other scripts  "
+""""""""""""""""""""""""""
 
 source! /home/peteches/.vimperatorrc.local
 " vim: set ft=vimperator:
