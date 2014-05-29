@@ -47,7 +47,7 @@ set viminfo='1000,f1,:100,/100,%,!
 set visualbell
 
 if v:version > 703
-    set relativenumber
+	set relativenumber
 endif
 
 " let ragtag maps be global
@@ -69,10 +69,10 @@ nmap <LEADER>es :UltiSnipsEdit<CR>
 "" Rainbow parenthesis
 let g:niji_match_all_filetypes = 1
 let g:niji_dark_colours = [['brown', 'RoyalBlue3'],
-                            \ ['Darkblue', 'SeaGreen3'],
-                            \ ['darkgray', 'DarkOrchid3'],
-                            \ ['darkgreen', 'firebrick3'],
-                            \ ['darkcyan', 'RoyalBlue3']]
+							\ ['Darkblue', 'SeaGreen3'],
+							\ ['darkgray', 'DarkOrchid3'],
+							\ ['darkgreen', 'firebrick3'],
+							\ ['darkcyan', 'RoyalBlue3']]
 let g:niji_light_colours = g:niji_dark_colours
 
 "" Tagbar stuff
@@ -142,7 +142,7 @@ nnoremap <leader>as a<space><esc>
 nnoremap <leader>is i<space><esc>
 
 if v:version >= 703
-    execute "set colorcolumn=" . join(range(80,335), ',')
+	execute "set colorcolumn=" . join(range(1,79), ',')
 endif
 
 cnoremap help vert help
@@ -151,47 +151,47 @@ cnoremap help vert help
 abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
 function! MakeTabsConsistent(fileop, tabsize)
-    if a:fileop ==# 'r'
-        execute (has('gui_running') ? '' : 'silent') '% ! unexpand --tabs='. a:tabsize .' --first-only'
-    elseif a:fileop ==# 'w'
-        execute (has('gui_running') ? '' : 'silent') '% ! expand --tabs='. a:tabsize .' --initial'
-    endif
+	if a:fileop ==# 'r'
+		execute (has('gui_running') ? '' : 'silent') '% ! unexpand --tabs='. a:tabsize .' --first-only'
+	elseif a:fileop ==# 'w'
+		execute (has('gui_running') ? '' : 'silent') '% ! expand --tabs='. a:tabsize .' --initial'
+	endif
 endfunction
 
 if has("autocmd")
-    augroup TEMPLATES
-        autocmd!
-        autocmd BufNewFile * call LoadTemplate()
-    augroup END
-    augroup MAN
-    autocmd!
-    autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
-    augroup END
-    augroup JSFILE
-    autocmd!
-    autocmd BufReadPost *.js call MakeTabsConsistent('r', 2)
-    autocmd BufWritePre *.js call MakeTabsConsistent('w', 2)
-    augroup END
-    augroup RUBYFILE
-    autocmd!
-    autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
-    autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
-    augroup END
-    augroup PYFILE
-    autocmd!
-    autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
-    autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
-    augroup END
-    augroup VIFILE
-    autocmd!
-    autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
-    augroup END
+	augroup TEMPLATES
+		autocmd!
+		autocmd BufNewFile * call LoadTemplate()
+	augroup END
+	augroup MAN
+	autocmd!
+	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+	augroup END
+	augroup JSFILE
+	autocmd!
+	autocmd BufReadPost *.js call MakeTabsConsistent('r', 2)
+	autocmd BufWritePre *.js call MakeTabsConsistent('w', 2)
+	augroup END
+	augroup RUBYFILE
+	autocmd!
+	autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
+	autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
+	augroup END
+	augroup PYFILE
+	autocmd!
+	autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
+	autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
+	augroup END
+	augroup VIFILE
+	autocmd!
+	autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
+	augroup END
 endif
 
 colorscheme ghost
 
 function! LoadTemplate()
-    silent! 0r ~/.vim/skel/template.%:e
-    "Highlight %VAR% placeholders with the TODO colour group
-    syn match Todo "%\u\+%" containedIn=ALL
+	silent! 0r ~/.vim/skel/template.%:e
+	"Highlight %VAR% placeholders with the TODO colour group
+	syn match Todo "%\u\+%" containedIn=ALL
 endfunction

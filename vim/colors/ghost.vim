@@ -6,7 +6,7 @@ let     colors_name          =                   'peteches'
 "       Hilight Group        Foreground          Background        Properties
 hi      Comment              ctermfg=23          ctermbg=none      cterm=none               guifg=#005f5f          guibg=NONE      gui=none
 hi      Constant             ctermfg=magenta     ctermbg=none      cterm=none               guifg=magenta     guibg=NONE      gui=NONE
-hi      ColorColumn          ctermfg=None        ctermbg=233       cterm=none               guifg=NONE        guibg=#121212       gui=NONE
+hi      ColorColumn          ctermfg=None        ctermbg=233       cterm=none               guifg=#121212     guibg=NONE      gui=NONE
 hi      Cursor               ctermfg=green       ctermbg=none      cterm=none               guifg=green       guibg=NONE      gui=NONE
 hi      DiffAdd              ctermfg=none        ctermbg=darkblue  cterm=none               guifg=NONE        guibg=darkblue  gui=NONE
 hi      DiffChange           ctermfg=none        ctermbg=magenta   cterm=none               guifg=NONE        guibg=magenta   gui=NONE

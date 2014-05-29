@@ -4,3 +4,4 @@ set guioptions-=m " remove menu
 set guioptions-=T " remove Toolbar
 set guioptions-=r " remove right hand scrollbar
 set guioptions-=l " remove left hand scrollbar
+set mouse=""      " Stop the mouse being a prick
