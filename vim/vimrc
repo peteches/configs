@@ -16,8 +16,6 @@ com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 set autoindent
 set cmdheight=2
 set confirm
-set spelllang=en_gb
-set noexpandtab
 set foldclose=all
 set foldcolumn=2
 set foldopen=hor,insert,jump,mark,search,tag,undo
@@ -26,9 +24,11 @@ set incsearch
 set laststatus=2
 set list
 set listchars=tab:>-,trail:·,extends:>,precedes:<,eol:᚜,nbsp:-
+set noexpandtab
 set nohls
 set noshowmode
 set notimeout ttimeout ttimeoutlen=200
+set number
 set pastetoggle=<F2>
 set ruler
 set scrolloff=10
@@ -37,18 +37,17 @@ set showcmd
 set showmatch
 set smartcase
 set softtabstop=8
+set spelllang=en_gb
 set tabpagemax=100
+set tabstop=8
 set textwidth=1000
 set tildeop
 set title
-set tabstop=8
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
 
 if v:version > 703
     set relativenumber
-else
-    set number
 endif
 
 " let ragtag maps be global
@@ -165,30 +164,34 @@ if has("autocmd")
         autocmd BufNewFile * call LoadTemplate()
     augroup END
     augroup MAN
-	autocmd!
-	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+    autocmd!
+    autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+    augroup END
+    augroup JSFILE
+    autocmd!
+    autocmd BufReadPost *.js call MakeTabsConsistent('r', 2)
+    autocmd BufWritePre *.js call MakeTabsConsistent('w', 2)
     augroup END
     augroup RUBYFILE
-	autocmd!
-	autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
-	autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
+    autocmd!
+    autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
+    autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
     augroup END
     augroup PYFILE
-	autocmd!
-	autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
-	autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
+    autocmd!
+    autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
+    autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
     augroup END
     augroup VIFILE
-	autocmd!
-	autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
-	autocmd BufWritePre *.vim,.vimrc,.gvimrc call MakeTabsConsistent('w', 4)
+    autocmd!
+    autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
     augroup END
 endif
 
 colorscheme ghost
 
 function! LoadTemplate()
-	silent! 0r ~/.vim/skel/template.%:e
-	"Highlight %VAR% placeholders with the TODO colour group
-	syn match Todo "%\u\+%" containedIn=ALL
+    silent! 0r ~/.vim/skel/template.%:e
+    "Highlight %VAR% placeholders with the TODO colour group
+    syn match Todo "%\u\+%" containedIn=ALL
 endfunction
