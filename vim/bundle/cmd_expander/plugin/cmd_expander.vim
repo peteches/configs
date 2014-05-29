@@ -9,12 +9,12 @@ nnoremap <leader>f <esc>:let old_isk = &iskeyword<cr>:set iskeyword=@,-,.,_,^;,^
 
 function! ExpandPath(cmd, old_isk)
 	"
-	:let s:cmd_type = system("type -t " . shellescape(a:cmd))
+	:let s:cmd_type = system("bash -c 'type -t " . shellescape(a:cmd) . "'")
 	:let s:cmd_type = tr(s:cmd_type, "\n", ' ')
 
 	if s:cmd_type ==# "file "
 		" use type to find full path to cmd
-		:let s:fullpath = system("type -P " . shellescape(a:cmd))
+		:let s:fullpath = system("bash -c 'type -P " . shellescape(a:cmd) . "'")
 		" remove any newlines (type add one tothe end of the var
 		: let s:fullpath = substitute(s:fullpath, "\n", '', '')
 		:execute "normal viwc" . s:fullpath
@@ -44,7 +44,7 @@ function! CompletePaths(findstart, base)
 	:else
 		" generate the actual completions.
 		:let res = []
-		:for cmd in system("type -Pa " . shellescape(a:base))
+		:for cmd in system("bash -c 'type -Pa " . shellescape(a:base) . "'")
 		:	call add(res, cmd)
 		:endfor
 		:return res
