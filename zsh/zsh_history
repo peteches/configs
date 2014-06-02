@@ -1,0 +1,1710 @@
+: 1400859213:0;clear
+: 1400859214:0;ls
+: 1400859261:0;echo '/usr/bin/zsh' | sudo tee /etc/shells
+: 1400859305:0;vim /etc/shells
+: 1400859568:0;cd .oh-my-zsh
+: 1400859568:0;lls
+: 1400859569:0;ls
+: 1400859576:0;ls plugins
+: 1400859592:0;vim ~/.zshrc
+: 1400859773:0;ls 
+: 1400859778:0;ls themes
+: 1400859831:0;source ./themes/terminalparty.zsh-theme
+: 1400859871:0;for i in themes/*-theme; do echo $i;done
+: 1400859886:0;for i in themes/*-theme; do source $i; ;done
+: 1400859938:0;for i in themes/*-theme; do source $i; echo $PROMPT ;done
+: 1400859952:0;cd themes
+: 1400859954:0;ls
+: 1400859965:0;source 3den.zsh-theme
+: 1400859996:0;source adben.zsh-theme
+: 1400859999:0;exit
+: 1400860005:0;clear
+: 1400860074:0;source .oh-my-zsh/themes/agnoster.zsh-theme
+: 1400860080:0;cd .peteches-configs
+: 1400860086:0;ls
+: 1400860101:0;cd ~/gitrepos/platformevo
+: 1400860106:0;cd ../chef
+: 1400860112:0;git status
+: 1400860122:0;touch blah
+: 1400860126:0;clear
+: 1400860129:0;git status
+: 1400860133:0;rm blah
+: 1400860245:0;cd ~/.peteches-configs
+: 1400860252:0;git status
+: 1400860278:0;cd ~/gitrepos/anarchyghosts
+: 1400860316:0;echo '#t' >> anarchyghosts/result.py
+: 1400860325:0;git status
+: 1400860337:0;git checkout anarchyghosts/result.py
+: 1400860360:0;cd /tmp
+: 1400860378:0;md testgit
+: 1400860382:0;cd testgit
+: 1400860383:0;ls
+: 1400860386:0;git init
+: 1400860392:0;touch file
+: 1400860402:0;echo re > file
+: 1400860406:0;git add file
+: 1400860409:0;git status
+: 1400860417:0;git commit -m "test"
+: 1400860423:0;echo t > file
+: 1400860429:0;git add file
+: 1400860436:0;git commit file
+: 1400860447:0;git commit file -m "trest"
+: 1400860450:0;clear
+: 1400860464:0;top &
+: 1400860480:0;sudo -s
+: 1400860498:0;sudo -s zsh
+: 1400860513:0;su
+: 1400860524:0;sudo su
+: 1400860529:0;sudo su -
+: 1400860537:0;clear
+: 1400860589:0;chsh --help 
+: 1400860612:0;sudo chsh -l
+: 1400860625:0;sudo chsh -s /bin/zsh
+: 1400860630:0;sudo -i
+: 1400860718:0;exit
+: 1400860725:0;vim ~/.zshrc
+: 1400860795:0;exit
+: 1400860798:0;fg
+: 1400860804:0;exit
+: 1400860817:0;vim ~/.zsh
+: 1400860821:0;vim ~/.zshrc
+: 1400860832:0;exit
+: 1400860836:0;sudo su
+: 1400860845:0;clear
+: 1400860863:0;echo "â®€ Â± â­ƒ€ âž¦ âƒ¼ƒ´ âƒ¼ƒ¸ âƒº¡"
+: 1400861047:0;echo $TERM
+: 1400861305:0;ls
+: 1400861315:0;ls 
+: 1400861318:0;ls *
+: 1400861377:0;ls
+: 1400861382:0;clear
+: 1400861424:0;chsh -s /usr/bin/zsh
+: 1400861457:0;grep pete /etc/passwd
+: 1400861538:0;ls
+: 1400861541:0;cd srcs
+: 1400861541:0;ls
+: 1400861546:0;ls -l
+: 1400861547:0;ls -la
+: 1400861575:0;cd ~/gitrepos/anarchyghosts
+: 1400861578:0;ls
+: 1400861602:0;ls -d ^*.py
+: 1400861607:0;ls  ^*.py
+: 1400861625:0;setopt extendedglob
+: 1400861626:0;ls  ^*.py
+: 1400861631:0;ls -d  ^*.py
+: 1400861646:0;ls -d  ^*.*
+: 1400861657:0;ls -d  ^Makefile
+: 1400861672:0;ls *.^py
+: 1400861685:0;ls *
+: 1400861711:0;ls anarchyghosts/*
+: 1400861728:0;ls
+: 1400861739:0;ls *.(json|spec)
+: 1400861766:0;ls **/*.py
+: 1400861771:0;ls **.py
+: 1400861806:0;ls
+: 1400861817:0;ls *.py~setup.py
+: 1400861852:0;ls -F *
+: 1400861858:0;ls -F *(/)
+: 1400861864:0;ls -dF *(/)
+: 1400861867:0;ls -dF *(@)
+: 1400861872:0;ls -dF *(*)
+: 1400861880:0;ls -dF *(x)
+: 1400861886:0;ls -dF *(X)
+: 1400861889:0;ls -dF *(r)
+: 1400861892:0;ls -dF *(R)
+: 1400861894:0;ls -dF *(w)
+: 1400861929:0;ls -dF *(.)
+: 1400862308:0;ys proton
+: 1401173327:0;yu
+: 1401173425:0;ls
+: 1401175615:0;cd ../p/c/c/sbg_elk
+: 1401175616:0;l
+: 1401175621:0;cd ../platformevo/chef/cookbooks/sbg_elk
+: 1401175623:0;ls
+: 1401175626:0;git status
+: 1401175642:0;git diff recipes/logstash.rb
+: 1401175737:0;vim recipes/logstash.rb
+: 1401176596:0;grep -E '^[[:space:]]*file' ../* -R
+: 1401176613:0;grep -E '^[[:space:]]*file[[:space:]]*{' ../* -R
+: 1401177368:0;vim .../sbg_supervisor/files/default/tests/minitest/lamp-event-worker-singles_test.rb:                file( "/etc/supervisor.d/event-worker-#{key}.conf" ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-event-worker-singles_test.rb:            file( "/etc/supervisor.d/group.event-singles.conf" ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-event-worker_test.rb:                file( "/etc/supervisor.d/event-worker-#{s}.conf" ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-fake-horse-details_test.rb:            file( "/etc/supervisor.d/fake-horse-details.conf" ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-betgenius_test.rb:            file( '/etc/supervisor.d/feedconnectors-betgenius.conf' ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-enetpulse_test.rb:            file( '/etc/supervisor.d/feedconnectors-enetpulse.conf' ).must_exist
+: 1401177369:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-mgsjackpot_test.rb:            file( '/etc/supervisor.d/feedconnectors-mgsjackpot.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-queue-counter_test.rb:            file( '/etc/supervisor.d/feedconnectors-queue-counter.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-runningball_test.rb:            file( '/etc/supervisor.d/feedconnectors-runningball.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-feedconnectors-spin_test.rb:            file( '/etc/supervisor.d/feedconnectors-spin.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-forgotten-user-mailer_test.rb:            file( '/etc/supervisor.d/forgotten-user-mailer.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-fts-dashboard_test.rb:            file( '/etc/supervisor.d/fts-dashboard.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-livebetmonitor-even_test.rb:            file( '/etc/supervisor.d/rep-event-monitoring-even.conf' ).must_exist
+: 1401177370:0;../sbg_supervisor/files/default/tests/minitest/lamp-livebetmonitor-odd_test.rb:            file( '/etc/supervisor.d/rep-event-monitoring-odd.conf' ).must_exist
+: 1401177391:0;vim ../sbg_openbet_poker/recipes/poker-env.rb
+: 1401177447:0;grep -E '^[[:space:]]*file[[:space:]]*=' ../* -R
+: 1401177474:0;grep -E '^[[:space:]]*file[[:space:]]*[^={(]' ../* -R
+: 1401177495:0;vim ../sbg_php/providers/ini.rb
+: 1401177553:0;vim ../sbg_ssh/recipes/ssh.rb
+: 1401177577:0;vim ../sbg_openbet/recipes/sports.rb
+: 1401177620:0;fg
+: 1401178074:0;ls files/default
+: 1401178079:0;ls files/default/logstash
+: 1401178095:0;vim recipes/logstash.rb
+: 1401178158:0;mv files/default/logstash/sky-grok-patterns.txt files/default/logstash/sbg_apache
+: 1401178163:0;cat recipes/logstash.rb
+: 1401178172:0;git status
+: 1401179205:0;cd ../
+: 1401179207:0;ls
+: 1401179213:0;cd sbg_lamp
+: 1401179214:0;ls
+: 1401179216:0;ls recipes
+: 1401179221:0;ranger
+: 1401179974:0;ls
+: 1401180011:0;ssh guealamp03
+: 1401180029:0;ssh guealampapp03
+: 1401180711:0;cd gitrepos/platformevo/chef/cookbooks/sbg_elk/files/default/logstash
+: 1401180711:0;ls
+: 1401180733:0;vim sbg_apache
+: 1401182412:0;ls
+: 1401182457:0;cd gitrepos/platformevo/chef/cookbooks/sbg_elk/recipes/
+: 1401182460:0;ls
+: 1401182468:0;exit
+: 1401184270:0;ssh guealampweb45
+: 1401184993:0;cd ~/gitrepos/platformevo/chef/cookbooks/sbg_elk/recipes
+: 1401184996:0;ls
+: 1401185031:0;cd ../templates/default/logstash
+: 1401185031:0;ls
+: 1401185051:0;cd g/p/c/c/s/t/d/logstash
+: 1401185054:0;cd gitrepos/platformevo/chef/cookbooks/sbg_elk/templates/default/logstash
+: 1401185056:0;ls
+: 1401185074:0;cd ~/a/e/bin
+: 1401185077:0;cd ~/area_51/elasticsearch-1.1.1/bin
+: 1401185077:0;ls
+: 1401185081:0;./elasticsearch
+: 1401185089:0;cd /tmp
+: 1401185095:0;cat lamp-log.conf.erb
+: 1401185129:0;sbg_elk=~/gitrepos/platformevo/chef/cookbooks/sbg_elk
+: 1401185136:0;head lamp-log.conf.erb
+: 1401185153:0;cd /var/lamp/logs
+: 1401185154:0;ls
+: 1401185158:0;cd apache/httpd
+: 1401185158:0;ls
+: 1401185223:0;vim guealampweb04_apps_ssl_error.log
+: 1401185260:0;ls
+: 1401185273:0;tail lamp-log.conf.erb
+: 1401185279:0;vim lamp-log.conf.erb
+: 1401185284:0;fg
+: 1401185305:0;tail lamp-log.conf.erb
+: 1401185338:0;~/area_51/logstash-1.4.1/bin/logstash -f./  Lamp-log.conf.erb
+: 1401185350:0;~/area_51/logstash-1.4.1/bin/logstash -f./lamp-log.conf.erb
+: 1401186291:0;sudo mkdir /etc/logstash/patterns -u
+: 1401186298:0;sudo mkdir /etc/logstash/patterns -p
+: 1401186339:0;ln -s $sbg_elk/files/default/logstash/sbg_apache /etc/logstash/patterns
+: 1401186343:0;sudo ln -s $sbg_elk/files/default/logstash/sbg_apache /etc/logstash/patterns
+: 1401186349:0;~/area_51/logstash-1.4.1/bin/logstash -f./lamp-log.conf.erb
+: 1401186821:0;echo '[Mon May 24 17:32:24.145799 2014] [core:error] [pid 137] [client 172.16.210.25:52495] AH00127: Invalid URI in request GET /../horse-racing/epsom-downs/ HTTP/1.1' >> guealampweb04_apps_ssl_error.log
+: 1401186838:0;echo '[Mon May 24 17:32:24.145799 2014] [core:error] [pid 137] [client 172.16.210.25:52495] AH00127: Invalid URI in request GET /../horse-racing/epsom-downs/ HTTP/1.1' | sudo tee -a guealampweb04_apps_ssl_error.log
+: 1401187015:0;cat guealampweb03_defaulthost.log | sudo tee -a guealampweb04_defaulthost.log
+: 1401187231:0;ssh guealampweb45
+: 1401187356:0;cat <<EOF | sudo tee guealampweb03_apps_access >/dev/null\
+172.16.210.25 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC9RJGgAAAAE" "-" "GET /sportsapi/v2/event/16059046 HTTP/1.1" 404 - "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (5063)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC5lKoQAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (340)\
+172.16.210.54 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGkAAAAE" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (256)\
+172.16.210.22 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC7e9HsAAAAD" "-" "GET /sportsapi/v2/event/16586334 HTTP/1.1" 200 6307 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (6356)\
+172.16.210.24 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5Yee8AAAAC" "-" "GET /sportsapi/v2/event/16586406 HTTP/1.1" 200 2425 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4436)\
+172.16.210.53 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGoAAAAE" "-" "GET /sportsapi/v2/event/16586327 HTTP/1.1" 200 2427 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4666)\
+172.16.210.25 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKoYAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (305)\
+172.16.210.24 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefAAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (312)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKocAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (391)\
+172.16.210.53 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefEAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (332)\
+EOF
+: 1401187565:0;~/area_51/logstash-1.4.1/bin/logstash -f./lamp-log.conf.erb
+: 1401187578:0;cat <<EOF | sudo tee guealampweb03_apps_access >/dev/null\
+172.16.210.25 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC9RJGgAAAAE" "-" "GET /sportsapi/v2/event/16059046 HTTP/1.1" 404 - "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (5063)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC5lKoQAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (340)\
+172.16.210.54 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGkAAAAE" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (256)\
+172.16.210.22 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC7e9HsAAAAD" "-" "GET /sportsapi/v2/event/16586334 HTTP/1.1" 200 6307 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (6356)\
+172.16.210.24 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5Yee8AAAAC" "-" "GET /sportsapi/v2/event/16586406 HTTP/1.1" 200 2425 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4436)\
+172.16.210.53 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGoAAAAE" "-" "GET /sportsapi/v2/event/16586327 HTTP/1.1" 200 2427 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4666)\
+172.16.210.25 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKoYAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (305)\
+172.16.210.24 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefAAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (312)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKocAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (391)\
+172.16.210.53 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefEAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (332)\
+EOF
+: 1401187611:0;cat <<EOF | sudo tee guealampweb04_apps_access >/dev/null\
+172.16.210.25 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC9RJGgAAAAE" "-" "GET /sportsapi/v2/event/16059046 HTTP/1.1" 404 - "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (5063)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC5lKoQAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (340)\
+172.16.210.54 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGkAAAAE" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (256)\
+172.16.210.22 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC7e9HsAAAAD" "-" "GET /sportsapi/v2/event/16586334 HTTP/1.1" 200 6307 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (6356)\
+172.16.210.24 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5Yee8AAAAC" "-" "GET /sportsapi/v2/event/16586406 HTTP/1.1" 200 2425 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4436)\
+172.16.210.53 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGoAAAAE" "-" "GET /sportsapi/v2/event/16586327 HTTP/1.1" 200 2427 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4666)\
+172.16.210.25 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKoYAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (305)\
+172.16.210.24 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefAAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (312)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKocAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (391)\
+172.16.210.53 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefEAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (332)\
+EOF
+: 1401187661:0;cat guealampweb04_apps_access
+: 1401187727:0;~/area_51/logstash-1.4.1/bin/logstash -f./lamp-log.conf.erb
+: 1401187740:0;cat <<EOF | sudo tee guealampweb05_apps_access >/dev/null\
+172.16.210.25 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC9RJGgAAAAE" "-" "GET /sportsapi/v2/event/16059046 HTTP/1.1" 404 - "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (5063)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:08 +0100] "U4RrxKwQ0kgAAC5lKoQAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (340)\
+172.16.210.54 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGkAAAAE" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (256)\
+172.16.210.22 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC7e9HsAAAAD" "-" "GET /sportsapi/v2/event/16586334 HTTP/1.1" 200 6307 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (6356)\
+172.16.210.24 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5Yee8AAAAC" "-" "GET /sportsapi/v2/event/16586406 HTTP/1.1" 200 2425 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4436)\
+172.16.210.53 "85.9.28.130" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC9RJGoAAAAE" "-" "GET /sportsapi/v2/event/16586327 HTTP/1.1" 200 2427 "-" "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)" "sportsapi" (4666)\
+172.16.210.25 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKoYAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (305)\
+172.16.210.24 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefAAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (312)\
+172.16.210.22 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5lKocAAAAA" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (391)\
+172.16.210.53 "-" "/etc/environment.ini" - - [27/May/2014:11:41:09 +0100] "U4RrxawQ0kgAAC5YefEAAAAC" "-" "GET /loadbalancer.php HTTP/1.0" 200 74 "-" "HTTP-Monitor/1.1" "-" (332)\
+EOF
+: 1401187889:0;~/area_51/logstash-1.4.1/bin/logstash -f./lamp-log.conf.erb
+: 1401187951:0;NEW=6;sudo cp guealampweb0{3,$NEW}_apps_access
+: 1401188067:0;NEW=5;cp guealampweb0{4,$NEW}_apps_ssl_error.log
+: 1401188120:0;sudo cp guealampweb0{4,$NEW}_apps_ssl_error.log
+: 1401191257:0;cd ~/.bash
+: 1401191259:0;ls
+: 1401191278:0;cd -P .
+: 1401191280:0;ls
+: 1401191289:0;vim bash_aliases
+: 1401191388:0;vim ~/.zshrc
+: 1401191478:0;ls
+: 1401191482:0;cd ../
+: 1401191482:0;ls
+: 1401191488:0;mkdir .zsh
+: 1401191494:0;mv .zsh zsh
+: 1401191495:0;ls
+: 1401191504:0;cd ~/.oh-my-zsh
+: 1401191505:0;ls
+: 1401191506:0;ls plugins
+: 1401191592:0;vim ~/.zsh
+: 1401191596:0;vim ~/.zshrc
+: 1401191840:0;exit
+: 1401191870:0;ls
+: 1401191872:0;ls bin
+: 1401191880:0;cat bin/docx2txt.pl
+: 1401191890:0;ls .oh-my-zsh/plugins
+: 1401191902:0;ls .oh-my-zsh/plugins/colorize
+: 1401191928:0;LS source .oh-my-zsh/plugins/colorize/colorize.plugin.zsh
+: 1401191961:0;source .oh-my-zsh/plugins/colorize/colorize.plugin.zsh
+: 1401191965:0;cat bin/docx2txt.pl
+: 1401191975:0;catman bin/docx2txt.pl
+: 1401191979:0;cat 1%
+: 1401191984:0;cat bin/docx2txt.pl
+: 1401192039:0;l
+: 1401192053:0;echo $TERM
+: 1401192065:0;cp dead.letter /tmp/
+: 1401192076:0;echo $plugin
+: 1401192085:0;vim ~/.zsh
+: 1401192090:0;vim ~/.zshrc
+: 1401192110:0;echo $plugins
+: 1401192204:0;cd .oh-my-zsh
+: 1401192205:0;ks
+: 1401192206:0;ls
+: 1401192208:0;ls lib
+: 1401192214:0;cd lib
+: 1401192214:0;ls
+: 1401192217:0;cat aliases.zsh
+: 1401192281:0;cd ...
+: 1401192282:0;ls
+: 1401192288:0;cd .oh-my-zsh
+: 1401192289:0;ls
+: 1401192292:0;ls custom
+: 1401192295:0;ls custom/plugins
+: 1401192298:0;ls custom/plugins/example
+: 1401192311:0;cat custom/plugins/example/example.plugin.zsh
+: 1401192329:0;cat custom/example.zsh
+: 1401192411:0;gst
+: 1401192416:0;gd
+: 1401192885:0;ls plugins
+: 1401193024:0;vim plugins/sudo/sudo.plugin.zsh
+: 1401193132:0;exit
+: 1401193162:0;vim plugins/vim-interaction/README.md
+: 1401193183:0;vim plugins/vi-mode
+: 1401193238:0;exit
+: 1401193309:0;grep -i log *
+: 1401193311:0;ls
+: 1401193314:0;grep -i log * -R
+: 1401193326:0;ls
+: 1401193335:0;cd.
+: 1401193339:0;cd..
+: 1401193341:0;ls
+: 1401193346:0;cd sbg_httpd
+: 1401193347:0;ls
+: 1401193351:0;grep -i log * -R
+: 1401193422:0;ranger
+: 1401193514:0;grep -i log templates/default/httpd/*
+: 1401193553:0;grep -iE '(Custom|error)?log(Format)?' templates/default/httpd/*
+: 1401193570:0;grep -iE '^[[:space:]]*(Custom|error)?log(Format)?' templates/default/httpd/*
+: 1401193608:0;grep -iE '^[[:space:]]*(Custom|error)?log(Format)?' *
+: 1401193625:0;grep -iRE '^[[:space:]]*(Custom|error)?log(Format)?' *
+: 1401193848:0;ssh gueagamlogstash01 ip a dev eth0
+: 1401193865:0;ssh gueagamlogstash01 ifconfig
+: 1401193882:0;ssh gueagamlogstash01 /sbin/ip a dev eth0
+: 1401193908:0;ip a show dev em1
+: 1401193913:0;ssh gueagamlogstash01 /sbin/ip a show dev eth0
+: 1401194712:0;cd ~/.oh-my-zsh/custom
+: 1401194712:0;ls
+: 1401194721:0;vim aliases.zsh
+: 1401194901:0;exit
+: 1401194916:0;vim .oh-my-zsh/custom/aliases.zsh
+: 1401194925:0;fg
+: 1401194946:0;type -P type
+: 1401194954:0;type -p type
+: 1401194957:0;type -p ip
+: 1401194973:0;type -a ip
+: 1401194994:0;fg
+: 1401195033:0;exit
+: 1401195040:0;alias
+: 1401195198:0;colorize bin/docx2txt.pl
+: 1401195205:0;fg
+: 1401195214:0;vim ~/.oh-my-zsh/custom/aliases.zsh
+: 1401195237:0;source ~/.oh-my-zsh/custom/aliases.zsh
+: 1401195244:0;cat ~/bin/docx2txt.pl
+: 1401195258:0;alias | vless
+: 1401195629:0;clear
+: 1401196529:0;ssh guealogstashtst03
+: 1401196664:0;sudo lsof -i -sTCP:LISTEN -P
+: 1401196745:0;iptables -L
+: 1401196779:0;cat /etc/sysconfig/iptables
+: 1401196784:0;sudo cat /etc/sysconfig/iptables
+: 1401197106:0;ssh gueagamlogstash01
+: 1401197610:0;ls
+: 1401197612:0;cd ../
+: 1401197612:0;ls
+: 1401197618:0;cd sbg_elk
+: 1401197618:0;ls
+: 1401197621:0;ls re
+: 1401197624:0;ls recipes
+: 1401197639:0;cat recipes/elasticsearch.rb
+: 1401197832:0;grep -iR kibana ../*
+: 1401197885:0;ssh guealogstashtst03 
+: 1401198420:0;cd .peteches-configs/powerline/themes/tmux/
+: 1401198421:0;ls
+: 1401198425:0;cat peteches.json
+: 1401198434:0;vim peteches.json
+: 1401198673:0;powerline-daemon -r
+: 1401198730:0;clear
+: 1401198739:0;exit
+: 1401199499:0;ssh guealogstashtst03 
+: 1401200113:0;cd ~/area_51
+: 1401200114:0;ls
+: 1401200129:0;md kibana
+: 1401200132:0;ls
+: 1401200137:0;cd kibana
+: 1401200138:0;ls
+: 1401200142:0;wget http://download.elasticsearch.org/kibana/kibana/kibana-latest.zip
+: 1401200147:0;x kibana-latest.zip
+: 1401200159:0;source ~/.zshrc
+: 1401200162:0;x kibana-latest.zip
+: 1401200176:0;unzip kibana-latest.zip
+: 1401200178:0;ls
+: 1401200183:0;ls kibana-latest
+: 1401200192:0;cat index.html
+: 1401200199:0;cat kibana-latest/index.html
+: 1401200216:0;netstat -tlpn
+: 1401200232:0;python -m simpleHTTP
+: 1401200257:0;python -m simpleHTTPserver
+: 1401200267:0;python -m SimpleHTTPserver
+: 1401200277:0;yum search simpleHTTPserver
+: 1401200283:0;python -m SimpleHTTPServer
+: 1401200791:0;vim recipes/elasticsearch.rb
+: 1401200821:0;g grep kibana
+: 1401200837:0;ls templates
+: 1401200839:0;default
+: 1401200844:0;ls templates/default
+: 1401200848:0;ls templates/default/httpd
+: 1401200851:0;ls templates/default/httpd/kibana.erb
+: 1401200855:0;cat templates/default/httpd/kibana.erb
+: 1401200894:0;ssh guealogstashtst03 
+: 1401201085:0;ssh gueagamlogstash01
+: 1401201471:0;lsof -p $( type -p firefox)
+: 1401201487:0;lsof -p $( pgrep firefox)
+: 1401201502:0;lsof /home/peteches/.cache/mozilla/firefox/o9h10cn8.default/Cache/_CACHE_003_
+: 1401201533:0;lsof -i 4 -s TCP:ESTABLISHED  -p $( pgrep firefox)
+: 1401201542:0;lsof -i 4 -s TCP:ESTABLISHED -a  -p $( pgrep firefox)
+: 1401201739:0;gb
+: 1401201750:0;gp
+: 1401201785:0;gco TEST_3
+: 1401201791:0;git stash
+: 1401201796:0;gco TEST_3
+: 1401201798:0;ls
+: 1401201802:0;cd ...
+: 1401201806:0;..
+: 1401201807:0;ls
+: 1401201811:0;ls recipes
+: 1401201823:0;cat recipes/kibana.rb
+: 1401201840:0;ls *
+: 1401201850:0;gco dev-rm20489-logstashToProd
+: 1401201860:0;gm TEST_3
+: 1401201879:0;git pull
+: 1401201889:0;gco TEST_3
+: 1401201900:0;git reset --hard
+: 1401201926:0;git stash apply
+: 1401201934:0;git stash
+: 1401201939:0;gco TEST_3
+: 1401201942:0;gp
+: 1401201966:0;git pull
+: 1401201972:0;alias gp
+: 1401201979:0;alias
+: 1401201989:0;alias | grep git
+: 1401201994:0;gl
+: 1401202010:0;gco dev-rm20489-logstashToProd
+: 1401202017:0;alias | grep git
+: 1401202025:0;gm TEST_3
+: 1401202050:0;ls recipes
+: 1401202056:0;git stash apply
+: 1401202060:0;ls recipes
+: 1401202067:0;vim recipes/logstash.rb
+: 1401202180:0;bc <<< 07.5+8.5
+: 1401203003:0;gs
+: 1401203042:0;alias | grep status
+: 1401203049:0;gst
+: 1401265826:0;git diff
+: 1401265834:0;vim recipes/logstash.rb
+: 1401268723:0;git checkout TEST_2
+: 1401268734:0;git status
+: 1401268768:0;git reset HEAD recipes/logstash.rb
+: 1401268773:0;git status
+: 1401268791:0;git checkout TEST_2
+: 1401268804:0;alias gl
+: 1401268807:0;gl
+: 1401268812:0;ks
+: 1401268813:0;ls
+: 1401268816:0;cd ../
+: 1401268817:0;ls
+: 1401268824:0;cd sbg_logstash_server
+: 1401268825:0;ls
+: 1401268829:0;ls recipes
+: 1401268847:0;ls
+: 1401268850:0;ls templates
+: 1401268853:0;ls templates/default
+: 1401268866:0;git status
+: 1401268909:0;diff ../sbg_elk/recipes/logstash.rb recipes/logstash.rb
+: 1401268912:0;diff ../sbg_elk/recipes/logstash.rb recipes/logstash.rb -u
+: 1401268924:0;vime ../sbg_elk/recipes/logstash.rb recipes/logstash.rb
+: 1401268930:0;vim ../sbg_elk/recipes/logstash.rb recipes/logstash.rb
+: 1401268941:0;vim ../sbg_elk/recipes/logstash.rb recipes/logstash.rb -p
+: 1401268948:0;vim ../sbg_elk/recipes/logstash.rb recipes/logstash.rb -o
+: 1401268953:0;vim ../sbg_elk/recipes/logstash.rb recipes/logstash.rb -O
+: 1401269125:0;yu
+: 1401269229:0;man trousers
+: 1401269241:0;rpm -ql trousers
+: 1401269267:0;vless /usr/share/doc/trousers/README
+: 1401269278:0;less /usr/share/doc/trousers/README
+: 1401269303:0;clear
+: 1401269660:0;ls
+: 1401269669:0;ls attributes/default.rb
+: 1401269674:0;cat attributes/default.rb
+: 1401269689:0;cat attributes/*
+: 1401269723:0;ls
+: 1401269726:0;ls templates
+: 1401269730:0;ls templates/default
+: 1401270385:0;gco dev-rm20489-logstashToProd
+: 1401270387:0;ls
+: 1401270390:0;cd ../
+: 1401270391:0;ls
+: 1401270406:0;ls sbg_logstash_server
+: 1401270407:0;ls
+: 1401270441:0;gst
+: 1401270727:0;ls
+: 1401270738:0;cd sbg_logstash_server
+: 1401270745:0;gco LIVE
+: 1401270752:0;ls
+: 1401270759:0;git stash
+: 1401270761:0;gco LIVE
+: 1401270764:0;ls
+: 1401270767:0;cd ../
+: 1401270769:0;ls
+: 1401270773:0;ls -la
+: 1401270795:0;alias | grep 'git log\
+'
+: 1401270828:0;alias | grep 'git log'\
+
+: 1401270854:0;glo
+: 1401270867:0;glg
+: 1401270885:0;glg ./sbg_elk
+: 1401270914:0;glgg ./sbg_elk
+: 1401270944:0;ls
+: 1401270953:0;glgg sbg_elk
+: 1401270958:0;glgg 
+: 1401271142:0;git log --name-only 
+: 1401271191:0;gco dev-rm20489-logstashToProd
+: 1401271196:0;glg
+: 1401271238:0;glg --author="Pete \"Peteches\" McCabe"
+: 1401271292:0;git status
+: 1401271939:0;ls sbg_elk/templates/default/logstash
+: 1401271952:0;ls sbg_elk/files/default/logstash
+: 1401272032:0;gst
+: 1401272114:0;gitstash-logstash_pat-conf=$(git stash create)
+: 1401272356:0;gitstashLogstashPatConf=$(git stash create)
+: 1401272366:0;echo $gitstashLogstashPatConf
+: 1401272370:0;gst
+: 1401272383:0;ls
+: 1401272386:0;cd ../
+: 1401272386:0;ls
+: 1401272392:0;cd roles
+: 1401272392:0;ls
+: 1401272403:0;ls *logstash*
+: 1401272421:0;git log *logstash*
+: 1401272443:0;vim -O *logstash*
+: 1401272505:0;cd ../
+: 1401272506:0;ls
+: 1401272522:0;grep logstash nodes/**
+: 1401272529:0;grep logstash nodes/**/*
+: 1401272544:0;grep logstash nodes/**/*(.)
+: 1401272630:0;vim nodes/LIVE/gueagamlogstash0* -O
+: 1401272665:0;grep logstash nodes/**/*(.)
+: 1401272688:0;vim -O roles/*logstash*
+: 1401272787:0;git status
+: 1401272825:0;alias | grep 'git diff
+: 1401272827:0;alias | grep 'git diff'
+: 1401272832:0;gd
+: 1401272867:0;alias | grep 'git add'
+: 1401273357:0;ga nodes/LIVE/gueagamlogstash01.rb nodes/LIVE/gueagamlogstash02.rb roles/sbg-logstash-server.rb
+: 1401273361:0;gst
+: 1401273401:0;ls
+: 1401273420:0;cat nodes/LIVE/gueagamlogstash01.rb
+: 1401273461:0;grep -f 'role[sbg-logstash]' nodes -R
+: 1401273468:0;grep -F 'role[sbg-logstash]' nodes -R
+: 1401273475:0;grep -F 'role[sbg-logstash-server]' nodes -R
+: 1401273480:0;grep -F 'role[sbg-logstash]' nodes -R
+: 1401273518:0;grep -E 'sbg.elk' nodes -R
+: 1401273640:0;gst
+: 1401273661:0;cd cookbooks/sbg_elk
+: 1401273662:0;ls
+: 1401273673:0;vim recipes/kibana.rb 
+: 1401273871:0;git commit --verbose
+: 1401274372:0;cd ../../
+: 1401274401:0;grep -F 'role[sbg-logstash' -R *
+: 1401274433:0;fg
+: 1401274500:0;git status
+: 1401274504:0;glg
+: 1401274591:0;alias | grep 'git push'
+: 1401274614:0;ggpnp
+: 1401279435:0;gst
+: 1401280031:0;glg
+: 1401280046:0;glgg
+: 1401280058:0;gitk
+: 1401280535:0;git merge-base
+: 1401280543:0;git merge-base ./
+: 1401280790:0;vim nodes/LIVE/gueagamlogstash01.rb
+: 1401280864:0;git log -n 1
+: 1401280873:0;vim nodes/LIVE/gueagamlogstash01.rb
+: 1401280878:0;vim
+: 1401281134:0;glg
+: 1401281175:0;glg --author="John Denholm"
+: 1401281356:0;git branch --contains="5245a470080352e0ba17552a89621e945ad4fcdf" 
+: 1401281439:0;alias -g G='|& grep -E'
+: 1401281451:0;git log G 5245a470080352e0ba17552a89621e945ad4fcdf
+: 1401281459:0;git log G 5245a470080352e0ba17552a89621e945ad4fcdf -A3
+: 1401281465:0;git log G 5245a470080352e0ba17552a89621e945ad4fcdf -C3
+: 1401281474:0;git log G 5245a470080352e0ba17552a89621e945ad4fcdf -A10
+: 1401281509:0;clear
+: 1401281512:0;git status
+: 1401281521:0;gco TEST_2
+: 1401281524:0;gl
+: 1401281570:0;gco -b dev-rm20490-logstashconf
+: 1401281579:0;git status
+: 1401281602:0;alias G 'git move'
+: 1401281604:0;alias G 'git mv'
+: 1401281607:0;alias G 'git'
+: 1401281628:0;alias G 'git' G move
+: 1401281666:0;echo "hi G "hope your well"
+: 1401281672:0;echo "hi G "hope your well
+: 1401281681:0;echo hi G hope your well
+: 1401281701:0;git status
+: 1401281786:0;mv cookbooks/sbg_elk/files/default/logstash cookbooks/sbg_logstash_server/files/default 
+: 1401281791:0;md cookbooks/sbg_logstash_server/files/default
+: 1401281792:0;mv cookbooks/sbg_elk/files/default/logstash cookbooks/sbg_logstash_server/files/default 
+: 1401281796:0;git status
+: 1401281810:0;md cookbooks/sbg_logstash_server/templates/default
+: 1401281835:0;mv cookbooks/sbg_elk/templates/default/logstash cookbooks/sbg_logstash_server/templates/default
+: 1401281839:0;gst
+: 1401281858:0;ga cookbooks/sbg_logstash_server/
+: 1401281861:0;gst
+: 1401281877:0;gco dev-rm20489-logstashToProd
+: 1401281884:0;git status
+: 1401281905:0;gco dev-rm20490-logstashconf
+: 1401281910:0;gst
+: 1401281985:0;git stash create
+: 1401282015:0;gitstash-rm20490=cd7b95457027d5d8b2f1cfdcf7510cd4d0f808d9
+: 1401282023:0;gitstash_rm20490=cd7b95457027d5d8b2f1cfdcf7510cd4d0f808d9
+: 1401282032:0;gst
+: 1401282049:0;git stash
+: 1401282063:0;ls
+: 1401282065:0;gst
+: 1401282078:0;gco dev-rm20489-logstashToProd
+: 1401282080:0;gst
+: 1401282087:0;glg
+: 1401282095:0;ls
+: 1401282111:0;grep -R 'sbg_elk' *
+: 1401283535:0;echo ${(#)65}
+: 1401283539:0;i=65
+: 1401283542:0;echo ${(#)i}
+: 1401283570:0;echo ${(%)PS1}
+: 1401283579:0;echo ${(%%)PS1}
+: 1401283758:0;exit
+: 1401283802:0;ls
+: 1401283807:0;clear
+: 1401283818:0;ls
+: 1401283833:0;gco dev-rm20490-logstashconf
+: 1401283838:0;git stash list
+: 1401283883:0;git stash pop
+: 1401283889:0;gd
+: 1401283895:0;gst
+: 1401283915:0;cd ../sbg_logstash_server/files/default/logstash
+: 1401283916:0;ls
+: 1401283921:0;vim sbg_apache
+: 1401283951:0;ls
+: 1401283957:0;gst
+: 1401283975:0;cd ....
+: 1401283978:0;ls
+: 1401283985:0;cd templates/default/logstash
+: 1401283986:0;ls
+: 1401283989:0;vim lamp-log.conf.erb
+: 1401284063:0;gco dev-rm20489-logstashToProd
+: 1401284067:0;gst
+: 1401284084:0;gco dev-rm20490-logstashconf
+: 1401284087:0;git stash
+: 1401284090:0;gco dev-rm20489-logstashToProd
+: 1401284093:0;gst
+: 1401284110:0;...
+: 1401284114:0;gco
+: 1401284118:0;gst
+: 1401284123:0;glg
+: 1401284143:0;gco dev-rm20489-logstashToProd
+: 1401284145:0;gst
+: 1401284147:0;glg
+: 1401284243:0;gd 8922c74b6682ec51ad832b7550f36c611a1b580a 5d0f359b466337dd9b640f9b2131bd75e22bbd92
+: 1401284270:0;....
+: 1401284276:0;...
+: 1401284280:0;..
+: 1401284311:0;grep -E 'sbg.logstash.server' -R *
+: 1401284402:0;vim cookbooks/sbg_elk/templates/default/logstash-server-sysconfig.erb
+: 1401284751:0;gl
+: 1401284757:0;gco TEST_2
+: 1401284764:0;gl
+: 1401284777:0;alias G merge
+: 1401284794:0;git merge dev-rm20489-logstashToProd
+: 1401284823:0;alias G push
+: 1401284832:0;alias G
+: 1401284842:0;alias G='| grep '
+: 1401284845:0;alias G push
+: 1401284874:0;alias | grep push
+: 1401284895:0;ggpush
+: 1401285034:0;ssh guealogstashtst03
+: 1401286310:0;cd .oh-my-zsh/custom/
+: 1401286311:0;ls
+: 1401286319:0;cd ../
+: 1401286320:0;ls
+: 1401286348:0;grep ggpush plugins/git/*
+: 1401286362:0;ls plugins/git/
+: 1401286425:0;cp plugins/git/git.plugin.zsh custom/plugins/git/
+: 1401286429:0;md custom/plugins/git/
+: 1401286431:0;cp plugins/git/git.plugin.zsh custom/plugins/git/
+: 1401286439:0;vim custom/plugins/git/git.plugin.zsh
+: 1401286730:0;v=one
+: 1401286753:0;[[ $v =~ one|two ]] && echo "True"
+: 1401286759:0;[[ $v =~ "one|two" ]] && echo "True"
+: 1401286768:0;[[ $v =~ ".*" ]] && echo "True"
+: 1401286773:0;[[ $v =~ "fd" ]] && echo "True"
+: 1401286816:0;git branch
+: 1401286823:0;git branch -a
+: 1401286929:0;for i in STAGE TEST_{1..8} LIVE dev-veg-195 dev-rm20480 ; do [[ $i =~ "STAGE|LIVE|TEST_[1-8]" ]] && echo $i matches || echo $i does not match; done
+: 1401286995:0;xdgopen http://gueaplatci01.skybet.net:8080/job/TEST_3
+: 1401287019:0;xdg-open http://gueaplatci01.skybet.net:8080/job/TEST_3
+: 1401287051:0;exit
+: 1401287059:0;. ~/.zsh
+: 1401287063:0;. ~/.zshrc
+: 1401287071:0;gco TEST_3
+: 1401287079:0;gl
+: 1401287123:0;git merge dev-rm20489-logstashToProd
+: 1401287137:0;ggpush
+: 1401287542:0;gco LIVE
+: 1401287543:0;gl
+: 1401287555:0;git merge TEST_3
+: 1401287589:0;ggpush
+: 1401288128:0;for i in {0..128}; do printf "%d %s" $i  ${(#)i}; done
+: 1401288145:0;for i in {0..128}; do printf "%d %s\n" $i ${(#)i}; done
+: 1401288153:0;for i in {0..128}; do printf "%3-d %s\n" $i ${(#)i}; done
+: 1401288158:0;for i in {0..128}; do printf "%3d %s\n" $i ${(#)i}; done
+: 1401288212:0;for i in {0..$((128/4))}; do printf "%3d %s" $i ${(#)${i}+2}; done
+: 1401288340:0;for i in {0..$((128/4))}; do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q}     ;  done
+: 1401288351:0;for i in {0..$((128/4))}; do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q}     ;  done
+: 1401288392:0;for i in {0..$((128/4))}; do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q}; i=$q+1     ;  done
+: 1401288486:0;while ( [[ $i -le 128 ]] ); do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q} ; $i=$p+1  done
+: 1401288491:0;while ( [[ $i -le 128 ]] ); do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q} ; $i=$p+1;  done
+: 1401288518:0;while ( [[ $i -le 128 ]] ); do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q} ; i=$p+1;  done
+: 1401288522:0;i=0
+: 1401288523:0;while ( [[ $i -le 128 ]] ); do o=$i+1; p=$o+1; q=$p+1; printf "%3d %s %3d %s %3d %s %3d %s\n" $i ${(#)i} $o ${(#)o} $p ${(#)p} $q ${(#)q} ; i=$p+1;  done
+: 1401288922:0;ssh gueagamlogstash01
+: 1401293858:0;cd ~/.oh-my-zsh
+: 1401293859:0;ls
+: 1401293885:0;mkdir custom/themes
+: 1401293899:0;cp themes/agnoster.zsh-theme custom/themes
+: 1401293912:0;cd custom/themes
+: 1401293913:0;ls
+: 1401293918:0;vim agnoster.zsh-theme
+: 1401294159:0;ls
+: 1401294161:0;rm agnoster.zsh-theme
+: 1401294164:0;cd ../
+: 1401294164:0;ls
+: 1401294176:0;man -k alias
+: 1401294189:0;man 1p alias
+: 1401294198:0;man -k zsh
+: 1401294210:0;man zshall
+: 1401351430:0;ssh gueagamlogstash02
+: 1401353386:0;ssh gueagamlogstash01
+: 1401353604:0;cd cookbooks/sbg_logstash_server
+: 1401353604:0;ls
+: 1401353632:0;cd .oh-my-zsh
+: 1401353633:0;ls
+: 1401353646:0;cd custom
+: 1401353648:0;ls
+: 1401353671:0;vim paths.zsh
+: 1401353725:0;. ~/.oh-my-zsh/custom/paths.zsh
+: 1401353759:0;cookbooks=chef/cookbooks
+: 1401353792:0;clear
+: 1401353793:0;ls
+: 1401353836:0;gco dev-rm20490-logstashconf
+: 1401353843:0;git stash apply
+: 1401353872:0;gst
+: 1401353910:0;vim templates/default/logstash/lamp-log.conf.erb
+: 1401354647:0;sudo systemctl reboot
+: 1401355627:0;yu
+: 1401356940:0;cd platevo
+: 1401356941:0;ls
+: 1401356960:0;cd chef/cookbooks/sbg_logstash_server
+: 1401356962:0;ls
+: 1401356964:0;gst
+: 1401356983:0;echo $plugins
+: 1401356993:0;alias | grep git
+: 1401357011:0;cd ~/.oh-my-zsh
+: 1401357016:0;cd 
+: 1401357025:0;cd ZSH_CUSTOM
+: 1401357026:0;ls
+: 1401357034:0;ls plugins
+: 1401357038:0;ls plugins/git
+: 1401357047:0;cat plugins/git/git.plugin.zsh
+: 1401357057:0;cat plugins/git/git.plugin.zsh >> aliases.zsh
+: 1401357059:0;cat aliases.zsh
+: 1401357069:0;cat plugins/git/git.plugin.zsh
+: 1401357104:0;vim aliases.zsh
+: 1401357146:0;rm plugins/git 
+: 1401357150:0;rm plugins/git  -rf
+: 1401357159:0;. ~/.zshrc
+: 1401357166:0;alias | grep ggpush
+: 1401357171:0;alias | grep git
+: 1401357186:0;cd
+: 1401357198:0;cd platevo/chef/cookbooks/sbg_logstash_server/
+: 1401357201:0;ls
+: 1401357204:0;gst
+: 1401357259:0;vim files/default/logstash/apache_patterns
+: 1401357279:0;vim templates/default/logstash/lamp-log.conf.erb
+: 1401357401:0;..
+: 1401357407:0;...
+: 1401357411:0;cd chef/nodes
+: 1401357412:0;ls
+: 1401357462:0;ls TEST_1
+: 1401357547:0;bingo
+: 1401357596:0;ls TEST_?
+: 1401357608:0;ls TEST_? -1
+: 1401357853:0;ssh gueanms01.skybet.net
+: 1401358172:0;tmux
+: 1401358373:0;exit
+: 1401358379:0;ssh nms01
+: 1401358384:0;ssh gueanms01.skybet.net
+: 1401358516:0;ssh guealamppushstg03
+: 1401358523:0;ssh guealamppushstg04
+: 1401360415:0;cd platevo
+: 1401360426:0;cd chef
+: 1401360431:0;ls nodes/STAGE
+: 1401360445:0;ls nodes/STAGE/*push*
+: 1401360450:0;cd ....
+: 1401360455:0;cd gitrepos/chef
+: 1401360456:0;ls
+: 1401360459:0;cd nodes
+: 1401360460:0;sl
+: 1401360464:0;ls staging/*push*
+: 1401360472:0;vim staging/*push*
+: 1401360501:0;cat staging/*push*
+: 1401360546:0;cd ../roles/skybet/lamp/sportsbook/push/
+: 1401360547:0;sl
+: 1401360548:0;ls
+: 1401360552:0;vim mplex.rb
+: 1401360575:0;cat mplex.rb
+: 1401360612:0;ls
+: 1401360615:0;cat default.rb
+: 1401360639:0;cd ../
+: 1401360643:0;la
+: 1401360646:0;ls push
+: 1401360679:0;vim ../common/push/default.rb
+: 1401360705:0;cd ../common
+: 1401360706:0;ls
+: 1401360710:0;vim default.rb
+: 1401360719:0;cd ../
+: 1401360720:0;vim default.rb
+: 1401360741:0;ls
+: 1401360751:0;grep \.crt * -R
+: 1401360755:0;cd ../
+: 1401360767:0;ls
+: 1401360778:0;grep -FR '.crt' cookbooks/*
+: 1401360967:0;grep -FRI '.crt' cookbooks/*
+: 1401361009:0;grep -ERI 'poker.*\.crt' cookbooks/*
+: 1401361019:0;grep -ERI 'poker.*\.crt' *
+: 1401361028:0;grep -ERI '.crt' *
+: 1401361230:0;grep -ERI '.crt' * | columns -t:
+: 1401361233:0;grep -ERI '.crt' * | column -t:
+: 1401361237:0;grep -ERI '.crt' * | column -ts:
+: 1401361275:0;sl
+: 1401361283:0;ls environments
+: 1401361294:0;cat environments/staging.rb
+: 1401361316:0;ls cookbooks
+: 1401361323:0;ls cookbooks/skybet
+: 1401361364:0;ls cookbooks/skybet/skybet_apachehttpd/files/sportsbook/ssl.conf
+: 1401361369:0;cat cookbooks/skybet/skybet_apachehttpd/files/sportsbook/ssl.conf
+: 1401361396:0;find . -name \*poker\*.crt
+: 1401361417:0;ls
+: 1401361432:0;ls cookbooks/
+: 1401361436:0;ls cookbooks/skybet
+: 1401361465:0;ls cookbooks/skybet/skybet_stunnel
+: 1401361471:0;ls cookbooks/skybet/skybet_stunnel/re
+: 1401361474:0;ls cookbooks/skybet/skybet_stunnel/recipes
+: 1401361479:0;ls cookbooks/skybet/skybet_stunnel/recipes/push.rb
+: 1401361484:0;cat cookbooks/skybet/skybet_stunnel/recipes/push.rb
+: 1401361528:0;ls
+: 1401361537:0;cat cookbooks/skybet/skybet_stunnel/attributes/default.rb
+: 1401361578:0;cat nodes/staging/guealamppushstg01.rb
+: 1401361623:0;ls
+: 1401361631:0;ls data_bags
+: 1401361639:0;ls environments
+: 1401361669:0;cat environments/staging*
+: 1401361688:0;ls
+: 1401361697:0;ls config
+: 1401361709:0;ls cookbooks
+: 1401361721:0;cd cookbooks/skybet/skybet_stunnel
+: 1401361723:0;ls
+: 1401361734:0;ld **/*(.)
+: 1401361742:0;ls **/*(.)
+: 1401361750:0;ls **/*(.) -1
+: 1401361774:0;cat attributes/default.rb
+: 1401361779:0;cd ../
+: 1401361780:0;sl
+: 1401361781:0;ls
+: 1401361812:0;grep skypoker **/attributes/*(.)
+: 1401361825:0;ls **/attributes/*(.)
+: 1401361833:0;cd ../
+: 1401361834:0;ls **/attributes/*(.)
+: 1401361837:0;grep skypoker **/attributes/*(.)
+: 1401361840:0;cd ../
+: 1401361844:0;grep skypoker **/attributes/*(.)
+: 1401361873:0;ls
+: 1401361882:0;ls tools
+: 1401362215:0;gl
+: 1401362224:0;grep skypoker **/attributes/*(.)
+: 1401362249:0;grep crt **/attributes/*(.)
+: 1401362284:0;grep crt **/*(.)
+: 1401362293:0;grep -I  crt **/*(.)
+: 1401362354:0;cat cookbooks/skybet/skybet_stunnel/recipes/push.rb
+: 1401362369:0;ls
+: 1401362385:0;cat cookbooks/skybet/skybet_stunnel/templates/default/stunnel.conf.erb
+: 1401362400:0;cat cookbooks/skybet/skybet_stunnel/recipes/push.rb
+: 1401362461:0;grep -FI node['push']['multiplex']['path']['key'] **/*(.)
+: 1401362472:0;grep -FI "node['push']['multiplex']['path']['key']" **/*(.)
+: 1401362562:0;cd ../../
+: 1401362563:0;ls
+: 1401362569:0;ssh nms01
+: 1401362585:0;ssh gueanms01.skybet.net
+: 1401362997:0;exit
+: 1401363185:0;ls
+: 1401363210:0;ls area_51/kibana/kibana-latest/../kibana-latest.zip:a
+: 1401363238:0;ls ~/.vim
+: 1401363643:0;echo ${(j:@@:)plugins}
+: 1401363706:0;echo ${(l:10:>:<:)plugins}
+: 1401363719:0;echo ${(l:10::>::<:)plugins}
+: 1401363809:0;echo ${(B)plugins}
+: 1401364004:0;echo =ls
+: 1401364094:0;ls
+: 1401364114:0;ks (D|g)^o*
+: 1401364123:0;ks (D|g)*
+: 1401364129:0;ls (D|g)^o*
+: 1401364187:0;ls (D|g)
+: 1401364194:0;ls (D|g)*
+: 1401364202:0;ls (D|g)^o*
+: 1401364252:0;ls (D|g)~o*
+: 1401364269:0;ls (D|g)*~o
+: 1401364278:0;ls (D|g)*~Do
+: 1401364283:0;ls (D|g)*~Do*
+: 1401364360:0;ls *(/)
+: 1401364369:0;ls *(^F)
+: 1401364378:0;ls *(@)
+: 1401364381:0;ls *(^@)
+: 1401364388:0;ls -d *(^@)
+: 1401364395:0;ls -d **(=)
+: 1401364403:0;ls -d /tmp/**(=)
+: 1401364408:0;ls -d /tmp/**(P)
+: 1401364420:0;ls -d /tmp/**(p)
+: 1401364427:0;ls -d /tmp/**(*)
+: 1401364438:0;ls -d **(*)
+: 1401364450:0;ls ./bin/(*)
+: 1401364457:0;ls bin
+: 1401364465:0;ls bin -l
+: 1401364483:0;ls .peteches-configs/scripts/*(*)
+: 1401364666:0;ls bin/*(-*)
+: 1401364912:0;cd platevo
+: 1401364916:0;gst
+: 1401367947:0;iptables -udo 
+: 1401367960:0;sudo iptables -L
+: 1401371596:0;ip a
+: 1401372550:0;yum isntall bzr
+: 1401372559:0;yi bazzaar
+: 1401372569:0;ys baz
+: 1401372590:0;alias | yum
+: 1401372598:0;alias | grep yum
+: 1401372655:0;echo "alias yi='sudo yum install --assumeyes'" >> .oh-my-zsh/custom/aliases.zsh
+: 1401372660:0;cat .oh-my-zsh/custom/aliases.zsh
+: 1401372690:0;. .oh-my-zsh/custom/aliases.zsh
+: 1401372694:0;yi bzr
+: 1401372704:0;cd ~
+: 1401372705:0;ls
+: 1401372716:0;alias | grep md
+: 1401372747:0;ls
+: 1401372753:0;cd area_51
+: 1401372753:0;ls
+: 1401372777:0;bzr branch lp:graphite
+: 1401372852:0;ls
+: 1401372858:0;cd graphite
+: 1401372859:0;ls
+: 1401372871:0;./check-dependencies.py
+: 1401372888:0;cd ../
+: 1401372893:0;ys graphite
+: 1401372901:0;rm graphite
+: 1401372904:0;rm graphite -rf
+: 1401372985:0;yi graphite-web
+: 1401373003:0;netstat -tlpn
+: 1401373021:0;sc-list-jobs
+: 1401373030:0;sc-list-units
+: 1401373073:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch
+: 1401373086:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch G systemctl
+: 1401373105:0;vim ~ZSH_CUSTOM/aliases.zsh
+: 1401373197:0;. ~ZSH_CUSTOM/aliases.zsh
+: 1401373201:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch G systemctl
+: 1401373212:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch C/
+: 1401373215:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch C /
+: 1401373228:0;clea
+: 1401373229:0;clear
+: 1401373235:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch G system
+: 1401373236:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch G sys
+: 1401373238:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch G s
+: 1401373287:0;vim ~ZSH_CUSTOM/functions.zsh
+: 1401373709:0;vim ~/.vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401373754:0;type -h
+: 1401373757:0;type --help
+: 1401373766:0;man zshbuiltins
+: 1401374275:0;vim ~ZSH_CUSTOM/functions.zsh
+: 1401374305:0;peteConf=~/.peteches-configs/
+: 1401374312:0;cd peteConf
+: 1401374314:0;ls
+: 1401374317:0;gst
+: 1401374333:0;ga vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374341:0;gcv
+: 1401374359:0;alias G commit
+: 1401374364:0;gc
+: 1401374442:0;vim vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374454:0;gd vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374473:0;cat vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374518:0;vim ~/.vimrc
+: 1401374549:0;vim vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374556:0;gc
+: 1401374579:0;cat vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374585:0;cat vim/bundle/cmd_expander/plugin/cmd_expander.vim | od -c
+: 1401374597:0;gc
+: 1401374635:0;ga vim/bundle/cmd_expander/plugin/cmd_expander.vim
+: 1401374637:0;gc
+: 1401374755:0;ggpush
+: 1401374774:0;ga vim/vimrc
+: 1401374777:0;gc
+: 1401374882:0;ggpush
+: 1401374902:0;ls 
+: 1401374905:0;ls zsh
+: 1401374921:0;cd zsh
+: 1401374933:0;cd 
+: 1401374939:0;cd ZSH_CUSTOM
+: 1401374940:0;ls
+: 1401374944:0;vim functions.zsh
+: 1401374952:0;. ssh_func
+: 1401374959:0;. ./functions.zsh
+: 1401374965:0;cd /tmp
+: 1401374976:0;md hi/this/is/a/dir
+: 1401374988:0;ls hi/this/is/a/dir
+: 1401374996:0;functions
+: 1401375005:0;functions['md']
+: 1401375033:0;cd -
+: 1401375036:0;rm functions.zsh
+: 1401375046:0;take /tmp/f/ff/felle
+: 1401375052:0;cd
+: 1401375054:0;ls
+: 1401375210:0;vim ~/.synergy.conf
+: 1401375516:0;kill $(pgrep synergys)
+: 1401375519:0;synergys
+: 1401375526:0;vim ~/.synergy.conf
+: 1401375549:0;synergys
+: 1401375553:0;fg
+: 1401375580:0;vim ~/.synergy.conf
+: 1401375661:0;ls ~/.vim/bundle
+: 1401375679:0;cd peteConf
+: 1401375721:0;git submodule add https://github.com/tommcdo/vim-exchange.git vim/bundle/
+: 1401375729:0;git submodule add https://github.com/tommcdo/vim-exchange.git vim/bundle/vim-exchange
+: 1401375735:0;gst
+: 1401375760:0;ls vim/bundle/vim-exchange
+: 1401375763:0;gc
+: 1401375778:0;ggpush
+: 1401375784:0;cd -
+: 1401375791:0;vim .synergy.conf
+: 1401375825:0;synergys
+: 1401375843:0;vim .synergy.conf
+: 1401375968:0;exit
+: 1401375971:0;clear
+: 1401376014:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch
+: 1401376022:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch L
+: 1401376036:0;tail ~ZSH_CUSTOM/aliases.zsh
+: 1401376056:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch | vless
+: 1401376156:0;vim ~/.vimrc
+: 1401376382:0;ga ~/.vimrc
+: 1401376389:0;ga ~/.vimrc(:a)
+: 1401376391:0;ga ~/.vimrc(:A)
+: 1401376399:0;ga ~/.vimrc(#q:a)
+: 1401376415:0;ga /home/peteches/.vimrc(:a
+: 1401376417:0;ga /home/peteches/.vimrc(:a)
+: 1401376420:0;ga /home/peteches/.vimrc(/)
+: 1401376466:0;cd ~peteConf
+: 1401376486:0;gst
+: 1401376495:0;gd vim/gvimrc
+: 1401376505:0;ga vim/
+: 1401376507:0;gc
+: 1401376548:0;gst
+: 1401376557:0;cat vim/ftplugin/.vim
+: 1401376563:0;rm vim/ftplugin/.vim
+: 1401376571:0;rm vim/ftplugin/html.vim
+: 1401376583:0;gc
+: 1401376592:0;gst
+: 1401376603:0;cat vim/ftplugin/*
+: 1401376659:0;cat vim/ftplugin/.vim vim/ftplugin/html.vim
+: 1401376680:0;alias | grep git reset
+: 1401376688:0;alias | grep "git reset"
+: 1401376692:0;gst
+: 1401376710:0;grh vim/ftplugin
+: 1401376720:0;gst
+: 1401376723:0;gc
+: 1401376971:0;ggpush
+: 1401376981:0;cd 
+: 1401376996:0;vim ~ZSH_CUSTOM/aliases.zsh
+: 1401377020:0;. ~ZSH_CUSTOM/aliases.zsh
+: 1401377044:0;echo -e "one \n two \n three" V
+: 1401377052:0;. ~ZSH_CUSTOM/aliases.zsh
+: 1401377056:0;vim ~ZSH_CUSTOM/aliases.zsh
+: 1401377068:0;. ~ZSH_CUSTOM/aliases.zsh
+: 1401377070:0;echo -e "one \n two \n three" V
+: 1401377096:0;clear
+: 1401377108:0;rpm -ql graphite V
+: 1401377117:0;rpm -ql graphite-web-0.9.12-5.fc20.noarch V
+: 1401377159:0;cd /usr/share/g
+: 1401377172:0;cd /usr/share/graphite
+: 1401377174:0;ls
+: 1401377192:0;python -m simpleHTTPServer
+: 1401377195:0;python -m SimpleHTTPServer
+: 1401377339:0;clea
+: 1401377340:0;clear
+: 1401377362:0;ls
+: 1401377364:0;cd webapp
+: 1401377366:0;ls
+: 1401377367:0;sl
+: 1401377371:0;cd content
+: 1401377371:0;ls
+: 1401377386:0;ls *
+: 1401377392:0;ls *(.)
+: 1401377398:0;ls */*(.)
+: 1401377428:0;cd ../
+: 1401377431:0;ls
+: 1401377437:0;cd.
+: 1401377438:0;cd..
+: 1401377441:0;sl
+: 1401441147:0;cd
+: 1401441148:0;ls
+: 1401441151:0;cd gitrepos
+: 1401441151:0;ls
+: 1401441159:0;cd platformevo
+: 1401441160:0;ls
+: 1401441165:0;gst
+: 1401441194:0;ls
+: 1401441211:0;cd chef/cookbooks/
+: 1401441239:0;ls sbg_(log*|elk)
+: 1401441251:0;ls sbg_(log*|elk)/**(-.)
+: 1401441254:0;ls sbg_(log*|elk)/**(-.) -1
+: 1401441265:0;ls sbg_(log*|elk)/**/*(-.) -1
+: 1401441293:0;ls sbg_(log*|elk)/**/*~*.md(-.) -1
+: 1401441388:0;ls sbg_(log*|elk)/**/*(e_[[ $REPLY:h == md ]]_-.) -1
+: 1401441401:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:h == md ]]'_-.) -1
+: 1401441417:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:h == md ]]'_) -1
+: 1401441478:0;f=sbg_logstash_server/templates/default/logstash-server-nginx.conf.erb
+: 1401441482:0;echo f:r
+: 1401441487:0;echo $f:r
+: 1401441491:0;echo $f:h
+: 1401441495:0;echo $f:e
+: 1401441503:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e == md ]]'_) -1
+: 1401441509:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e =! md ]]'_) -1
+: 1401441514:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_) -1
+: 1401441526:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1
+: 1401441650:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1 C
+: 1401441654:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1 C /
+: 1401441813:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1 C / | sort -k2
+: 1401441842:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1 C / | sort -k2 -k3 -k1
+: 1401441873:0;ls sbg_(log*|elk)/**/*(e_'[[ $REPLY:e != md ]]'_-.) -1 C / | sort -k2 -k3 -k4 -k1
+: 1401441956:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md && ! -e ${REPLY/elk/logstash_server} ]]'_-.) -1 C / | sort -k2 -k3 -k4 -k1
+: 1401442227:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md && reply=${REPLY} ]]'_-.) -1 C / | sort -k2 -k3 -k4 -k1
+: 1401442250:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY}'_-.) -1 C / | sort -k2 -k3 -k4 -k1
+: 1401442257:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY}'_-.) -1
+: 1401442294:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md && -e ${REPLY} ]]'_-.) -1
+: 1401442307:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/log}'_-.) -1
+: 1401442333:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstash_server}'_-.) -1
+: 1401442340:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstash_server/}'_-.) -1
+: 1401442344:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstash\_server/}'_-.) -1
+: 1401442352:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstashserver/}'_-.) -1
+: 1401442358:0;ls sbg_elk/**/*(e_'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstashserver}'_-.) -1
+: 1401442382:0;ls sbg_elk/**/*(e@'[[ $REPLY:e != md ]] && reply=${REPLY/elk/logstash_server}'@-.) -1
+: 1401442426:0;ls sbg_elk/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/elk/logstash_server}'@-.) -1
+: 1401442440:0;ls sbg_elk/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/elk/logstash_server} ]]'@-.) -1
+: 1401442654:0;yu 
+: 1401442690:0;ls sbg_elk/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/elk/logstash_server} ]]'@-.) -1
+: 1401442734:0;ls sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) -1
+: 1401442864:0;ls sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.)
+: 1401442894:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.)
+: 1401443009:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.) | xargs -L2 diff
+: 1401443409:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.) | xargs -n2 diff
+: 1401443414:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.) | xargs -n2 diff -u
+: 1401443419:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.) | xargs -n2 diff -u V
+: 1401443618:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY} ${REPLY/logstash_server/elk}"'@-.) | xargs -n2 diff -uw V
+: 1401444046:0;echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY/logstash_server/elk} ${REPLY}"'@-.) | xargs -n2 diff -uw V
+: 1401444678:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && -e ${REPLY/logstash_server/elk} ]] && reply="${REPLY/logstash_server/elk} ${REPLY}"'@-.) V
+: 1401444710:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) V
+: 1401444748:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) V -c ':%s/[^m]*m//g'
+: 1401445088:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) V -c '%s/[^m]*m//g'
+: 1401445101:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) V -c '%s/<esc>[^m]*m//g'
+: 1401445157:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) | sed 's/[^m*m//g'  V
+: 1401445176:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) | sed 's/[^m]*m//g'  V
+: 1401445332:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]] && echo $REPLY'@-.) | sed 's/[^m]*m//g'  V
+: 1401445507:0;{echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) ; cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.); } V
+: 1401445523:0;{echo sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.) ; 'cat' sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]]'@-.); } V
+: 1401445544:0;cat sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]] && echo $REPLY'@-.) | sed 's/[^m]*m//g'  V
+: 1401445582:0;vless sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]] && echo $REPLY'@-.) 
+: 1401445592:0;vim sbg_logstash_server/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/logstash_server/elk} ]] && echo $REPLY'@-.)
+: 1401445803:0;vim sbg_elk/**/*(e@'[[ $REPLY:e != md && ! -e ${REPLY/elk/logstash_server} ]] && echo $REPLY'@-.)
+: 1401446769:0;ls
+: 1401446773:0;gst
+: 1401456336:0;grep elk ../nodes/**(-.)
+: 1401456339:0;grep elk ../nodes/**/*(-.)
+: 1401456363:0;ssh gueabnms01
+: 1401456375:0;ssh gueabnms01.skybet.net
+: 1401456396:0;ssh guebnms01.skybet.net
+: 1401456410:0;ssh-copy-id guebnms01.skybet.net
+: 1401456430:0;ssh-copy-id guebnms01.skybet.net -l mccabep
+: 1401456446:0;ssh-copy-id mccabep@guebnms01.skybet.net
+: 1401456467:0;ssh guebnms01.skybet.net -l mccabep
+: 1401456477:0;vim ~/.ssh/config
+: 1401456659:0;ssh guebelasticsearch01
+: 1401456673:0;vim ~/.ssh/config
+: 1401456748:0;ssh guebelasticsearch01 -vvv
+: 1401456786:0;vim ~/.ssh/config
+: 1401456914:0;fg
+: 1401457073:0;ssh guebelasticsearch01 -vvv
+: 1401457081:0;ssh guebelasticsearch01 
+: 1401457235:0;vim /etc/systemd/system/nms01proxy.service
+: 1401457987:0;sc-restart nms01proxy.service
+: 1401458005:0;sc-reload
+: 1401458022:0;alias G systemctl
+: 1401458056:0;systemctl daemon-reload
+: 1401458061:0;sudo systemctl daemon-reload
+: 1401458144:0;sc-restart nms01proxy.service
+: 1401458167:0;sc-status nms01proxy.service
+: 1401458187:0;fg
+: 1401458206:0;sudo systemctl daemon-reload
+: 1401458210:0;sc-restart nms01proxy.service
+: 1401458214:0;sc-status nms01proxy.service
+: 1401458274:0;pgrep autossh
+: 1401458284:0;sc-start nms01proxy.service
+: 1401458288:0;sc-status nms01proxy.service
+: 1401458887:0;journalctl -xn
+: 1401458993:0;journalctl -xu nms01proxy
+: 1401459132:0;fg
+: 1401459198:0;sudo systemctl daemon-reload
+: 1401459206:0;sc-start nms01proxy.service
+: 1401459221:0;sc-status nms01proxy.service
+: 1401459236:0;fg
+: 1401459326:0;sudo systemctl daemon-reload
+: 1401459329:0;sc-start nms01proxy.service
+: 1401459346:0;sc-status nms01proxy.service
+: 1401459358:0;netstat -tlpn
+: 1401459378:0;fg
+: 1401459657:0;sc-disable nms01.proxy
+: 1401459679:0;sc-enable gue{a,b}nms01.proxy
+: 1401459690:0;sc-enable gue{a,b}nms01proxy
+: 1401459696:0;sc-disable nms01proxy
+: 1401459706:0;netstat -tlpn
+: 1401459711:0;kill 2192
+: 1401459714:0;netstat -tlpn
+: 1401459730:0;sc-start gue{a,b}nms01proxy
+: 1401459732:0;netstat -tlpn
+: 1401459752:0;sc-cat gue{a,b}nms01proxy
+: 1401459778:0;sc-status gue{a,b}nms01proxy
+: 1401459825:0;cat /etc/systemd/system/guebnms01proxy.service
+: 1401459858:0;vim ~/.ssh/config
+: 1401459918:0;sc-restart guebnms01proxy
+: 1401459999:0;sc-status guebnms01proxy
+: 1401460018:0;sc-start guebnms01proxy
+: 1401460020:0;sc-status guebnms01proxy
+: 1401460034:0;vim ~/.ssh/config
+: 1401460077:0;vim /etc/systemd/system/guebnms01proxy.service
+: 1401460099:0;sc-status guebnms01proxy
+: 1401460108:0;sudo systemctl daemon-reload
+: 1401460111:0;sc-status guebnms01proxy
+: 1401460117:0;sc-start guebnms01proxy
+: 1401460119:0;sc-status guebnms01proxy
+: 1401460124:0;netstat -tlpn
+: 1401460138:0;sc-status guebnms01proxy
+: 1401460341:0;vim /etc/systemd/system/guebnms01proxy.service
+: 1401460506:0;fg
+: 1401460587:0;sudo systemctl daemon-reload
+: 1401460592:0;netstat -tlpn
+: 1401460603:0;ls /var/run
+: 1401460638:0;sc-stop gue{a,b}nms01
+: 1401460645:0;sc-stop gue{a,b}nms01proxy
+: 1401460808:0;ys phosphor
+: 1401460851:0;yp /usr/lib/xscreensaver/phosphor
+: 1401460860:0;yp \*phosphor
+: 1401460866:0;yp \*/phosphor
+: 1401460914:0;ys xscreensaver
+: 1401460949:0;yum install xscreensaver
+: 1401460963:0;yi xscreensaver
+: 1401461025:0;/usr/libexec/xscreensaver/phosphor -scale 2 -delay 5000 -geometry 1024x768 -program $SHELL
+: 1401461057:0;xrandr
+: 1401461073:0;/usr/libexec/xscreensaver/phosphor -scale 2 -delay 5000 -geometry 1920x1080 -program $SHELL
+: 1401461094:0;histexit
+: 1401461101:0;exit
+: 1401461137:0;/usr/libexec/xscreensaver/apple2 -text -fast -program $SHELL
+: 1401461142:0;cd
+: 1401461166:0;/usr/libexec/xscreensaver/apple2 -text -fast -geometry 1920x1080  -program $SHELL
+: 1401461180:0;PS!=\u@\h\w\$
+: 1401461203:0;PS1="\u@\h \w \$"
+: 1401461210:0;ls
+: 1401461231:0;clear
+: 1401461246:0;sc-status gue{a,b}nms01proxy
+: 1401461336:0;journalctl -xu nms01proxy -n 30
+: 1401461357:0;journalctl -xu gueanms01proxy -n 30
+: 1401461391:0;sc-start gue{a,b}nms01proxy
+: 1401461394:0;journalctl -xu gueanms01proxy -n 30
+: 1401461403:0;journalctl -xu guebnms01proxy -n 30
+: 1401461411:0;netstat -tlpn
+: 1401461415:0;journalctl -xu guebnms01proxy -n 30
+: 1401461466:0;ls /var/run
+: 1401461491:0;sc-stop gueanms01proxy
+: 1401461497:0;netstat -tlpn
+: 1401461506:0;sudo systemctl daemon-reload
+: 1401461522:0;sc-start gueanms01proxy
+: 1401461532:0;ls /var/run/gu*
+: 1401461553:0;sc-status gueanms01proxy
+: 1401461561:0;netstat -tlpn
+: 1401461569:0;sc-start guebnms01proxy
+: 1401461583:0;netstat -tlpn
+: 1401461591:0;sc-status guebnms01proxy
+: 1401461625:0;journalctl -xeu guebnms01proxy
+: 1401461667:0;vim /etc/systemd/system/guebnms01proxy.servicE
+: 1401461672:0;vim /etc/systemd/system/guebnms01proxy.service
+: 1401461822:0;cat /etc/systemd/system/guebnms01proxy.service
+: 1401461838:0;vim /etc/systemd/system/guebnms01proxy.service
+: 1401461842:0;fg
+: 1401461881:0;sudo systemctl daemon-reload
+: 1401461893:0;sc-restart gueanms01proxy
+: 1401461898:0;ls /var/run
+: 1401461921:0;journalctl -xeu gueanms01proxy
+: 1401461937:0;netstat -tlpn
+: 1401461947:0;fg
+: 1401462160:0;/usr/bin/autossh -M 0 guebnms01.skybet.net -D 8081 -NTq2
+: 1401462172:0;netstat -tlpn
+: 1401462177:0;exit
+: 1401462183:0;fg
+: 1401462218:0;la 
+: 1401462222:0;ls ~
+: 1401462225:0;ls ~ -a
+: 1401462248:0;mkdir ~/.run
+: 1401462252:0;fg
+: 1401462455:0;sudo systemctl daemon-reload
+: 1401462459:0;netstat
+: 1401462464:0;netstat -tlpn
+: 1401462481:0;sc-start guebnms01proxy
+: 1401462488:0;sc-status guebnms01proxy
+: 1401462507:0;cat ~/.ssh/autossh-guebnms01proxy.pid
+: 1401462515:0;sc-start gueanms01proxy
+: 1401462524:0;cat ~/.ssh/autossh-gueanms01proxy.pid
+: 1401462533:0;netstat -tlpn
+: 1401462678:0;reset;x=$(($COLUMNS/2)); y=$LINES;xdir=0;ydir=-1;while true ; do read -s -r -t0.02 -n3 direction ; case "${direction:2:1}" in A) ydir=-1;xdir=0 ;; B)ydir=1;xdir=0 ;; C) ydir=0;xdir=1 ;; D) ydir=0;xdir=-1 ;; esac ; ox=$x; oy=$y ; x=$(( $x + $xdir )) ; y=$(( $y + $ydir )) ; printf "\033[%s;%sH\033[46m \033[0m\033[%s;%sH\033[44m \033[0m\033[0;0H" $y $x $oy $ox ; sleep 0.01 ; done
+: 1401462682:0;bash
+: 1401463193:0;ssh guebelasticsearch01
+: 1401464571:0;cd chef
+: 1401464572:0;ls
+: 1401464574:0;cd co
+: 1401464579:0;cd cookbooks
+: 1401464579:0;ls
+: 1401464584:0;cd  sbg_elk
+: 1401464585:0;ls
+: 1401464590:0;ls recipes
+: 1401464598:0;vim recipes/logstash.rb
+: 1401464651:0;cd .../nodes
+: 1401464653:0;ls
+: 1401464662:0;grep elk **/*(.)
+: 1401464686:0;cd ../../nodes
+: 1401464688:0;grep elk **/*(.)
+: 1401464817:0;grep logstash **/*(.)
+: 1401464852:0;vim LIVE_B/gueblogstash01.rb
+: 1401467131:0;clear
+: 1401467138:0;cd .peteches-configs/.git
+: 1401467139:0;ld
+: 1401467141:0;ls
+: 1401467147:0;ls branches
+: 1401467151:0;ls branches -a
+: 1401467157:0;git branch
+: 1401467161:0;ls *
+: 1401467175:0;ls refs/*
+: 1401467199:0;cat refs/heads/*
+: 1401467243:0;ls refs/tags
+: 1401467264:0;ls objects/*
+: 1401698850:0;yu -y
+: 1401700283:0;gst
+: 1401700312:0;alias G stash
+: 1401700319:0;gsta
+: 1401700324:0;gb
+: 1401700337:0;gco master
+: 1401700358:0;gitk
+: 1401700444:0;jobs
+: 1401700449:0;fg
+: 1401700456:0;ls
+: 1401700486:0;alias G alias
+: 1401700519:0;alias sa='alias | grep '
+: 1401700523:0;sa git
+: 1401700560:0;echo "alias sa='alias | grep '" >> ~ZSH_CUSTOM/aliases.zsh
+: 1401700568:0;sa rm
+: 1401701072:0;gl
+: 1401701184:0;git log
+: 1401701218:0;git checkout HEAD^
+: 1401701223:0;git log
+: 1401701233:0;alias gl
+: 1401701246:0;gco master
+: 1401701282:0;git log --author="Pete \"Peteches\" McCabe"
+: 1401701311:0;gst
+: 1401701353:0;gco dev-rm20490-logstashconf
+: 1401701360:0;git stash apply
+: 1401701386:0;mv sbg_logstash_server/files/default/logstash/apache_patterns sbg_logstash_server/templates/default/logstash/lamp-log.conf.erb ~/tmp/logstash
+: 1401701392:0;mkdir ~/tmp/logstash
+: 1401701393:0;mv sbg_logstash_server/files/default/logstash/apache_patterns sbg_logstash_server/templates/default/logstash/lamp-log.conf.erb ~/tmp/logstash
+: 1401701402:0;mkdir ~/tmp/logstash -p
+: 1401701404:0;mv sbg_logstash_server/files/default/logstash/apache_patterns sbg_logstash_server/templates/default/logstash/lamp-log.conf.erb ~/tmp/logstash
+: 1401701407:0;ls
+: 1401701419:0;cd ....
+: 1401701421:0;ls
+: 1401701441:0;git remote -v platformevo
+: 1401701466:0;cd platformevo; git remote -v
+: 1401701473:0;cd ../
+: 1401701483:0;rm -rf platformevo
+: 1401701485:0;ls
+: 1401701493:0;sa clone
+: 1401701506:0;git clone ssh://code.skybet.net/platformevo 
+: 1401701535:0;cd platformevo
+: 1401701537:0;ls
+: 1401701539:0;gb
+: 1401701543:0;git fetch
+: 1401701549:0;gst
+: 1401701551:0;gb
+: 1401701711:0;gb -a
+: 1401701719:0;gb -a G logstash
+: 1401701723:0;gb -a G log
+: 1401701733:0;gb -a G 204
+: 1401701958:0;sa fetch
+: 1401701961:0;git fetch
+: 1401701993:0;gco origin/TEST_3
+: 1401702007:0;gco TEST_3
+: 1401702016:0;gl
+: 1401702086:0;gco -b dev-rm-td277
+: 1401702094:0;cd c/c/
+: 1401702097:0;cd chef/cookbooks/sbg_
+: 1401702099:0;cd chef/cookbooks/
+: 1401702100:0;lw
+: 1401702101:0;ls
+: 1401702118:0;git rm -r sbg_elk
+: 1401702122:0;gst
+: 1401702143:0;grep sbg_elk ../**/*(.)
+: 1401702189:0;grep grafana ../**/*(.)
+: 1401702355:0;grep sbg_elk ../**/*(.)
+: 1401702367:0;cd ..
+: 1401702382:0;vim roles/sbg-grafana.rb
+: 1401702807:0;vim nodes/LIVE_B/guebelasticsearch01.rb
+: 1401702836:0;cat nodes/LIVE_B/guebelasticsearch01.rb
+: 1401702846:0;gd
+: 1401702876:0;cat nodes/LIVE_B/guebelasticsearch01.rb
+: 1401702881:0;vim nodes/LIVE_B/guebelasticsearch01.rb
+: 1401702894:0;gd
+: 1401702924:0;grep elk **/*(.) 
+: 1401702943:0;vim cookbooks/sbg_grafana/metadata.rb
+: 1401702954:0;grep elk **/*(.) 
+: 1401702968:0;grep sbg_elk **/*(.) 
+: 1401702981:0;gd
+: 1401703061:0;sa commit
+: 1401703072:0;gc
+: 1401703150:0;vim --version
+: 1401703160:0;clear
+: 1401703182:0;ld nodes/LIVE_B/*elastic*
+: 1401703220:0;ls nodes/*/*elasticsearch*.rb
+: 1401703377:0;gb -m dev-rm-td277 dev-td277
+: 1401703381:0;gst
+: 1401704744:0;ls
+: 1401704836:0;cat ~/.vimperator
+: 1401704839:0;cat ~/.vimperatorrc 
+: 1401704896:0;cal
+: 1401705259:0;grep sbg_elk **/*(.)
+: 1401705282:0;vim roles/sbg-grafana.rb
+: 1401705921:0;ssh gueanms01 nc gueagamapp07 9909
+: 1401705957:0;cd gitrepos
+: 1401705985:0;ssh code.bskyb.com G logstash
+: 1401705992:0;ssh code.bskyb.net G logstash
+: 1401706044:0;cd platformevo
+: 1401706052:0;git remote -v
+: 1401706058:0;cd ..
+: 1401706066:0;ssh code.skybet.net G logstash
+: 1401706123:0;git clone code.skybet.net:logstash
+: 1401706327:0;cd logstash
+: 1401706328:0;ls
+: 1401706345:0;vless *.txt
+: 1401706352:0;vless DevNotes.txt
+: 1401706364:0;alias vless
+: 1401706502:0;alias vless='vim --cmd '\''let no_plugin_maps = 1'\'' -c '\''runtime! macros/less.vim'\'''
+: 1401706505:0;vless DevNotes.txt
+: 1401706513:0;vless DevNotes.txt installation.txt
+: 1401706589:0;ls
+: 1401706603:0;vless config.conf
+: 1401706800:0;vim *.sh
+: 1401707175:0;ls rpmbuild
+: 1401707183:0;ls monitoring
+: 1401707368:0;vless monitoring/nagios.txt
+: 1401707381:0;vim monitoring/simplecheck.py
+: 1401707986:0;ls hackday
+: 1401707999:0;vless hackday/*
+: 1401710296:0;ssh guealampweb03
+: 1401710890:0;cd
+: 1401710911:0;cd platevo/c/he
+: 1401710914:0;cd platevo/chef
+: 1401710916:0;ls
+: 1401710927:0;grep oxi **/*(.)
+: 1401710944:0;grep oxi **/*(.) G log
+: 1401710958:0;grep oxi **/*(.) | grep log
+: 1401711155:0;grep sbg_openbet roles/*
+: 1401711296:0;grep sbg_openbet roles/*ls cookbooks/sbg_openbet/recipes
+: 1401711320:0;grep sbg_openbet cookbooks/sbg_openbet/recipes
+: 1401711336:0;ls cookbooks/sbg_openbet
+: 1401711342:0;ls cookbooks/sbg_openbet/recipes
+: 1401711381:0;grep -E 'LOG_(DIR|FILE)' cookbooks/sbg_openbet/recipes/*
+: 1401711407:0;grep -E 'LOG_(DIR|FILE)' cookbooks/sbg_openbet/* -R
+: 1401711431:0;grep -E 'LOG_(DIR|FILE)' * -R
+: 1401711447:0;grep -E 'LOG_(DIR|FILE)'  -R
+: 1401711476:0;grep -E 'LOG_(DIR|FILE)' **/*(.)~**/attributes/**
+: 1401711485:0;grep -E 'LOG_(DIR|FILE)' **/*~**/attributes/**(.)
+: 1401711488:0;grep -E 'LOG_(DIR|FILE)' **/*~**/attributes/*
+: 1401711490:0;grep -E 'LOG_(DIR|FILE)' **/*~**/attributes/
+: 1401711491:0;grep -E 'LOG_(DIR|FILE)' **/*~**/attributes
+: 1401711496:0;grep -E 'LOG_(DIR|FILE)' **/*~*attributes
+: 1401711499:0;grep -E 'LOG_(DIR|FILE)' **/*~attributes
+: 1401711507:0;grep -E 'LOG_(DIR|FILE)' **~attributes/*
+: 1401711713:0;setopt extended_glob
+: 1401711715:0;grep -E 'LOG_(DIR|FILE)' **~attributes/*
+: 1401711727:0;grep -E 'LOG_(DIR|FILE)' **/*~**/attributes/**(.)
+: 1401712730:0;ssh guealampweb03
+: 1401712745:0;ssh guealampweb07
+: 1401714508:0;ssh gueabetapp03
+: 1401714622:0;host 172.16.146.172
+: 1401714634:0;ssh gueanms01.skybet.net host 172.16.146.172
+: 1401714743:0;ssh guealampweb03 mount -t nfs
+: 1401715712:0;for i in {01..99}; do ssh gueabetapp$i "mount -t nfs";done
+: 1401715837:0;for i in {01..99}; do ssh -o StrictHostKeyChecking=no  gueabetapp$i "mount -t nfs";done
+: 1401715993:0;for i in {97,98,99}; do ssh -o StrictHostKeyChecking=no  gueabetapp$i "mount -t nfs";done
+: 1401716055:0;ssh -o StrictHostKeyChecking=no  gueabetapp08 "mount -t nfs"
+: 1401716151:0;cd /tmp
+: 1401716168:0;curl http://wiki.sig.net/appmatrix_sports.html -o ./appmatrix
+: 1401716171:0;ls
+: 1401716175:0;vim appmatrix
+: 1401719717:0;for i in <appmatrix;do echo $i;done
+: 1401719730:0;for i in $(cat appmatrix );do echo $i;done
+: 1401719735:0;vim appmatrix
+: 1401719750:0;for i in $(cat appmatrix );do echo $i;done
+: 1401719767:0;for i in $(cat appmatrix );do ssh $i "mount -t nfs" ;done
+: 1401719787:0;for i in $(cat appmatrix );do echo $i | od -c;done
+: 1401719803:0;vim appmatrix
+: 1401719819:0;cat appmatrix
+: 1401719875:0;vim appmatrix
+: 1401719898:0;for i in $(cat appmatrix );do echo $i | od -c;done
+: 1401719914:0;cat appmatrix > serverlist
+: 1401719923:0;for i in $(cat serverlist );do echo $i | od -c;done
+: 1401719938:0;cat appmatrix| od -c
+: 1401719943:0;ls
+: 1401719967:0;for i in $(cat serverlist );do echo $i | tr -d [^[:print:]] od -c;done
+: 1401719972:0;for i in $(cat serverlist );do echo $i | tr -d [^[:print:]] | od -c;done
+: 1401720012:0;for i in $(cat serverlist );do echo $i | tr -d [[:print:]] | od -c;done
+: 1401720024:0;for i in $(cat serverlist );do echo $i | tr -d [[:cntrl:]] | od -c;done
+: 1401720032:0;for i in $(cat serverlist );do echo $i | tr -d '[[:cntrl:]]' | od -c;done
+: 1401720067:0;man tr
+: 1401720083:0;for i in $(cat serverlist );do echo $i | tr -dx '[[:print:]]' | od -c;done
+: 1401720088:0;for i in $(cat serverlist );do echo $i | tr -dc '[[:print:]]' | od -c;done
+: 1401720121:0;for i in $(cat serverlist );do echo $i | sed 's/[^m]*m//' | od -c;done
+: 1401720141:0;for i in $(cat serverlist );do echo $i | sed 's/[^m]*m//g' | od -c;done
+: 1401720155:0;for i in $(cat serverlist );do echo $i | sed 's/.*$//g' | od -c;done
+: 1401720193:0;for i in $(sed 's/^[.*$//g' serverlist );do echo $i | od -c;done
+: 1401720221:0;for i in $(sed 's/.*$//g' serverlist );do echo $i | od -c;done
+: 1401720231:0;for i in $(sed 's/.*\n$//g' serverlist );do echo $i | od -c;done
+: 1401720242:0;for i in $(sed 's/.*$//g' serverlist );do echo $i | od -c;done
+: 1401720245:0;for i in $(sed 's/.*$//g' serverlist );do echo -e $i | od -c;done
+: 1401720276:0;for i in $(sed 's/.*$//g' serverlist );do ssh $i "mount -t nfs" ; done
+: 1401720596:0;for i in $(sed 's/.*$//g' serverlist );do ssh $i "hostname;mount -t nfs;echo -e '-----\n'" >> mounts ; done
+: 1401720666:0;vim mounts
+: 1401721060:0;cd
+: 1401721576:0;cd ~/.peteches-configs
+: 1401721594:0;git log --pretty=format'%h %s' --graph
+: 1401721786:0;gst
+: 1401721841:0;gb
+: 1401721854:0;git log master..dev-vim
+: 1401721860:0;gco dev-vim
+: 1401721864:0;git log master..dev-vim
+: 1401721870:0;git log master..dev-term-setup
+: 1401721875:0;gst
+: 1401721886:0;gco master
+: 1401721909:0;git log dev-term-setup..master
+: 1401721929:0;git log dev-vim..master
+: 1401721999:0;git log origin/master..
+: 1401722003:0;gst
+: 1401722176:0;ssh gueabetapp04
+: 1401722267:0;ssh gueagamapp07
+: 1401722422:0;cd platevo
+: 1401722424:0;;la
+: 1401722429:0;cd chef
+: 1401722431:0;l
+: 1401722440:0;cd ../../
+: 1401722443:0;cd logstash
+: 1401722445:0;ls
+: 1401722451:0;vim config.conf
+: 1401722899:0;gst
+: 1401722907:0;gd vimperator/
+: 1401722970:0;> vimperator/info/default/ignored-keys vimperator/info/default/local-marks vimperator/info/default/macros
+: 1401722984:0;ls vimperator/info/default/ignored-keys vimperator/info/default/local-marks
+: 1401722992:0;ls vimperator/info/default/ignored-keys vimperator/info/default/local-marks -l
+: 1401723015:0;echo "" | tee vimperator/info/default/ignored-keys vimperator/info/default/local-marks vimperator/info/default/macros
+: 1401723018:0;gd
+: 1401723023:0;gd vimperator/
+: 1401723041:0;cat vimperator/info/default/*
+: 1401723047:0;gst
+: 1401723068:0;cat vimperator/info/default/(ignored_keys|local-marks|macros)
+: 1401723072:0;gst
+: 1401723085:0;gco vimperator/info/default/ignored-keys
+: 1401723087:0;gst
+: 1401723098:0;ga vimperator/
+: 1401723100:0;gst
+: 1401723116:0;sa reset
+: 1401723140:0;grh vimperator/plugin
+: 1401723144:0;gst
+: 1401723163:0;gc -m "zeroed annoying marks/macros files"
+: 1401723166:0;gst
+: 1401723177:0;gd X-configs/
+: 1401723191:0;ls X-configs
+: 1401723199:0;git rm -r X-configs/
+: 1401723207:0;git rm -r X-configs/ -f
+: 1401723209:0;gst
+: 1401723221:0;gc -m "removed X-configs, no longer needed"
+: 1401723226:0;gst
+: 1401723232:0;gd tmux/
+: 1401723247:0;ga tmux/
+: 1401723264:0;gc -m "reconfigure tmux to default to zsh"
+: 1401723266:0;gst
+: 1401723275:0;gd powerline/
+: 1401723283:0;ga powerline/
+: 1401723298:0;gc -m "Using ipecho instead of icanhazip"
+: 1401723302:0;gst
+: 1401723308:0;gd kde
+: 1401723318:0;ga kde
+: 1401723331:0;gc -m "adjusted transparency of Konsole"
+: 1401723333:0;gstr
+: 1401723335:0;gst
+: 1401723339:0;gd gitconfig
+: 1401723441:0;vim gitconfig .git/config -O
+: 1401723526:0;glg
+: 1401723535:0;gst
+: 1401723552:0;vim gitconfig
+: 1401723622:0;gd gitconfig
+: 1401723662:0;gc -m "removed email addy from user config, allowing me to specify per repo."
+: 1401723669:0;ga gitconfig
+: 1401723670:0;gc -m "removed email addy from user config, allowing me to specify per repo."
+: 1401723677:0;gst
+: 1401723687:0;ls vimperator/plugin/pagescroll.js
+: 1401723695:0;git stash
+: 1401723708:0;git add vimperator/plugin/pagescroll.js
+: 1401723712:0;git stash
+: 1401723731:0;gco -b dev-vimp-scrollplugin
+: 1401723737:0;git stash apply
+: 1401723741:0;gco master
+: 1401723752:0;gco dev-vimp-scrollplugin
+: 1401723754:0;gst
+: 1401723771:0;gc -m "initial commit of scrolling plugin"
+: 1401723775:0;ggpush
+: 1401723784:0;gco master
+: 1401723788:0;ggpush
+: 1401723794:0;gst
+: 1401723801:0;gco dev-vim
+: 1401723804:0;gst
+: 1401723813:0;gl
+: 1401723819:0;glg
+: 1401723828:0;gco master
+: 1401723846:0;glg dev-vim...master
+: 1401723861:0;ls vim/bundle
+: 1401723934:0;git log --left-right master...dev-vim
+: 1401723974:0;git log --left-right dev-vim...master
+: 1401723988:0;git diff dev-vim...master
+: 1401724008:0;gco dev-cim
+: 1401724010:0;gco dev-vim
+: 1401724017:0;git merge master
+: 1401724023:0;gst
+: 1401724031:0;gco dev-term-setup
+: 1401724034:0;git merge master
+: 1401724037:0;gst
+: 1401724041:0;gco master
+: 1401724059:0;gb -d dev-vim
+: 1401724063:0;gb -d dev-term-setup
+: 1401724089:0;git log --left-right master...dev-term-setup
+: 1401724099:0;gco dev-term-setup
+: 1401724148:0;git push origin :dev-term-setup
+: 1401724158:0;gco master
+: 1401724164:0;gb -d dev-term-setup
+: 1401724166:0;gb
+: 1401724175:0;glg
+: 1401724193:0;gst
+: 1401724217:0;ls
+: 1401724222:0;ls zsh
+: 1401724226:0;cd zsh
+: 1401724228:0;ls
+: 1401724235:0;mkdir custome
+: 1401724236:0;mkdir custom
+: 1401724244:0;rm custome
+: 1401724249:0;rmdir custome
+: 1401724252:0;ls
+: 1401724255:0;cd ../
+: 1401724296:0;git submodule add https://github.com/robbyrussell/oh-my-zsh.git zsh/oh-my-zsh
+: 1401724325:0;mv ~/.zsh* zsh
+: 1401725892:0;ls ~/.*zsh*(@)
+: 1401725927:0;mv zsh/oh-my-zsh/custom/* zsh/zsh_custom
+: 1401725929:0;ls ~/.*zsh*(@)
+: 1401725940:0;la 
+: 1401725956:0;rm .Xdefaults .xsession
+: 1401725958:0;la
+: 1401725998:0;exit

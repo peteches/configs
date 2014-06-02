@@ -108,6 +108,10 @@ for script in ${config_dir}/scripts/*; do
     config_matrix+=( "${script} ${HOME}/bin/$( basename ${script} )" )
 done
 
+for x in ${config_dir}/zsh/*; do
+    config_matrix+=( "$x $HOME/.$(basename $x)" )
+done
+
 # Also add kde things seperately to keep local scripts in tact.
 for file in $( find ${config_dir}/kde -type f -printf "%P "); do
     config_matrix+=( "${config_dir}/kde/${file} ${HOME}/.kde/${file}")
