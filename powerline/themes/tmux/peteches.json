@@ -17,6 +17,9 @@
 			},
 			{
 				"name": "external_ip",
+				"args": {
+					"query_url": "http://ipecho.net/plain"
+				},
 				"priority": 50
 			},
 			{
