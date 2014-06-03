@@ -18,9 +18,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 if [[ -x $( type -p vimx | awk '{print $NF}' ) ]]; then
-    alias vim='vimx -p'
-else
-    alias vim='vim -p'
+    alias vim='vimx'
 fi
 
 # Add an "alert" alias for long running commands.  Use like so:
