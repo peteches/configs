@@ -99,7 +99,7 @@ map <F3> <ESC>:set nu! list! foldenable!<CR>
 map <F4> <ESC>:NERDTreeToggle<CR>
 map <F5> <ESC>:GundoToggle<CR>
 
-imap <LEADER>' <ESC>viWS'Ea
+imap <LEADER>,, <ESC>viWS'Ea
 imap <LEADER>.. <ESC>viWS"Ea
 imap <LEADER>w' <ESC>viwS'Ea
 imap <LEADER>w2 <ESC>viwS"Ea
@@ -107,7 +107,7 @@ nmap <LEADER>+x <ESC>:!chmod +x %<CR>
 
 nmap <LEADER>er :vsplit $MYVIMRC<CR>
 nmap <LEADER>sr :so $MYVIMRC<CR>
-nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"
+nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
@@ -118,28 +118,18 @@ nmap <UP> <NOP>
 nmap <DOWN> <NOP>
 
 " window mappings
-map <C-LEFT> <c-w>h
-map <C-RIGHT> <c-w>l
-map <C-DOWN> <c-w>j
-map <C-UP> <c-w>k
-imap <C-LEFT> <ESC><c-w>h
-imap <C-RIGHT> <ESC><c-w>l
-imap <C-DOWN> <ESC><c-w>j
-imap <C-UP> <ESC><c-w>k
-
-" quick tab movements
-map <S-LEFT> gT
-map <S-RIGHT> gt
-imap <S-LEFT> <ESC>gT
-imap <S-RIGHT> <ESC>gt
+map <C-h> <c-w>h
+map <C-l> <c-w>l
+map <C-j> <c-w>j
+map <C-k> <c-w>k
 
 "file completion
 imap <C-f> <C-x><C-f>
 
 " for surrounding the character under the cursor with spaces.
-nnoremap <leader>ss i<space><esc>2l.
-nnoremap <leader>as a<space><esc>
-nnoremap <leader>is i<space><esc>
+nnoremap <leader>s<space> i<space><esc>2l.
+nnoremap <leader>a<space> a<space><esc>
+nnoremap <leader>i<space> i<space><esc>
 
 if v:version >= 703
 	execute "set colorcolumn=" . join(range(1,79), ',')
@@ -174,8 +164,8 @@ if has("autocmd")
 	augroup END
 	augroup RUBYFILE
 	autocmd!
-	autocmd BufReadPost *.rb call MakeTabsConsistent('r', 2)
-	autocmd BufWritePre *.rb call MakeTabsConsistent('w', 2)
+	autocmd BufReadPost *.e?rb call MakeTabsConsistent('r', 2)
+	autocmd BufWritePre *.e?rb call MakeTabsConsistent('w', 2)
 	augroup END
 	augroup PYFILE
 	autocmd!
