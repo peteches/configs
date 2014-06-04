@@ -7,3 +7,5 @@
 [core]
 	pager = less -r
 [alias]
+[alias]
+	stash-unapply = !git stash show -p|git apply -R
