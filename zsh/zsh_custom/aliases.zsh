@@ -1,7 +1,7 @@
 # vim: ft=zsh
 
 #aliases
-alias sort="sort -S$(($(sed '/MemT/!d;s/[^0-9]*//g' /proc/meminfo)/1024-200)) "
+alias sort="sort -S$(($(sed '/MemT/!d;s/[^0-9]*//g' /proc/meminfo)/1024-200))"
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -25,7 +25,7 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias vless="vim --cmd 'let no_plugin_maps = 1' -c 'runtime! macros/less.vim' -"
+alias vless="vim --cmd 'let no_plugin_maps = 1' -c 'runtime! macros/less.vim'"
 
 alias cat='colorize'
 
@@ -41,7 +41,6 @@ alias yi='sudo yum install --assumeyes'
 ####################
 #  GLOBAL ALIASES  #
 ####################
-alias -g G=' | egrep '
+alias -g G=' | egrep'
 alias -g C=' | column -ts'
 alias -g V=' | vless;'
-alias sa='alias | grep '
