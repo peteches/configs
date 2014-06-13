@@ -103,6 +103,9 @@ map <F3> <ESC>:set nu! list! foldenable!<CR>
 map <F4> <ESC>:NERDTreeToggle<CR>
 map <F5> <ESC>:GundoToggle<CR>
 
+" make the <c-y> more useful by doing whole words
+inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
+
 imap <LEADER>,, <ESC>viWS'Ea
 imap <LEADER>.. <ESC>viWS"Ea
 imap <LEADER>w' <ESC>viwS'Ea
@@ -153,6 +156,7 @@ function! MakeTabsConsistent(fileop, tabsize)
 endfunction
 
 if has("autocmd")
+	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 	augroup TEMPLATES
 		autocmd!
 		autocmd BufNewFile * call LoadTemplate()
@@ -168,8 +172,8 @@ if has("autocmd")
 	augroup END
 	augroup RUBYFILE
 	autocmd!
-	autocmd BufReadPost *.e?rb call MakeTabsConsistent('r', 2)
-	autocmd BufWritePre *.e?rb call MakeTabsConsistent('w', 2)
+	autocmd BufReadPost *.erb,*.rb call MakeTabsConsistent('r', 2)
+	autocmd BufWritePre *.erb,*.rb call MakeTabsConsistent('w', 2)
 	augroup END
 	augroup PYFILE
 	autocmd!
