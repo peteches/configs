@@ -17,6 +17,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ks='ls' # yeah another typo fix
 if [[ -x $( type -p vimx | awk '{print $NF}' ) ]]; then
     alias vim='vimx'
 fi
@@ -41,6 +42,6 @@ alias yi='sudo yum install --assumeyes'
 ####################
 #  GLOBAL ALIASES  #
 ####################
-alias -g G=' | egrep'
+alias -g G=' | grep'
 alias -g C=' | column -ts'
 alias -g V=' | vless;'

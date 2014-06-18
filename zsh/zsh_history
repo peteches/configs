@@ -1708,3 +1708,37 @@ EOF
 : 1401725956:0;rm .Xdefaults .xsession
 : 1401725958:0;la
 : 1401725998:0;exit
+: 1403016972:0;cd ~/.vagrant.d
+: 1403016979:0;ls ~/bin
+: 1403016997:0;cd ~/bin
+: 1403016998:0;ls
+: 1403017000:0;ls -l
+: 1403017051:0;qemu-img.vmdk.hack.sh ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk
+: 1403017058:0;./qemu-img.vmdk.hack.sh ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk
+: 1403017060:0;ls
+: 1403017078:0;qemu-img.vmdk3.hack.sh ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk
+: 1403017121:0;vagrant mutate vbox-rhel6-64 libvirt
+: 1403017132:0;vagrant box list
+: 1403017160:0;vagrant mutate rhel65-rhel6-64 libvirt
+: 1403017168:0;vagrant mutate help
+: 1403017172:0;vagrant mutate -h
+: 1403017184:0;vagrant -h  mutate
+: 1403017215:0;vagrant mutate -h
+: 1403017245:0;vagrant mutate ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk libvirt
+: 1403017253:0;qemu-img.vmdk3.hack.sh ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk
+: 1403017261:0;vagrant mutate ~/.vagrant.d/boxes/vbox-rhel6-64/virtualbox/rhel65-64-disk1.vmdk libvirt
+: 1403017341:0;sudo -i
+: 1403017370:0;vim /etc/yum.repos.d/virtualbox.repo
+: 1403017379:0;yi virtualbox
+: 1403017390:0;yum clean all
+: 1403017397:0;yi virtualbox
+: 1403017403:0;yi VirtualBox
+: 1403017472:0;yum search virtual
+: 1403017510:0;yi VirtualBox-4.3.x86_64
+: 1403017741:0;cd ~/.vagrant.d
+: 1403017742:0;ls
+: 1403017745:0;vim vagrantfile
+: 1403017907:0;ls
+: 1403017913:0;cd ~/vagrant
+: 1403017914:0;ls
+: 1403017926:0;exit
