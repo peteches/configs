@@ -19,9 +19,6 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular
-[submodule "vim/bundle/table-mode"]
-	path = vim/bundle/table-mode
-	url = https://github.com/dhruvasagar/vim-table-mode
 [submodule "powerline/fonts"]
 	path = powerline/fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
