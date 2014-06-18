@@ -94,3 +94,6 @@
 [submodule "vim/bundle/vim-hardmode"]
 	path = vim/bundle/vim-hardmode
 	url = https://github.com/wikitopian/hardmode.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
