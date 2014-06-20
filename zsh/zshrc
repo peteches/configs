@@ -59,6 +59,7 @@ plugins=(
 	sudo
 	systemd
 	tmux
+	vagrant
 	vi-mode
 	x
 	yum
