@@ -48,7 +48,21 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sudo systemd vi-mode yum colored-man colorize copydir copyfile cp x mosh tmux )
+plugins=(
+	colored-man
+	colorize
+	copydir
+	copyfile
+	cp
+	git
+	mosh
+	sudo
+	systemd
+	tmux
+	vi-mode
+	x
+	yum
+)
 
 source $ZSH/oh-my-zsh.sh
 
