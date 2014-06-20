@@ -156,7 +156,7 @@ function! MakeTabsConsistent(fileop, tabsize)
 endfunction
 
 if has("autocmd")
-	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()|set backspace=indent
+	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 	augroup TEMPLATES
 		autocmd!
 		autocmd BufNewFile * call LoadTemplate()
