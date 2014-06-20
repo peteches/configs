@@ -6,6 +6,9 @@
 	diff = always
 [core]
 	pager = less -r
+	editor = vimx
 [alias]
 [alias]
 	stash-unapply = !git stash show -p|git apply -R
+[tig]
+	commit-order = topo
