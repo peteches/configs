@@ -139,7 +139,7 @@ nnoremap <leader>a<space> a<space><esc>
 nnoremap <leader>i<space> i<space><esc>
 
 if v:version >= 703
-	execute "set colorcolumn=" . join(range(1,79), ',')
+	execute "set colorcolumn=80"
 endif
 
 cnoremap help vert help
