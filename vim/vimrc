@@ -156,33 +156,14 @@ function! MakeTabsConsistent(fileop, tabsize)
 endfunction
 
 if has("autocmd")
-	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()|set backspace=indent
 	augroup TEMPLATES
 		autocmd!
 		autocmd BufNewFile * call LoadTemplate()
 	augroup END
 	augroup MAN
 	autocmd!
-	autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
-	augroup END
-	augroup JSFILE
-	autocmd!
-	autocmd BufReadPost *.js call MakeTabsConsistent('r', 2)
-	autocmd BufWritePre *.js call MakeTabsConsistent('w', 2)
-	augroup END
-	augroup RUBYFILE
-	autocmd!
-	autocmd BufReadPost *.erb,*.rb call MakeTabsConsistent('r', 2)
-	autocmd BufWritePre *.erb,*.rb call MakeTabsConsistent('w', 2)
-	augroup END
-	augroup PYFILE
-	autocmd!
-	autocmd BufReadPost *.py call MakeTabsConsistent('r', 4)
-	autocmd BufWritePre *.py call MakeTabsConsistent('w', 4)
-	augroup END
-	augroup VIFILE
-	autocmd!
-	autocmd BufReadPost *.vim,.vimrc,.gvimrc call MakeTabsConsistent('r', 4)
+		autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
 	augroup END
 endif
 
