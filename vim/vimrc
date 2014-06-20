@@ -186,7 +186,7 @@ if has("autocmd")
 	augroup END
 endif
 
-colorscheme ghost
+colorscheme solarized
 
 function! LoadTemplate()
 	silent! 0r ~/.vim/skel/template.%:e

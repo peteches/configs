@@ -1,13 +1,17 @@
 [Appearance]
-ColorScheme=BlueOnBlack
+ColorScheme=Solarized
 Font=Inconsolata-dz for Powerline,9,-1,5,50,0,0,0,0,0
 
 [General]
-Name=Shell
+Command=/usr/bin/zsh
+Name=Konsole
 Parent=FALLBACK/
 
 [Interaction Options]
 MiddleClickPasteMode=1
+
+[Keyboard]
+KeyBindings=default
 
 [Scrolling]
 HistoryMode=0
