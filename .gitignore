@@ -18,3 +18,7 @@ backups
 
 # ignore istory stuff from vimperator. should be synced through firefox.
 vimperator/info/*/history*
+
+# ignore zsh update and history files, these should be maintained locally
+zsh/zsh-update
+zsh/zsh_history
