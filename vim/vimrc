@@ -57,6 +57,7 @@ endif
 " let ragtag maps be global
 let g:ragtag_global_maps = 1
 
+
 "" powerline stuff
 "set rtp+=~/.vimrc/bundle/powerline
 "let g:powerline_config_path = expand("$HOME/.config/powerline")
@@ -168,6 +169,15 @@ if has("autocmd")
 endif
 
 colorscheme solarized
+
+"  override solarized colors for SignColumn
+"  override solarized colors for SignColumn
+"  ShowMarks hi groups. (not in solarized colourscheme.
+hi SignColumn ctermbg=0
+hi ShowMarksHLl ctermfg=166 ctermbg=0
+hi ShowMarksHLu ctermfg=160 ctermbg=0
+hi ShowMarksHLo ctermfg=33 ctermbg=0
+hi ShowMarksHLm ctermfg=64 ctermbg=0
 
 function! LoadTemplate()
 	silent! 0r ~/.vim/skel/template.%:e
