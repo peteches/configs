@@ -97,3 +97,12 @@
 [submodule "vim/bundle/vim-ShowMarks"]
 	path = vim/bundle/vim-ShowMarks
 	url = https://github.com/vim-scripts/ShowMarks
+[submodule "tmux/solarized-colors"]
+	path = tmux/solarized-colors
+	url = https://github.com/seebi/tmux-colors-solarized.git
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
