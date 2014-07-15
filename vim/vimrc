@@ -86,6 +86,7 @@ let g:tagbar_compact = 1
 let g:tagbar_indent = 2
 
 let NERDTreeQuitOnOpen=1
+let NERDTreeIgnore=[ '\.py[ocd]$[[file]]' ]
 let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
 
 " Gundo stuff
@@ -148,14 +149,6 @@ cnoremap help vert help
 "sign off patch
 abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
-function! MakeTabsConsistent(fileop, tabsize)
-	if a:fileop ==# 'r'
-		execute (has('gui_running') ? '' : 'silent') '% ! unexpand --tabs='. a:tabsize .' --first-only'
-	elseif a:fileop ==# 'w'
-		execute (has('gui_running') ? '' : 'silent') '% ! expand --tabs='. a:tabsize .' --initial'
-	endif
-endfunction
-
 if has("autocmd")
 	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 	augroup TEMPLATES
@@ -184,3 +177,6 @@ function! LoadTemplate()
 	"Highlight %VAR% placeholders with the TODO colour group
 	syn match Todo "%\u\+%" containedIn=ALL
 endfunction
+
+let $XIKI_DIR="/home/peteches/area_51/xiki"
+so $XIKI_DIR/etc/vim/xiki.vim
