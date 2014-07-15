@@ -35,7 +35,7 @@ alias virsh='sudo virsh'
 alias iptables='sudo iptables'
 alias docker='sudo docker'
 alias pacman='sudo pacman'
-alias ggpush='git push origin $(current_branch) && [[ $(current_branch) =~ "STAGE|LIVE|TEST_[1-8]" ]] && xdg-open http://gueaplatci01.skybet.net:8080/job/$(current_branch)'
+alias ggpush='git push origin $(current_branch) && if [[ $(current_branch) =~ "STAGE|LIVE|TEST_[1-8]" ]] ; then xdg-open http://gueaplatci01.skybet.net:8080/job/$(current_branch); else ;:;fi'
 alias yi='sudo yum install --assumeyes'
 
 
