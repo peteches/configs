@@ -150,7 +150,6 @@ cnoremap help vert help
 abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
 if has("autocmd")
-	autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 	augroup TEMPLATES
 		autocmd!
 		autocmd BufNewFile * call LoadTemplate()
