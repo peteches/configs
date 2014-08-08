@@ -115,3 +115,6 @@
 [submodule "vim/bundle/vim-switch"]
 	path = vim/bundle/vim-switch
 	url = https://github.com/AndrewRadev/switch.vim.git
+[submodule "vim/bundle/vim-mediummode"]
+	path = vim/bundle/vim-mediummode
+	url = https://github.com/kbarrette/mediummode.git
