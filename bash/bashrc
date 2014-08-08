@@ -67,3 +67,5 @@ if [[ -x /usr/bin/fortune && -x /usr/bin/cowsay ]];then
 	cowfiles=($(cowsay -l 2> /dev/null | sed 1d))
 	fortune | cowsay -f ${cowfiles[$(( $RANDOM % ${#cowfiles[@]} ))]} -W $(( $( /bin/stty size </dev/tty | cut -f2 -d" " ) - 10 ))
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
