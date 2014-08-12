@@ -101,6 +101,7 @@ config_matrix=(
     "${config_dir}/vimperator ${HOME}/.vimperator"
     "${config_dir}/vimperator/vimperatorrc ${HOME}/.vimperatorrc"
     "${config_dir}/gitconfig ${HOME}/.gitconfig"
+    "${config_dir}/gitignore ${HOME}/.gitignore"
 )
 
 # add scripts individually so as to keep locally generated scripts.

@@ -23,7 +23,7 @@ set use_envelope_from = yes
 set certificate_file  = ~/.mutt/certificates
 set signature         = ~/.mutt/signature
 source                  ~/.mutt/aliases
-source                  ~/.mutt/colours
+source                  ~/.mutt/colourschemes/mutt-colors-solarized-dark-256.muttrc
 source                  ~/.mutt/crypto
 
 

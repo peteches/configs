@@ -87,3 +87,5 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
