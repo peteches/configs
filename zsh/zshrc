@@ -55,14 +55,17 @@ plugins=(
 	copyfile
 	cp
 	git
+	jsontools
 	mosh
 	sudo
 	systemd
+	taskwarrior
 	tmux
 	vagrant
 	vi-mode
-	x
+	web-search
 	yum
+	zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh

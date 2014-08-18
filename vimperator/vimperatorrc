@@ -15,8 +15,9 @@ nnoremap <silent> gt b<Space>trello.com<Return>
 nnoremap <silent> gj b<Space>gueaci01.skybet.net<Return>
 nnoremap <Esc> :stop<Return>
 nnoremap Q :emenu Tools.Web Developer.Toggle Tools<CR>
+nnoremap \s :js uri=gBrowser.contentDocument.location.href; if (!uri.match(/^https/)) {uri = uri.replace('http','https')};gBrowser.loadURIWithFlags(uri);
 
-"""""""""""""
+""""""""""""
 "  Options  "
 """""""""""""
 
@@ -35,6 +36,10 @@ colorscheme molokai
 """"""""""""""""""
 
 autocmd PageLoad pastebin javascript window.content.window.document.getElementById('paste_user').value="Peteches"
+
+"""""""""""""""
+"  Functions  "
+"""""""""""""""
 
 """"""""""""""""""""""""""
 "  source other scripts  "

@@ -1,0 +1,51 @@
+global !p
+import ipcalc
+def netobj(cidr, rv="ip"):
+    net = False
+    try:
+        net = ipcalc.Network(cidr)
+    except:
+        pass
+    if net:
+        if rv == "ip":
+            return str(net)
+        elif rv == "broadcast":
+            return str(net.broadcast())
+        elif rv == "netmask":
+            return str(net.netmask())
+    else:
+        return " - "
+endglobal
+
+snippet node "Node config for Orchestrator" b
+# Node Name
+name "${1:host}.skybet.net"
+
+#Attributes required for initial server build
+#Don't remove them please
+# ${2:172.16.1.1/32}
+default['ipaddress'] = "`!p snip.rv = netobj(t[2])`"
+default['fqdn'] = "$1.skybet.net"
+default['netbroadcast'] = "`!p snip.rv = netobj(t[2], "broadcast")`"
+default['netgateway'] = "${3:Gateway}"
+default['netmask'] = "`!p snip.rv = netobj(t[2], "netmask")`"
+default['netlabel'] = "${4:LABEL}"
+
+#Attributes required for automatic vcenter builds
+default['disksize'] = "${5:12}"
+default['memsize'] = "${6:8192}"
+default['numcpu'] = "${7:6}"
+default['guestos'] = "${8:rhel6_64Guest}"
+default['vmfolder'] = "${9}"
+default['respool'] = "${10}"
+default['cluster'] = "${11}"
+# Node Environment
+chef_environment "${12:TEST_7}"
+
+# Node Run Lists (Recipes and roles)
+run_list [
+
+]
+
+
+endsnippet
