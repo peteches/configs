@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-mediummode"]
 	path = vim/bundle/vim-mediummode
 	url = https://github.com/kbarrette/mediummode.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
