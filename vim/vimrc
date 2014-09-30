@@ -54,6 +54,32 @@ if v:version > 703
 	set relativenumber
 endif
 
+" Command-t stuff
+" File scanner uses git ls-files if in a git repo
+" Falls back to find if not.
+let g:CommandTFileScanner = "git"
+let g:CommandTAlwaysShowDotFiles = 1
+let g:CommandTScanDotDirectories = 1
+let g:CommandTMatchWindowReverse = 1
+
+"""""""""""""""""""""""""""""
+"  re use existing buffers  "
+"""""""""""""""""""""""""""""
+function! s:GotoOrOpen(command, ...)
+	for file in a:000
+		if bufwinnr(file) != -1
+			exec "sb " . file
+		else
+			exec a:command . " " . file
+		endif
+	endfor
+endfunction
+command! -nargs=+ GotoOrOpen call s:GotoOrOpen(<f-args>)
+let g:CommandTAcceptSelectionCommand = 'GotoOrOpen e'
+let g:CommandTAcceptSelectionTabCommand = 'GotoOrOpen tabe'
+let g:CommandTAcceptSelectionSplitCommand = 'GotoOrOpen sp'
+let g:CommandTAcceptSelectionVSplitCommand = 'GotoOrOpen vs'
+
 " let ragtag maps be global
 let g:ragtag_global_maps = 1
 
