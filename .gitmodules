@@ -91,9 +91,6 @@
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/vim-ShowMarks"]
-	path = vim/bundle/vim-ShowMarks
-	url = https://github.com/vim-scripts/ShowMarks
 [submodule "vim/bundle/FuzzyFinder"]
 	path = vim/bundle/FuzzyFinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
@@ -118,3 +115,6 @@
 [submodule "vim/bundle/vim-mediummode"]
 	path = vim/bundle/vim-mediummode
 	url = https://github.com/kbarrette/mediummode.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
