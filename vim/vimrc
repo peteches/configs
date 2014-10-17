@@ -15,6 +15,9 @@ com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 " ensure Gblame always ignore whitespace
 cnoremap Gb Gblame w
 
+" set switch
+nnoremap - :Switch<CR>
+
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
