@@ -206,5 +206,5 @@ function! LoadTemplate()
 	syn match Todo "%\u\+%" containedIn=ALL
 endfunction
 
-let $XIKI_DIR="/home/peteches/area_51/xiki"
-so $XIKI_DIR/etc/vim/xiki.vim
+" let $XIKI_DIR="/home/peteches/area_51/xiki"
+" so $XIKI_DIR/etc/vim/xiki.vim
