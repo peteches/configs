@@ -86,7 +86,6 @@ let g:CommandTAcceptSelectionVSplitCommand = 'GotoOrOpen vs'
 " let ragtag maps be global
 let g:ragtag_global_maps = 1
 
-
 "" powerline stuff
 "set rtp+=~/.vimrc/bundle/powerline
 "let g:powerline_config_path = expand("$HOME/.config/powerline")
@@ -149,6 +148,9 @@ nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
+" Switch mappings
+nnoremap - :Switch<CR>
+
 "learn not to use arrow keys!
 nmap <LEFT> <NOP>
 nmap <RIGHT> <NOP>
@@ -163,6 +165,16 @@ map <C-k> <c-w>k
 
 "file completion
 imap <C-f> <C-x><C-f>
+
+" Git fugitive mappings
+nnoremap <LEADER>gb :Gblame w<CR>
+nnoremap <LEADER>gd :Gdiff<SPACE>
+nnoremap <LEADER>gs :Gstatus<CR>
+nnoremap <LEADER>gc :Gcommit<CR>
+nnoremap <LEADER>gl :Glog<CR>
+nnoremap <LEADER>gr :Gread<CR>
+nnoremap <LEADER>ge :Gedit<CR>
+nnoremap <LEADER>gw :Gwrite<CR>
 
 " for surrounding the character under the cursor with spaces.
 nnoremap <leader>s<space> i<space><esc>2l.
@@ -205,6 +217,3 @@ function! LoadTemplate()
 	"Highlight %VAR% placeholders with the TODO colour group
 	syn match Todo "%\u\+%" containedIn=ALL
 endfunction
-
-" let $XIKI_DIR="/home/peteches/area_51/xiki"
-" so $XIKI_DIR/etc/vim/xiki.vim
