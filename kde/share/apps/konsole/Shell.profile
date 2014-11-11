@@ -3,7 +3,7 @@ ColorScheme=Solarized
 Font=Inconsolata-dz for Powerline,9,-1,5,50,0,0,0,0,0
 
 [General]
-Command=/usr/bin/zsh
+Command=/usr/bin/tmux -2u new-session -A -s konsole
 Name=Konsole
 Parent=FALLBACK/
 
