@@ -69,6 +69,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+if [[ -e $HOME/.zsh_local ]]; then
+	source $HOME/.zsh_local # local stuff not to be put in repo.
+fi
 
 # User configuration
 
