@@ -4,11 +4,12 @@
 [push]
 	default = current
 [color]
-	diff = always
+	diff = auto
 [core]
 	pager = less -r
 	editor = vimx
 	excludesfile = ~/.gitignore
+	mergetool = vimdiff
 [alias]
 [alias]
 	stash-unapply = !git stash show -p|git apply -R
