@@ -28,7 +28,13 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias vless="vim --cmd 'let no_plugin_maps = 1' -c 'runtime! macros/less.vim'"
 
-alias cat='colorize'
+alias ccat='colorize'
+
+alias door='clear;x=$(($COLUMNS/2));y=$(($LINES/2));c=0;n=1;a=90;while :;do bgc=$(($c%232 + 16));case "$a" in 0)xd=0;yd=-1;n=$(($n+1));; 90)xd=1;yd=0;; 180)xd=0;yd=1;n=$(($n+1));; 270)xd=-1;yd=0 ;; *) break ;; esac; for ((i=0;i < $n;i++));do if [[ $x -ge $COLUMNS || $x -le 0 || $y -ge $LINES || $y -le 0 ]]; then x=$(($COLUMNS/2));y=$(($LINES/2));n=1;a=0; continue ; fi ; printf "\033[%s;%sH\033[48;5;%sm \033[0m" $y $x $bgc ; x=$(( $x + $xd )); y=$(( $y + $yd )); done ; c=$(( $c + 1 )); a=$(( $(( $a + 90 )) % 360 )) ; sleep 0.001; done'
+
+alias worm='a=1;x=1;y=1;xd=1;yd=1;while true;do if [[ $x == $LINES || $x == 0 ]]; then xd=$(( $xd *-1 )) ; fi ; if [[ $y == $COLUMNS || $y == 0 ]]; then yd=$(( $yd * -1 )) ; fi ; x=$(( $x + $xd )); y=$(( $y + $yd )); printf "\33[%s;%sH\33[48;5;%sm \33[0m" $x $y $(($a%199+16)) ;a=$(( $a + 1 )) ; sleep 0.001 ;done'
+
+alias snow='clear;while' ':;do' 'echo' '$LINES' '$COLUMNS' '$(($RANDOM%$COLUMNS))' '$(printf' '"\u2743\n");sleep' '0.1;done|gawk' ''\''{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH%s \033[0;0H",a[x],x,$4;}}'\'''
 
 # sudo aliases
 alias virsh='sudo virsh'
@@ -36,6 +42,7 @@ alias iptables='sudo iptables'
 alias docker='sudo docker'
 alias pacman='sudo pacman'
 alias ggpush='git push origin $(current_branch) && openJenkinsJob $(current_branch) &>/dev/null &'
+alias gmnff='git merge --no-ff'
 alias yi='sudo yum install --assumeyes'
 
 
