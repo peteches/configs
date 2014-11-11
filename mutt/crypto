@@ -27,7 +27,7 @@ set pgp_good_sign="^gpg: Good signature from"
 # if you want to use S-mime instead set the smime_is_default variable to yes
 
 # automatically sign all outgoing messages
-set crypt_autosign=yes
+set crypt_autosign=no
 
 # auto encrypt replies to encrypted messages
 set crypt_replyencrypt=yes
@@ -42,3 +42,8 @@ set crypt_verify_sig=yes
 set my_hdr="X-PGP-Key: http://pgp.mit.edu:11371/pks/lookup?search=pete@petemccabe.gb.net&op=index&exact=on"
 
 send-hook Rebecca.McCabe@bradford.gov.uk set crypt_autosign=no
+
+
+## cipher suites
+set ssl_use_sslv3 = no
+set ssl_use_tlsv1 = yes

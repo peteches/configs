@@ -28,7 +28,7 @@ source                  ~/.mutt/crypto
 
 
 set mail_check=60
-set imap_keepalive=300
+set imap_keepalive=100
 source ~/.mutt/imap_passwd
 
 set folder=imaps://peteches@mail.petemccabe.gb.net/
@@ -53,4 +53,3 @@ ignore *
 unignore From: Date: Subject: X-Original-To:
 unhdr_order *
 hdr_order X-Original-To: From: Date: Subject:
-
