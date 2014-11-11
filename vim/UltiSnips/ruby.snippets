@@ -19,13 +19,13 @@ endglobal
 
 snippet node "Node config for Orchestrator" b
 # Node Name
-name "${1:host}.skybet.net"
+name "`!v expand("%:t:r")`.skybet.net"
 
 #Attributes required for initial server build
 #Don't remove them please
 # ${2:172.16.1.1/32}
 default['ipaddress'] = "`!p snip.rv = netobj(t[2])`"
-default['fqdn'] = "$1.skybet.net"
+default['fqdn'] = "`!v expand("%:t:r")`.skybet.net"
 default['netbroadcast'] = "`!p snip.rv = netobj(t[2], "broadcast")`"
 default['netgateway'] = "${3:Gateway}"
 default['netmask'] = "`!p snip.rv = netobj(t[2], "netmask")`"
@@ -40,12 +40,32 @@ default['vmfolder'] = "${9}"
 default['respool'] = "${10}"
 default['cluster'] = "${11}"
 # Node Environment
-chef_environment "${12:TEST_7}"
+chef_environment "${12:`!v expand('%:p:h:t')`}"
 
 # Node Run Lists (Recipes and roles)
 run_list [
-
+  ${13:${VISUAL:# runlist}}
 ]
 
 
+endsnippet
+
+snippet config "Create vagrant vm config definition" b
+config.vm.define "${1:NODE}" do |node|
+    node.vm.box_url = "http://guearepo01.skybet.net:81/files/vbox-rhel6-64.box"
+    node.vm.box = "vbox-rhel6-64"
+    node.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = ["chef/cookbooks", "chef/opscode-cookbooks"]
+      chef.node_name = "testserver"
+      chef.roles_path = "chef/roles"
+      chef.data_bags_path = "chef/data_bags"
+      chef.environments_path = "chef/environments"
+      chef.environment = "TEST_7"
+      chef.add_recipe("chef-solo-search")
+      chef.add_recipe("sbg_base::rhel_repo")
+
+      chef.add_role("sbg-common")
+      $0
+    end
+end
 endsnippet
