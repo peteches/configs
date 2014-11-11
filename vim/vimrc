@@ -17,6 +17,11 @@ cnoremap Gb Gblame w
 
 " set switch
 nnoremap - :Switch<CR>
+let g:switch_custom_definitions =
+	\ [
+	\	['yes', 'no'],
+	\	['true', 'false'],
+	\ ]
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
