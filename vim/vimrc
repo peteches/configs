@@ -21,6 +21,7 @@ let g:switch_custom_definitions =
 	\ [
 	\	['yes', 'no'],
 	\	['true', 'false'],
+	\	['left', 'right'],
 	\ ]
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
