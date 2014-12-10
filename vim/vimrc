@@ -1,4 +1,3 @@
-
 filetype off
 "call pathogen to organise plugins
 call pathogen#infect()
@@ -11,10 +10,6 @@ source ~/.vim/ftplugin/man.vim
 com! -nargs=1 ManV :vnew | set ft=man | Man <args>
 com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 
-" fugitive mappings
-" ensure Gblame always ignore whitespace
-cnoremap Gb Gblame w
-
 " set switch
 nnoremap - :Switch<CR>
 let g:switch_custom_definitions =
@@ -22,6 +17,8 @@ let g:switch_custom_definitions =
 	\	['yes', 'no'],
 	\	['true', 'false'],
 	\	['left', 'right'],
+	\	['on', 'off'],
+	\	['||', '&&'],
 	\ ]
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
