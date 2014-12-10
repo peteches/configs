@@ -1,5 +1,5 @@
 .*.sw?
 tags
-*/Vagrantfile
+Vagrantfile
 doc
 fonts.dir
