@@ -10,6 +10,18 @@ source ~/.vim/ftplugin/man.vim
 com! -nargs=1 ManV :vnew | set ft=man | Man <args>
 com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 
+" usefull shortcuts
+" swap : and ;
+nnoremap : ;
+nnoremap ; :
+
+"Visual block far more useful than regular visual mode
+nnoremap v <C-v>
+
+
+" Remove any introduced trailing whitespace after moving...
+let g:DVB_TrimWS = 1
+
 " set switch
 nnoremap - :Switch<CR>
 let g:switch_custom_definitions =
@@ -18,11 +30,14 @@ let g:switch_custom_definitions =
 	\	['true', 'false'],
 	\	['on', 'off'],
 	\	['||', '&&'],
+	\	['udp', 'tcp'],
+	\	['low', 'medium', 'high'],
 	\ ]
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
+set background=dark
 set cmdheight=2
 set confirm
 set foldclose=all
@@ -59,6 +74,7 @@ if v:version > 703
 	set relativenumber
 endif
 
+
 " Command-t stuff
 " File scanner uses git ls-files if in a git repo
 " Falls back to find if not.
@@ -89,8 +105,8 @@ let g:CommandTAcceptSelectionVSplitCommand = 'GotoOrOpen vs'
 let g:ragtag_global_maps = 1
 
 "" powerline stuff
-"set rtp+=~/.vimrc/bundle/powerline
-"let g:powerline_config_path = expand("$HOME/.config/powerline")
+set rtp+=~/.vimrc/bundle/powerline
+let g:powerline_config_path = expand("$HOME/.config/powerline")
 
 "" UltiSnip stuff
 let g:UltiSnipsEditSplit = "vertical"
@@ -183,9 +199,7 @@ nnoremap <leader>s<space> i<space><esc>2l.
 nnoremap <leader>a<space> a<space><esc>
 nnoremap <leader>i<space> i<space><esc>
 
-if v:version >= 703
-	execute "set colorcolumn=80"
-endif
+call matchadd('ColorColumn', '\%81v', 100)
 
 cnoremap help vert help
 
@@ -203,7 +217,14 @@ if has("autocmd")
 	augroup END
 endif
 
+" solarised options
+
+let g:solarized_visibility='normal'
+
 colorscheme solarized
+
+highlight ColorColumn ctermbg=235
+call matchadd('ColorColumn', '\%81v', 100)
 
 "  override solarized colors for SignColumn
 "  override solarized colors for SignColumn
@@ -219,3 +240,11 @@ function! LoadTemplate()
 	"Highlight %VAR% placeholders with the TODO colour group
 	syn match Todo "%\u\+%" containedIn=ALL
 endfunction
+
+"       drag      visuals
+vmap    <expr>    <S-h>                DVB_Drag('left')
+vmap    <expr>    <S-l>                DVB_Drag('right')
+vmap    <expr>    <S-j>                DVB_Drag('down')
+vmap    <expr>    <S-k>                DVB_Drag('up')
+vmap    <expr>    D                DVB_Duplicate()
+
