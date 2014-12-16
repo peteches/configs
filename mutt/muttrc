@@ -46,7 +46,7 @@ subscribe gentoo-kernel@lists.gentoo.org
 subscribe info@linux-magazine.com
 subscribe linux-ha@lists.linux-ha.org
 
-set smtp_url="smtp://peteches@mail.petemccabe.gb.net:587"
+set smtp_url="smtp://peteches@smtp.petemccabe.gb.net:587"
 set ssl_starttls = yes
 
 ignore *
