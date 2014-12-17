@@ -24,6 +24,7 @@ nnoremap \s :js uri=gBrowser.contentDocument.location.href; if (!uri.match(/^htt
 set defsearch=duckduckgo
 set focuscontent
 set gui=nonavigation
+set complete=lst
 
 """"""""""""""""""
 "  colourscheme  "
