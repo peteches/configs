@@ -36,14 +36,8 @@ alias worm='a=1;x=1;y=1;xd=1;yd=1;while true;do if [[ $x == $LINES || $x == 0 ]]
 
 alias snow='clear;while' ':;do' 'echo' '$LINES' '$COLUMNS' '$(($RANDOM%$COLUMNS))' '$(printf' '"\u2743\n");sleep' '0.1;done|gawk' ''\''{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH%s \033[0;0H",a[x],x,$4;}}'\'''
 
-# sudo aliases
-alias virsh='sudo virsh'
-alias iptables='sudo iptables'
-alias docker='sudo docker'
-alias pacman='sudo pacman'
 alias ggpush='git push origin $(current_branch) && openJenkinsJob $(current_branch) &>/dev/null &'
 alias gmnff='git merge --no-ff'
-alias yi='sudo yum install --assumeyes'
 
 
 ####################
