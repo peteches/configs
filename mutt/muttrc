@@ -25,16 +25,16 @@ set signature         = ~/.mutt/signature
 source                  ~/.mutt/aliases
 source                  ~/.mutt/colourschemes/mutt-colors-solarized-dark-256.muttrc
 source                  ~/.mutt/crypto
-
+source			~/.mutt/local
 
 set mail_check=60
 set imap_keepalive=100
 source ~/.mutt/imap_passwd
 
-set folder=imaps://peteches@mail.petemccabe.gb.net/
-set spoolfile=imaps://peteches@mail.petemccabe.gb.net/
-set record=imaps://peteches@mail.petemccabe.gb.net/Sent
-set postponed=imaps://peteches@mail.petemccabe.gb.net/Drafts
+set folder=imaps://peteches@imap.petemccabe.gb.net/
+set spoolfile=imaps://peteches@imap.petemccabe.gb.net/
+set record=imaps://peteches@imap.petemccabe.gb.net/Sent
+set postponed=imaps://peteches@imap.petemccabe.gb.net/Drafts
 
 set header_cache=/var/tmp/.mutt
 
