@@ -1,7 +1,3 @@
-function sa() {
-    pat="$*"
-    alias | grep -E "$pat"
-}
 openJenkinsJob () {
 	JOB=$1 
 	local url="http://gueaplatci01.skybet.net:8080/job/${JOB}/"
