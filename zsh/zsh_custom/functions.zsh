@@ -16,6 +16,6 @@ openJenkinsJob () {
 			response_code=$(curl -I ${url}/${job_num}/console 2>/dev/null | awk 'NR==1{print $2}') 
 			sleep 5
 		done
-		xdg-open ${url}/${job_num}/console
+		nohup xdg-open ${url}/${job_num}/console &>/dev/null
 	fi
 }
