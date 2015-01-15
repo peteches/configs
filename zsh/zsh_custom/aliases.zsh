@@ -22,6 +22,13 @@ if [[ -x $( type -p vimx | awk '{print $NF}' ) ]]; then
     alias vim='vimx'
 fi
 
+# almost pointless sudo alias
+# ensures the command being sudoed is
+# scanned for any aliases.
+alias sudo='sudo '
+
+alias mmv='noglob zmv -W'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

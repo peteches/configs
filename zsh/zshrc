@@ -81,6 +81,19 @@ fi
 
 # User configuration
 
+# set fpath
+fpath=($HOME/.zsh_custom/functions $fpath)
+if [ -d $HOME/.zsh_local_funcs ]; then
+	fpath=($HOME/.zsh_local_funcs $fpath)
+fi
+
+# now auto load any functions you can find.
+for fdir in ${fpath[@]}; do
+	if [[ -d $fdir ]]; then
+		autoload $fdir/*(N:t)
+	fi
+done
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/peteches/.local/bin:/home/peteches/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/peteches/scripts:/home/peteches/bin:/home/peteches/.local/bin:/home/peteches/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
