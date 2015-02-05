@@ -1,4 +1,4 @@
-# vim: ft=zsh sw=2 ts=2 et
+# vim: ft=zsh
 
 zparseopts -D -E -A Aargs -a args 1=sshopts \
 			2=sshopts \
@@ -47,18 +47,16 @@ zparseopts -D -E -A Aargs -a args 1=sshopts \
 			h \
 			-help \
 			-sync-panes \
+			-same-window \
 			-with-windows \
-			-session: \
 			-command:=Aargs
-
-print -l --a 'lpk' ${(kv)Aargs}
 
 if [[ $args =~ -h(elp)? || $# == 0 ]];then
 	print "usage: $0 [sshopts] [mssh opts] [sshhosts]"
 	print "       -h|--help		print this help"
+	print "       --same-window	don't open new tmux window for mssh connections."
 	print "       --sync-panes	enable 'sync-panes' tmux option."
 	print "       --with-windows	use windows instead of panes for each connection."
-	print "       --session <session>	use specified tmux session."
 	print "       --command <cmd>	run command on hosts. (be careful of quotes)"
 	if [[ $args =~ -h(elp)? ]]; then
 		# if specifically asked for help return 0
@@ -76,11 +74,23 @@ else
 	TMUX_CMD="split-window"
 fi
 
-# # for the first ssh connection we want to use the currently active pane
-# # then spawn new panes / windows for subsequent connections.
-# tmux set-buffer -b 0 "ssh $sshopts $1"
-# tmux paste-buffer -db 0
-# shift
+if [[ $args =~ -same-window ]]; then
+	# we use the current pane
+
+	# for the first ssh connection we want to use the currently active pane
+	# then spawn new panes / windows for subsequent connections.
+	tmux set-buffer -b 0 "ssh $sshopts $1"
+	tmux paste-buffer -db 0
+else
+	# we need to create a new window for the first connection.
+	tmux new-window "ssh $sshopts $1 $Aargs[--command]"
+fi
+
+shift
+
+if [[ $args =~ -sync-panes ]]; then
+	tmux set-window-option synchronize-panes on
+fi
 
 for host in $*; do
 	tmux $TMUX_CMD "ssh $sshopts $host $Aargs[--command]"
