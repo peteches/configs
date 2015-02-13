@@ -38,7 +38,7 @@ let g:switch_custom_definitions =
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
-set background=dark
+set background=light
 set cmdheight=2
 set confirm
 set foldclose=all
@@ -74,6 +74,16 @@ set visualbell
 if v:version > 703
 	set relativenumber
 endif
+
+" mediumMode settings
+let g:mediummode_reset_events = [
+	'InsertLeave',
+	'BufEnter',
+	'CursorHold',
+	'TextChanged',
+	]
+
+let g:mediummode_allowed_character_motions = 5
 
 
 " Command-t stuff
