@@ -66,7 +66,6 @@ set spelllang=en_gb
 set tabpagemax=100
 set tabstop=8
 set textwidth=1000
-set tildeop
 set title
 set viminfo='1000,f1,:100,/100,%,!
 set visualbell
@@ -77,11 +76,11 @@ endif
 
 " mediumMode settings
 let g:mediummode_reset_events = [
-	'InsertLeave',
-	'BufEnter',
-	'CursorHold',
-	'TextChanged',
-	]
+	\ 'InsertLeave',
+	\ 'BufEnter',
+	\ 'CursorHold',
+	\ 'TextChanged',
+	\ ]
 
 let g:mediummode_allowed_character_motions = 5
 
