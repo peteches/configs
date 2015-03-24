@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-jsoneditoronline"]
 	path = vim/bundle/vim-jsoneditoronline
 	url = https://github.com/peteches/vim-jsoneditoronline
+[submodule "zsh/antigen"]
+	path = zsh/antigen-repo
+	url = https://github.com/zsh-users/antigen.git
