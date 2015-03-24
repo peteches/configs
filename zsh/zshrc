@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,10 @@ fpath=( ${HOME}/.zsh_custom/functions/ $fpath )
 ZSH_CUSTOM=$HOME/.zsh_custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# source $ZSH/oh-my-zsh.sh
+# use antigen instead
+source $HOME/.antigen-repo/antigen.zsh
+
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=()
 plugins=(
@@ -72,14 +75,26 @@ plugins=(
 	web-search
 	yum
 	zsh_reload
+	zsh-users/zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+antigen use oh-my-zsh
+
+for plugin in ${plugins}; do
+	antigen bundle ${plugin}
+done
+
+antigen apply
+
 if [[ -e $HOME/.zsh_local ]]; then
 	source $HOME/.zsh_local # local stuff not to be put in repo.
 fi
 
 # User configuration
+
+for file in ${HOME}/.zsh_custom/*.zsh; do
+	source $file
+done
 
 # set fpath
 fpath=($HOME/.zsh_custom/functions $fpath)
