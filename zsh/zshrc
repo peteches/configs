@@ -56,17 +56,20 @@ source $HOME/.antigen-repo/antigen.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=()
 plugins=(
+	adolfoabegg/browse-commit
 	colored-man
 	colorize
 	common-aliases
 	copydir
 	copyfile
 	cp
+	djui/alias-tips
 	git
 	jira
 	jsontools
 	mosh
 	sudo
+	supercrabtree/k
 	systemd
 	taskwarrior
 	tmux
