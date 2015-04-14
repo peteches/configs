@@ -106,3 +106,6 @@
 [submodule "zsh/antigen"]
 	path = zsh/antigen-repo
 	url = https://github.com/zsh-users/antigen.git
+[submodule "vim/bundle/ctrl-p"]
+	path = vim/bundle/ctrl-p
+	url = https://github.com/kien/ctrlp.vim.git
