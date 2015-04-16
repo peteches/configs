@@ -226,6 +226,11 @@ if has("autocmd")
 	autocmd!
 		autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
 	augroup END
+
+	augroup reload_rc
+		autocmd!
+		autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	augroup END
 endif
 
 " solarised options
