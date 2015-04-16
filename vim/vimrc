@@ -217,7 +217,18 @@ cnoremap help vert help
 "sign off patch
 abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
 
+" functions
+function! TrimWhiteSpace()
+	%s/\s\+$//e
+endfunction
+
+nnoremap <leader>rts :call TrimWhiteSpace()<CR>
+
 if has("autocmd")
+	augroup WHITESPACE
+		autocmd!
+		autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call TrimWhiteSpace()
+	augroup END
 	augroup TEMPLATES
 		autocmd!
 		autocmd BufNewFile * call LoadTemplate()
