@@ -199,7 +199,7 @@ imap <C-f> <C-x><C-f>
 nnoremap <LEADER>gb :Gblame w<CR>
 nnoremap <LEADER>gd :Gdiff<SPACE>
 nnoremap <LEADER>gs :Gstatus<CR>
-nnoremap <LEADER>gc :Gcommit<CR>
+nnoremap <LEADER>gc :Gcommit -v<CR>
 nnoremap <LEADER>gl :Glog<CR>
 nnoremap <LEADER>gr :Gread<CR>
 nnoremap <LEADER>ge :Gedit<CR>
