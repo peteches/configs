@@ -50,3 +50,6 @@ EDITOR=/usr/bin/vim
 # 106 = turquoise background
 #
 LS_COLORS='di=34:fi=0:ln=32:so=35:bd=36:cd=95:or=41;90:mi=41;90:'
+
+# set a nice debug prompt for bash scripts
+export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
