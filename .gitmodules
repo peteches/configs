@@ -115,3 +115,327 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "vim/bundle/vim-colorscheme-switcher"]
+	path = vim/bundle/vim-colorscheme-switcher
+	url = https://github.com/xolox/vim-colorscheme-switcher.git
+[submodule "vim/colors/beekai"]
+	path = vim/colors/beekai
+	url = https://github.com/stephanedemotte/beekai
+[submodule "vim/colors/vim-railscasts"]
+	path = vim/colors/vim-railscasts
+	url = https://github.com/justincampbell/vim-railscasts
+[submodule "vim/colors/vim-monochrome.git"]
+	path = vim/colors/vim-monochrome.git
+	url = https://github.com/fxn/vim-monochrome.git
+[submodule "vim/colors/vim-colors_atelier-schemes"]
+	path = vim/colors/vim-colors_atelier-schemes
+	url = https://github.com/atelierbram/vim-colors_atelier-schemes
+[submodule "vim/colors/neonwave.vim"]
+	path = vim/colors/neonwave.vim
+	url = https://github.com/SacredCrumb/neonwave.vim
+[submodule "vim/colors/abbott.vim"]
+	path = vim/colors/abbott.vim
+	url = https://github.com/vim-scripts/abbott.vim
+[submodule "vim/colors/inori"]
+	path = vim/colors/inori
+	url = https://github.com/duythinht/inori
+[submodule "vim/colors/mushroom"]
+	path = vim/colors/mushroom
+	url = https://github.com/mtglsk/mushroom
+[submodule "vim/colors/wells-colorscheme.vim"]
+	path = vim/colors/wells-colorscheme.vim
+	url = https://github.com/wellsjo/wells-colorscheme.vim
+[submodule "vim/colors/vim-sandydune"]
+	path = vim/colors/vim-sandydune
+	url = https://github.com/idbrii/vim-sandydune
+[submodule "vim/colors/vim-lapis256"]
+	path = vim/colors/vim-lapis256
+	url = https://github.com/andrwb/vim-lapis256
+[submodule "vim/colors/itg_flat_vim"]
+	path = vim/colors/itg_flat_vim
+	url = https://github.com/cdmedia/itg_flat_vim
+[submodule "vim/colors/heroku-colorscheme"]
+	path = vim/colors/heroku-colorscheme
+	url = https://github.com/stulzer/heroku-colorscheme
+[submodule "vim/colors/sprinkles"]
+	path = vim/colors/sprinkles
+	url = https://github.com/alexjgriffin/sprinkles
+[submodule "vim/colors/Benokai"]
+	path = vim/colors/Benokai
+	url = https://github.com/benjaminwhite/Benokai
+[submodule "vim/colors/lumberjack.vim"]
+	path = vim/colors/lumberjack.vim
+	url = https://github.com/yamafaktory/lumberjack.vim
+[submodule "vim/colors/vt_tmux"]
+	path = vim/colors/vt_tmux
+	url = https://github.com/yantze/vt_tmux
+[submodule "vim/colors/flattened"]
+	path = vim/colors/flattened
+	url = https://github.com/romainl/flattened
+[submodule "vim/colors/Dev_Delight"]
+	path = vim/colors/Dev_Delight
+	url = https://github.com/sandeepsinghmails/Dev_Delight
+[submodule "vim/colors/wolfpack"]
+	path = vim/colors/wolfpack
+	url = https://github.com/carlson-erik/wolfpack
+[submodule "vim/colors/Revolution.vim"]
+	path = vim/colors/Revolution.vim
+	url = https://github.com/CruizeMissile/Revolution.vim
+[submodule "vim/colors/cobalt2-vim-theme"]
+	path = vim/colors/cobalt2-vim-theme
+	url = https://github.com/GertjanReynaert/cobalt2-vim-theme
+[submodule "vim/colors/Spacegray.vim"]
+	path = vim/colors/Spacegray.vim
+	url = https://github.com/ajh17/Spacegray.vim
+[submodule "vim/colors/genericdc"]
+	path = vim/colors/genericdc
+	url = https://github.com/nowk/genericdc
+[submodule "vim/colors/flattown"]
+	path = vim/colors/flattown
+	url = https://github.com/blerins/flattown
+[submodule "vim/colors/vim-sunburst"]
+	path = vim/colors/vim-sunburst
+	url = https://github.com/sickill/vim-sunburst
+[submodule "vim/colors/vim-gotham"]
+	path = vim/colors/vim-gotham
+	url = https://github.com/whatyouhide/vim-gotham
+[submodule "vim/colors/flattr.vim"]
+	path = vim/colors/flattr.vim
+	url = https://github.com/farseer90718/flattr.vim
+[submodule "vim/colors/vim-railscasts-theme"]
+	path = vim/colors/vim-railscasts-theme
+	url = https://github.com/chankaward/vim-railscasts-theme
+[submodule "vim/colors/vim-coffee"]
+	path = vim/colors/vim-coffee
+	url = https://github.com/duythinht/vim-coffee
+[submodule "vim/colors/molokai"]
+	path = vim/colors/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "vim/colors/vim-colors-bluedrake"]
+	path = vim/colors/vim-colors-bluedrake
+	url = https://github.com/MichaelMalick/vim-colors-bluedrake
+[submodule "vim/colors/C64.vim"]
+	path = vim/colors/C64.vim
+	url = https://github.com/vim-scripts/C64.vim
+[submodule "vim/colors/twilight256.vim"]
+	path = vim/colors/twilight256.vim
+	url = https://github.com/vim-scripts/twilight256.vim
+[submodule "vim/colors/ingretu"]
+	path = vim/colors/ingretu
+	url = https://github.com/gmarik/ingretu
+[submodule "vim/colors/desertEx"]
+	path = vim/colors/desertEx
+	url = https://github.com/vim-scripts/desertEx
+[submodule "vim/colors/less.vim"]
+	path = vim/colors/less.vim
+	url = https://github.com/vim-scripts/less.vim
+[submodule "vim/colors/BusyBee"]
+	path = vim/colors/BusyBee
+	url = https://github.com/vim-scripts/BusyBee
+[submodule "vim/colors/Muon"]
+	path = vim/colors/Muon
+	url = https://github.com/gregsexton/Muon
+[submodule "vim/colors/FlatColor"]
+	path = vim/colors/FlatColor
+	url = https://github.com/MaxSt/FlatColor
+[submodule "vim/colors/vim-colors-clearance"]
+	path = vim/colors/vim-colors-clearance
+	url = https://github.com/cseelus/vim-colors-clearance
+[submodule "vim/colors/tchaba"]
+	path = vim/colors/tchaba
+	url = https://github.com/vim-scripts/tchaba
+[submodule "vim/colors/synic.vim"]
+	path = vim/colors/synic.vim
+	url = https://github.com/vim-scripts/synic.vim
+[submodule "vim/colors/strange"]
+	path = vim/colors/strange
+	url = https://github.com/vim-scripts/strange
+[submodule "vim/colors/rdark-terminal"]
+	path = vim/colors/rdark-terminal
+	url = https://github.com/vim-scripts/rdark-terminal
+[submodule "vim/colors/pink"]
+	path = vim/colors/pink
+	url = https://github.com/vim-scripts/pink
+[submodule "vim/colors/mrkn256.vim"]
+	path = vim/colors/mrkn256.vim
+	url = https://github.com/mrkn/mrkn256.vim
+[submodule "vim/colors/miko"]
+	path = vim/colors/miko
+	url = https://github.com/vim-scripts/miko
+[submodule "vim/colors/lilypink"]
+	path = vim/colors/lilypink
+	url = https://github.com/vim-scripts/lilypink
+[submodule "vim/colors/lettuce.vim"]
+	path = vim/colors/lettuce.vim
+	url = https://github.com/vim-scripts/lettuce.vim
+[submodule "vim/colors/leo256"]
+	path = vim/colors/leo256
+	url = https://github.com/vim-scripts/leo256
+[submodule "vim/colors/inkpot"]
+	path = vim/colors/inkpot
+	url = https://github.com/vim-scripts/inkpot
+[submodule "vim/colors/icansee.vim"]
+	path = vim/colors/icansee.vim
+	url = https://github.com/vim-scripts/icansee.vim
+[submodule "vim/colors/greenvision"]
+	path = vim/colors/greenvision
+	url = https://github.com/vim-scripts/greenvision
+[submodule "vim/colors/fu"]
+	path = vim/colors/fu
+	url = https://github.com/noah/fu
+[submodule "vim/colors/colorful256.vim"]
+	path = vim/colors/colorful256.vim
+	url = https://github.com/vim-scripts/colorful256.vim
+[submodule "vim/colors/calmar256-lightdark.vim"]
+	path = vim/colors/calmar256-lightdark.vim
+	url = https://github.com/vim-scripts/calmar256-lightdark.vim
+[submodule "vim/colors/blacklight"]
+	path = vim/colors/blacklight
+	url = https://github.com/vim-scripts/blacklight
+[submodule "vim/colors/The-Vim-Gardener"]
+	path = vim/colors/The-Vim-Gardener
+	url = https://github.com/vim-scripts/The-Vim-Gardener
+[submodule "vim/colors/Gentooish"]
+	path = vim/colors/Gentooish
+	url = https://github.com/vim-scripts/Gentooish
+[submodule "vim/colors/256-jungle"]
+	path = vim/colors/256-jungle
+	url = https://github.com/vim-scripts/256-jungle
+[submodule "vim/colors/256-grayvim"]
+	path = vim/colors/256-grayvim
+	url = https://github.com/vim-scripts/256-grayvim
+[submodule "vim/colors/lodestone.vim"]
+	path = vim/colors/lodestone.vim
+	url = https://github.com/lodestone/lodestone.vim
+[submodule "vim/colors/mustang-vim"]
+	path = vim/colors/mustang-vim
+	url = https://github.com/croaker/mustang-vim
+[submodule "vim/colors/bubblegum"]
+	path = vim/colors/bubblegum
+	url = https://github.com/baskerville/bubblegum
+[submodule "vim/colors/vim-kalisi"]
+	path = vim/colors/vim-kalisi
+	url = https://github.com/freeo/vim-kalisi
+[submodule "vim/colors/jellyx.vim"]
+	path = vim/colors/jellyx.vim
+	url = https://github.com/guns/jellyx.vim
+[submodule "vim/colors/flatui.vim"]
+	path = vim/colors/flatui.vim
+	url = https://github.com/john2x/flatui.vim
+[submodule "vim/colors/landscape.vim"]
+	path = vim/colors/landscape.vim
+	url = https://github.com/itchyny/landscape.vim
+[submodule "vim/colors/neverland-vim-theme.git"]
+	path = vim/colors/neverland-vim-theme.git
+	url = git://github.com/trapd00r/neverland-vim-theme.git
+[submodule "vim/colors/vim-sorcerer"]
+	path = vim/colors/vim-sorcerer
+	url = https://github.com/adlawson/vim-sorcerer
+[submodule "vim/colors/lizard"]
+	path = vim/colors/lizard
+	url = https://github.com/gilsondev/lizard
+[submodule "vim/colors/vim-kolor"]
+	path = vim/colors/vim-kolor
+	url = https://github.com/zeis/vim-kolor
+[submodule "vim/colors/ecostation"]
+	path = vim/colors/ecostation
+	url = https://github.com/vim-scripts/ecostation
+[submodule "vim/colors/0x7A69_dark.vim"]
+	path = vim/colors/0x7A69_dark.vim
+	url = https://github.com/vim-scripts/0x7A69_dark.vim
+[submodule "vim/colors/mopkai.vim"]
+	path = vim/colors/mopkai.vim
+	url = https://github.com/mopp/mopkai.vim
+[submodule "vim/colors/SlateDark"]
+	path = vim/colors/SlateDark
+	url = https://github.com/vim-scripts/SlateDark
+[submodule "vim/colors/grishin-color-scheme"]
+	path = vim/colors/grishin-color-scheme
+	url = https://github.com/vim-scripts/grishin-color-scheme
+[submodule "vim/colors/swamplight"]
+	path = vim/colors/swamplight
+	url = https://github.com/vim-scripts/swamplight
+[submodule "vim/colors/RadicalGoodSpeed.vim"]
+	path = vim/colors/RadicalGoodSpeed.vim
+	url = https://github.com/svjunic/RadicalGoodSpeed.vim
+[submodule "vim/colors/vim"]
+	path = vim/colors/vim
+	url = https://github.com/lxmzhv/vim
+[submodule "vim/colors/industry.vim"]
+	path = vim/colors/industry.vim
+	url = https://github.com/vim-scripts/industry.vim
+[submodule "vim/colors/vim-getafe"]
+	path = vim/colors/vim-getafe
+	url = https://github.com/larssmit/vim-getafe
+[submodule "vim/colors/mango.vim"]
+	path = vim/colors/mango.vim
+	url = https://github.com/goatslacker/mango.vim
+[submodule "vim/colors/vim-monokai"]
+	path = vim/colors/vim-monokai
+	url = https://github.com/sickill/vim-monokai
+[submodule "vim/colors/vim-distinguished"]
+	path = vim/colors/vim-distinguished
+	url = https://github.com/Lokaltog/vim-distinguished
+[submodule "vim/colors/Apprentice"]
+	path = vim/colors/Apprentice
+	url = https://github.com/romainl/Apprentice
+[submodule "vim/colors/color-scheme-holokai-of-vim"]
+	path = vim/colors/color-scheme-holokai-of-vim
+	url = https://github.com/changyuheng/color-scheme-holokai-of-vim
+[submodule "vim/colors/vim-colors-pencil"]
+	path = vim/colors/vim-colors-pencil
+	url = https://github.com/reedes/vim-colors-pencil
+[submodule "vim/colors/vim-babymate256"]
+	path = vim/colors/vim-babymate256
+	url = https://github.com/baverman/vim-babymate256
+[submodule "vim/colors/vim-hemisu"]
+	path = vim/colors/vim-hemisu
+	url = https://github.com/noahfrederick/vim-hemisu
+[submodule "vim/colors/vim-starwars"]
+	path = vim/colors/vim-starwars
+	url = https://github.com/marlun/vim-starwars
+[submodule "vim/colors/iceberg.vim"]
+	path = vim/colors/iceberg.vim
+	url = https://github.com/cocopon/iceberg.vim
+[submodule "vim/colors/vim-colors-codeschool"]
+	path = vim/colors/vim-colors-codeschool
+	url = https://github.com/antlypls/vim-colors-codeschool
+[submodule "vim/colors/gruvbox"]
+	path = vim/colors/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/colors/ChasingLogic-colorscheme-vim"]
+	path = vim/colors/ChasingLogic-colorscheme-vim
+	url = https://github.com/ChasingLogic/ChasingLogic-colorscheme-vim
+[submodule "vim/colors/earendel"]
+	path = vim/colors/earendel
+	url = https://github.com/vim-scripts/earendel
+[submodule "vim/colors/AtelierDune"]
+	path = vim/colors/AtelierDune
+	url = https://github.com/vim-scripts/AtelierDune
+[submodule "vim/colors/seoul256.vim"]
+	path = vim/colors/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim
+[submodule "vim/colors/vim-lucius.git"]
+	path = vim/colors/vim-lucius.git
+	url = git@github.com:jonathanfilip/vim-lucius.git
+[submodule "vim/colors/Ubloh-Color-Scheme"]
+	path = vim/colors/Ubloh-Color-Scheme
+	url = https://github.com/vim-scripts/Ubloh-Color-Scheme
+[submodule "vim/colors/skittles_berry"]
+	path = vim/colors/skittles_berry
+	url = https://github.com/shawncplus/skittles_berry
+[submodule "vim/colors/burnttoast256"]
+	path = vim/colors/burnttoast256
+	url = https://github.com/vim-scripts/burnttoast256
+[submodule "vim/colors/Zenburn"]
+	path = vim/colors/Zenburn
+	url = https://github.com/jnurmine/Zenburn
+[submodule "vim/colors/vim-wombat256i"]
+	path = vim/colors/vim-wombat256i
+	url = https://github.com/dsolstad/vim-wombat256i
+[submodule "vim/colors/vim-colors-solarized"]
+	path = vim/colors/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "vim/colors/jellybeans.vim"]
+	path = vim/colors/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
