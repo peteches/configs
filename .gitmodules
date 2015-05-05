@@ -439,3 +439,9 @@
 [submodule "vim/colors/jellybeans.vim"]
 	path = vim/colors/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "vim/bundle/yaml-vim"]
+	path = vim/bundle/yaml-vim
+	url = https://github.com/mrk21/yaml-vim.git
+[submodule "vim/bundle/vim-sleuth"]
+	path = vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
