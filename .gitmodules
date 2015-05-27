@@ -439,3 +439,6 @@
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim/bundle/pep8"]
+	path = vim/bundle/pep8
+	url = https://github.com/vim-scripts/pep8

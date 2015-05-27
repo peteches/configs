@@ -1,5 +1,11 @@
 filetype plugin indent on
 
-" pymode stuff
-let g:pymode_lint_checkers = [  "pylint", "pep8", "mccabe" ]
-let g:pymode_lint_ignore = "E501,C0301"
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+augroup SYNTAX
+	autocmd!
+	autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call <SNR>46_Pep8()
+augroup END
