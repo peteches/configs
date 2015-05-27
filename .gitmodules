@@ -6,7 +6,7 @@
 	url = https://github.com/Lokaltog/vim-powerline
 [submodule "vim/bundle/pyflakes"]
 	path = vim/bundle/pyflakes
-	url = https://github.com/kevinw/pyflakes
+	url = https://github.com/mitechie/pyflakes-pathogen
 [submodule "vim/bundle/repeat"]
 	path = vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat
