@@ -141,9 +141,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore=[ '\.py[ocd]$[[file]]' ]
 let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
 
-" Gundo stuff
-let g:gundo_preview_bottom = 1
-
 abbr slef self
 abbr resutl result
 abbr fro for
@@ -155,7 +152,6 @@ map Y y$
 " <F2> pasteToggle
 map <F3> <ESC>:set nu! list! foldenable!<CR>
 map <F4> <ESC>:NERDTreeToggle<CR>
-map <F5> <ESC>:GundoToggle<CR>
 
 " make the <c-y> more useful by doing whole words
 inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
