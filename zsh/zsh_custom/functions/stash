@@ -1,0 +1,112 @@
+
+
+###########
+#  Funcs  #
+###########
+
+# setup()
+#	Sets up all require shared stuff.
+#
+# inputs	-
+# outputs	-
+# return value	- 0 if successfull
+# side effects	-
+setup()
+{
+	#create secure directory
+	export temp_dir=$( mktemp -d -p ${HOME}/ .stash_details.xxxxxxx )
+
+	mount -t ramfs -o 50MB  ramfs $temp_dir
+	export cookiefile=$temp_dir/cookies
+
+}
+
+# log_in()
+#	set's up secure environment for storing cookies / login data and
+#	prompts users for login auth details.
+#
+# inputs	-
+# outputs	-
+# return value	- 0 if successfull
+# side effects	-
+log_in()
+{
+	local user
+	local pass
+
+	echo -n "Enter Stash username: "
+	read user
+
+	echo -n "Enter Stash Password: "
+	read -s pass
+
+	
+
+
+}
+
+# pull_req_create()
+#	creates a pull reques
+#
+# inputs	-
+# outputs	-
+# return value	- 0 if successfull
+# side effects	-
+pull_req_create()
+{
+	local -A reviewers
+	local dst_branch
+	local src_branch
+	local desc
+	local title
+
+	local repo_slug=$( get_repo_slug )
+	local name=$( get_repo_name )
+	local project_key=$( get_repo_key )
+
+	echo -n "Title (def: $src_branch): "
+	read title
+	echo -n "Description (def: \"Merging $src_branch to $dst_branch\"):"
+	read desc
+	echo -n "From branch (def: $src_branch): "
+	read src_branch
+	echo -n "Dest branch (def: $dst_branch): "
+	read dst_branch
+	echo -n "Reviewers: "
+	read -A reviewers
+}
+
+# pull_req()
+#	handles pull requests via stash api
+#
+# inputs	- cmd, cmd args
+# outputs	-
+# return value	- 0 if successfull
+# side effects	-
+pull_req()
+{
+	local cmd=$1
+	shift 1
+	case $cmd in
+		create)
+			pull_req_create "$@"
+			;;
+		*)
+			usage 1 pull_req
+			;;
+	esac
+}
+
+##########
+#  Main  #
+##########
+
+case $1 in
+	pr)
+		shift
+		pull_req "$@"
+		;;
+	*)
+		usage 1
+		;;
+esac
