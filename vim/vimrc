@@ -5,6 +5,16 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+" define some backups
+if filewritable("$HOME/.vimbackups/") != 2
+	call system("mkdir -p $HOME/.vimbackups/")
+endif
+
+set backup
+set backupdir=$HOME/.vimbackups/
+set backupcopy=auto
+set writebackup
+
 " set runtime to include man page lookups
 source ~/.vim/ftplugin/man.vim
 com! -nargs=1 ManV :vnew | set ft=man | Man <args>
