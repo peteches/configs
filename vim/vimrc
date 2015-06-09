@@ -75,6 +75,18 @@ if v:version > 703
 	set relativenumber
 endif
 
+let g:session_file=expand("$HOME/.vim/Session.vim")
+if filereadable(g:session_file) && argc() < 1
+	echom "Loading Session from " . g:session_file
+	exe "source " . g:session_file
+else
+	echom "No Session file found creating new session."
+	runtime plugin/obsession.vim
+	if exists(':Obsession')
+		exe "Obsession " . g:session_file
+	endif
+endif
+
 " mediumMode settings
 let g:mediummode_reset_events = [
 	\ 'InsertLeave',
