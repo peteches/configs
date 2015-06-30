@@ -4,17 +4,13 @@
 "  MAPS  "
 """"""""""
 
-nnoremap <silent> "<leader>p" :emenu File.New Private Window
+nnoremap <silent> "<leader>p" :emenu File.New Private Window<Return>
 
 nnoremap <silent> "\\f" <Esc>:js<Space>window.openNewTabWith(window.content.window.document.getElementById('r1-0').querySelector('a.result__a').getAttribute('href'))<Return>
+nnoremap ; :
+
 nnoremap [t gT
 nnoremap ]t gt
-nnoremap <silent> go b<Space>monitoring.skybet.net<Return>
-nnoremap <silent> gr b<Space>guearundeck.skybet.net<Return>
-nnoremap <silent> gp b<Space>peopleportal.bskyb.com<Return>
-nnoremap <silent> gJ b<space>tools.skybet.net/jira<Return>
-nnoremap <silent> gt b<Space>trello.com<Return>
-nnoremap <silent> gj b<Space>gueaci01.skybet.net<Return>
 nnoremap <Esc> :stop<Return>
 nnoremap Q :emenu Tools.Web Developer.Toggle Tools<CR>
 nnoremap "\\s" :js uri=gBrowser.contentDocument.location.href; if (!uri.match(/^https/)) {uri = uri.replace('http','https')};gBrowser.loadURIWithFlags(uri);<Return>
