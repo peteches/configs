@@ -1,3 +1,7 @@
+let g:pathogen_disabled=
+	\ [
+	\ ]
+
 filetype off
 "call pathogen to organise plugins
 call pathogen#infect()
@@ -44,6 +48,9 @@ let g:switch_custom_definitions =
 	\	['udp', 'tcp'],
 	\	['low', 'medium', 'high'],
 	\ ]
+
+" Switch mappings
+nnoremap - :Switch<CR>
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
@@ -191,9 +198,6 @@ nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
-" Switch mappings
-nnoremap - :Switch<CR>
-
 "learn not to use arrow keys!
 nmap <LEFT> <NOP>
 nmap <RIGHT> <NOP>
@@ -241,7 +245,7 @@ nnoremap <leader>rts :call TrimWhiteSpace()<CR>
 if has("autocmd")
 	augroup WHITESPACE
 		autocmd!
-		autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call TrimWhiteSpace()
+		autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * if match(expand('%'), 'fugitive://') != 0 | :call TrimWhiteSpace()
 	augroup END
 	augroup TEMPLATES
 		autocmd!
