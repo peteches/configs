@@ -7,5 +7,5 @@ set softtabstop=4
 
 augroup SYNTAX
 	autocmd!
-	autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call <SNR>47_Pep8()
+	autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * Pep8
 augroup END
