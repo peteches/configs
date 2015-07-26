@@ -185,6 +185,8 @@ map <F4> <ESC>:NERDTreeToggle<CR>
 
 " make the <c-y> more useful by doing whole words
 inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
+" Same for <c-e>
+inoremap <expr> <c-e> matchstr(getline(line('.')+1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
 
 imap <LEADER>,, <ESC>viWS'Ea
 imap <LEADER>.. <ESC>viWS"Ea
