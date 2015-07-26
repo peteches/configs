@@ -272,6 +272,11 @@ if has("autocmd")
 		autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
 	augroup END
 
+	augroup GITCONFLICT
+		autocmd!
+		autocmd BufRead * if match(system("git diff --name-only --diff-filter=U"), expand('%')) != -1 | set foldenable foldmethod=expr foldexpr=FoldGitConflict() | /^<<<<<<< HEAD/ | normal zo | endif
+	augroup END
+
 	augroup reload_rc
 		autocmd!
 		autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -309,3 +314,23 @@ vmap    <expr>    <S-j>                DVB_Drag('down')
 vmap    <expr>    <S-k>                DVB_Drag('up')
 vmap    <expr>    D                DVB_Duplicate()
 
+function! FoldGitConflict()
+	let nline = getline(v:lnum)
+	let line = getline(v:lnum + 1)
+
+	if match(line, '^<<<<<<<') >= 0
+		return "<1"
+	elseif match(nline, '^>>>>>>>') >= 0
+		return "<1"
+	else
+		return "1"
+	endif
+endfunction
+
+hi DIFFHEAD ctermfg=1
+hi DIFFMIDDLE ctermfg=1
+hi DIFFBRANCH ctermfg=1
+
+call matchadd('DIFFHEAD', '^<<<<<<< HEAD')
+call matchadd('DIFFMIDDLE', '^=======')
+call matchadd('DIFFBRANCH', '^>>>>>>>.*')
