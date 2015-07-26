@@ -52,6 +52,14 @@ let g:switch_custom_definitions =
 " Switch mappings
 nnoremap - :Switch<CR>
 
+" vim-pad settings
+let g:pad#dir = "~/.notes/"
+
+if filewritable(g:pad#dir) != 2
+	call system("mkdir -p " . g:pad#dir)
+endif
+
+
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
 set autoindent
