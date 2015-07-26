@@ -54,6 +54,12 @@ nnoremap - :Switch<CR>
 
 " vim-pad settings
 let g:pad#dir = "~/.notes/"
+let g:pad#default_format = "pandoc"
+let g:pad#modeline_position = "top"
+let g:pad#default_file_extension = ".md"
+let g:pad#open_in_split = 0
+
+
 
 if filewritable(g:pad#dir) != 2
 	call system("mkdir -p " . g:pad#dir)
