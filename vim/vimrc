@@ -274,7 +274,7 @@ if has("autocmd")
 
 	augroup GITCONFLICT
 		autocmd!
-		autocmd BufRead * if match(system("git diff --name-only --diff-filter=U"), expand('%')) != -1 | set foldenable foldmethod=expr foldexpr=FoldGitConflict() | /^<<<<<<< HEAD/ | normal zo | endif
+		autocmd BufRead * call InitConflictedFile()
 	augroup END
 
 	augroup reload_rc
@@ -326,6 +326,20 @@ function! FoldGitConflict()
 		return "1"
 	endif
 endfunction
+
+function! InitConflictedFile()
+	let conflicted_files=system("git diff --name-only --diff-filter=U")
+	let this_file=substitute(expand('%'),system("git rev-parse --show-toplevel"), "", "")
+	if match(conflicted_files, this_file) != -1
+		set foldenable
+		set foldmethod=expr
+		set foldexpr=FoldGitConflict()
+		normal gg
+		/^<<<<<<< HEAD/
+		normal zo
+	endif
+endfunction
+
 
 hi DIFFHEAD ctermfg=1
 hi DIFFMIDDLE ctermfg=1
