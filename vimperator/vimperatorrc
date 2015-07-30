@@ -9,11 +9,13 @@ nnoremap <silent> "<leader>p" :emenu File.New Private Window<Return>
 nnoremap <silent> "\\f" <Esc>:js<Space>window.openNewTabWith(window.content.window.document.getElementById('r1-0').querySelector('a.result__a').getAttribute('href'))<Return>
 nnoremap ; :
 
+nnoremap <leader>b <esc>:buffer<space>
+
 nnoremap [t gT
 nnoremap ]t gt
 nnoremap <Esc> :stop<Return>
 nnoremap Q :emenu Tools.Web Developer.Toggle Tools<CR>
-nnoremap "\\s" :js uri=gBrowser.contentDocument.location.href; if (!uri.match(/^https/)) {uri = uri.replace('http','https')};gBrowser.loadURIWithFlags(uri);<Return>
+nnoremap "<leader>s" :js uri=gBrowser.contentDocument.location.href; if (!uri.match(/^https/)) {uri = uri.replace('http','https')};gBrowser.loadURIWithFlags(uri);<Return>
 
 nnoremap j 10j
 nnoremap k 10k
