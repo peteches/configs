@@ -1,3 +1,5 @@
+"  Setup {{{
+
 let g:pathogen_disabled=
 	\ [
 	\ ]
@@ -9,7 +11,9 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-" define some backups
+" }}}
+
+" define some backups {{{
 if filewritable("$HOME/.vimbackups/") != 2
 	call system("mkdir -p $HOME/.vimbackups/")
 endif
@@ -19,52 +23,22 @@ set backupdir=$HOME/.vimbackups/
 set backupcopy=auto
 set writebackup
 
-" set runtime to include man page lookups
+" }}}
+
+" Commands {{{
+" man page lookups {{{
 source ~/.vim/ftplugin/man.vim
 com! -nargs=1 ManV :vnew | set ft=man | Man <args>
 com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 
-" usefull shortcuts
-" swap : and ;
-nnoremap : ;
-nnoremap ; :
+" }}}
+" Help windows {{{
+com! -nargs=1 Vhelp :vnew | set ft=help | help <args>
+" }}}
 
-"Visual block far more useful than regular visual mode
-nnoremap v <C-v>
+" }}}
 
-
-" Remove any introduced trailing whitespace after moving...
-let g:DVB_TrimWS = 1
-
-" set switch
-nnoremap - :Switch<CR>
-let g:switch_custom_definitions =
-	\ [
-	\	['yes', 'no'],
-	\	['true', 'false'],
-	\	['left', 'right'],
-	\	['on', 'off'],
-	\	['||', '&&'],
-	\	['udp', 'tcp'],
-	\	['low', 'medium', 'high'],
-	\ ]
-
-" Switch mappings
-nnoremap - :Switch<CR>
-
-" vim-pad settings
-let g:pad#dir = "~/.notes/"
-let g:pad#default_format = "pandoc"
-let g:pad#modeline_position = "top"
-let g:pad#default_file_extension = ".md"
-let g:pad#open_in_split = 0
-
-
-
-if filewritable(g:pad#dir) != 2
-	call system("mkdir -p " . g:pad#dir)
-endif
-
+" General Settings {{{
 
 "set listchars=tab:>-,trail:.,extends:>,precedes:<,eol:$,nbsp:-
 "set statusline=[%n]\ %y\ ./%-f%M%R\ %=Col:\ %02c\ (%02v)\ Line:\ %02l\ /\ %02L\ %P
@@ -106,20 +80,45 @@ if v:version > 703
 	set relativenumber
 endif
 
-" TODO: sort this out so it works.
-" let g:session_file=expand("$HOME/.vim/Session.vim")
-" if filereadable(g:session_file) && argc() < 1
-" 	echom "Loading Session from " . g:session_file
-" 	exe "source " . g:session_file
-" else
-" 	echom "No Session file found creating new session."
-" 	runtime plugin/obsession.vim
-" 	if exists(':Obsession')
-" 		exe "Obsession " . g:session_file
-" 	endif
-" endif
+" }}}
 
-" mediumMode settings
+" Plugin Settings {{{
+
+" Switch {{{
+
+" set switch
+let g:switch_custom_definitions =
+	\ [
+	\	['yes', 'no'],
+	\	['true', 'false'],
+	\	['left', 'right'],
+	\	['on', 'off'],
+	\	['||', '&&'],
+	\	['udp', 'tcp'],
+	\	['low', 'medium', 'high'],
+	\ ]
+
+" Switch mappings
+nnoremap - :Switch<CR>
+
+" }}}
+
+" vim-pad {{{
+let g:pad#dir = "~/.notes/"
+let g:pad#default_format = "pandoc"
+let g:pad#modeline_position = "top"
+let g:pad#default_file_extension = ".md"
+let g:pad#open_in_split = 0
+
+
+
+if filewritable(g:pad#dir) != 2
+	call system("mkdir -p " . g:pad#dir)
+endif
+
+" }}}
+
+" mediumMode {{{
 let g:mediummode_reset_events = [
 	\ 'InsertLeave',
 	\ 'BufEnter',
@@ -129,36 +128,21 @@ let g:mediummode_reset_events = [
 
 let g:mediummode_allowed_character_motions = 5
 
-" airline stuff
+" }}}
+
+" airline {{{
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
 
-"""""""""""""""""""""""""""""
-"  re use existing buffers  "
-"""""""""""""""""""""""""""""
-function! s:GotoOrOpen(command, ...)
-	for file in a:000
-		if bufwinnr(file) != -1
-			exec "sb " . file
-		else
-			exec a:command . " " . file
-		endif
-	endfor
-endfunction
-command! -nargs=+ GotoOrOpen call s:GotoOrOpen(<f-args>)
-let g:CommandTAcceptSelectionCommand = 'GotoOrOpen e'
-let g:CommandTAcceptSelectionTabCommand = 'GotoOrOpen tabe'
-let g:CommandTAcceptSelectionSplitCommand = 'GotoOrOpen sp'
-let g:CommandTAcceptSelectionVSplitCommand = 'GotoOrOpen vs'
+" }}}
 
+" Ragtag {{{
 " let ragtag maps be global
 let g:ragtag_global_maps = 1
 
-"" powerline stuff
-set rtp+=~/.vimrc/bundle/powerline
-let g:powerline_config_path = expand("$HOME/.config/powerline")
+" }}}
 
-"" UltiSnip stuff
+" UltiSnip {{{
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsSnippetDirectories=['snips', 'UltiSnips']
 let g:UltiSnipsExpandTrigger= '<tab>'
@@ -167,24 +151,19 @@ let g:UltiSnipsJumpForwardTrigger= '<C-J>'
 let g:UltiSnipsJumpBackwardTrigger= '<C-K>'
 nmap <LEADER>es :UltiSnipsEdit<CR>
 
-"" Rainbow parenthesis
-let g:niji_match_all_filetypes = 1
-let g:niji_dark_colours = [['brown', 'RoyalBlue3'],
-							\ ['Darkblue', 'SeaGreen3'],
-							\ ['darkgray', 'DarkOrchid3'],
-							\ ['darkgreen', 'firebrick3'],
-							\ ['darkcyan', 'RoyalBlue3']]
-let g:niji_light_colours = g:niji_dark_colours
+" }}}
 
-"" Tagbar stuff
-let g:tagbar_ctags_bin = "/usr/bin/ctags"
-let g:tagbar_compact = 1
-let g:tagbar_indent = 2
+" }}}
 
-let NERDTreeQuitOnOpen=1
-let NERDTreeIgnore=[ '\.py[ocd]$[[file]]' ]
-let g:pydiction_location='~/.vim/bundle/pydiction-1.2/complete-dict'
+" usefull shortcuts {{{
+" swap : and ;
+nnoremap : ;
+nnoremap ; :
 
+"Visual block far more useful than regular visual mode
+nnoremap v <C-v>
+
+" auto fix common typos
 abbr slef self
 abbr resutl result
 abbr fro for
@@ -192,33 +171,20 @@ abbr fiel file
 abbr teh the
 abbr fsp /usr/lib/frogshell/
 map Y y$
-" <F1> help
-" <F2> pasteToggle
-map <F3> <ESC>:set nu! list! foldenable!<CR>
-map <F4> <ESC>:NERDTreeToggle<CR>
 
 " make the <c-y> more useful by doing whole words
 inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
 " Same for <c-e>
 inoremap <expr> <c-e> matchstr(getline(line('.')+1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
 
-imap <LEADER>,, <ESC>viWS'Ea
-imap <LEADER>.. <ESC>viWS"Ea
-imap <LEADER>w' <ESC>viwS'Ea
-imap <LEADER>w2 <ESC>viwS"Ea
-nmap <LEADER>+x <ESC>:!chmod +x %<CR>
+" shortcuts for common surround comands
+inoremap <LEADER>,, <ESC>viWS'Ea
+inoremap <LEADER>.. <ESC>viWS"Ea
 
-nmap <LEADER>er :vsplit $MYVIMRC<CR>
-nmap <LEADER>sr :so $MYVIMRC<CR>
-nmap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
+nnoremap <LEADER>er :vsplit $MYVIMRC<CR>
+nnoremap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
-
-"learn not to use arrow keys!
-nmap <LEFT> <NOP>
-nmap <RIGHT> <NOP>
-nmap <UP> <NOP>
-nmap <DOWN> <NOP>
 
 " window mappings
 map <C-h> <c-w>h
@@ -227,7 +193,9 @@ map <C-j> <c-w>j
 map <C-k> <c-w>k
 
 "file completion
-imap <C-f> <C-x><C-f>
+inoremap <C-f> <C-x><C-f>
+"line completion
+inoremap <C-l> <C-x><C-l>
 
 " Git fugitive mappings
 nnoremap <LEADER>gb :Gblame w<CR>
@@ -244,68 +212,10 @@ nnoremap <leader>s<space> i<space><esc>2l.
 nnoremap <leader>a<space> a<space><esc>
 nnoremap <leader>i<space> i<space><esc>
 
-call matchadd('ColorColumn', '\%81v', 100)
-
-cnoremap help vert help
-
-"sign off patch
-abbr sign Signed-off-by: "Pete \"Peteches\" McCabe" <eudyptula@petemccabe.gb.net>
-
-" functions
-function! TrimWhiteSpace()
-	%s/\s\+$//e
-endfunction
+" Highlight the 80th column
+call matchadd('ColorColumn', '\%80v', 100)
 
 nnoremap <leader>rts :call TrimWhiteSpace()<CR>
-
-if has("autocmd")
-	augroup WHITESPACE
-		autocmd!
-		autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * if match(expand('%'), 'fugitive://') != 0 | :call TrimWhiteSpace()
-	augroup END
-	augroup TEMPLATES
-		autocmd!
-		autocmd BufNewFile * call LoadTemplate()
-	augroup END
-	augroup MAN
-	autocmd!
-		autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
-	augroup END
-
-	augroup GITCONFLICT
-		autocmd!
-		autocmd BufRead * if match(system("git diff --name-only --diff-filter=U"), expand('%')) != -1 | set foldenable foldmethod=expr foldexpr=FoldGitConflict() | /^<<<<<<< HEAD/ | normal zo | endif
-	augroup END
-
-	augroup reload_rc
-		autocmd!
-		autocmd BufWritePost $MYVIMRC source $MYVIMRC
-	augroup END
-endif
-
-" solarised options
-
-let g:solarized_visibility='normal'
-
-colorscheme solarized
-
-highlight ColorColumn ctermbg=235
-call matchadd('ColorColumn', '\%81v', 100)
-
-"  override solarized colors for SignColumn
-"  override solarized colors for SignColumn
-"  ShowMarks hi groups. (not in solarized colourscheme.
-hi SignColumn ctermbg=0
-hi ShowMarksHLl ctermfg=166 ctermbg=0
-hi ShowMarksHLu ctermfg=160 ctermbg=0
-hi ShowMarksHLo ctermfg=33 ctermbg=0
-hi ShowMarksHLm ctermfg=64 ctermbg=0
-
-function! LoadTemplate()
-	silent! 0r ~/.vim/skel/template.%:e
-	"Highlight %VAR% placeholders with the TODO colour group
-	syn match Todo "%\u\+%" containedIn=ALL
-endfunction
 
 "       drag      visuals
 vmap    <expr>    <S-h>                DVB_Drag('left')
@@ -313,6 +223,31 @@ vmap    <expr>    <S-l>                DVB_Drag('right')
 vmap    <expr>    <S-j>                DVB_Drag('down')
 vmap    <expr>    <S-k>                DVB_Drag('up')
 vmap    <expr>    D                DVB_Duplicate()
+
+" }}}
+
+" functions {{{
+function! TrimWhiteSpace()
+	%s/\s\+$//e
+endfunction
+
+function! LoadTemplate()
+	silent! 0r ~/.vim/skel/template.%:e
+endfunction
+
+"""""""""""""""""""""""""""""
+"  re use existing buffers  "
+"""""""""""""""""""""""""""""
+function! s:GotoOrOpen(command, ...)
+	for file in a:000
+		if bufwinnr(file) != -1
+			exec "sb " . file
+		else
+			exec a:command . " " . file
+		endif
+	endfor
+endfunction
+command! -nargs=+ GotoOrOpen call s:GotoOrOpen(<f-args>)
 
 function! FoldGitConflict()
 	let nline = getline(v:lnum)
@@ -327,6 +262,48 @@ function! FoldGitConflict()
 	endif
 endfunction
 
+" }}}
+
+" Autocmds {{{
+
+if has("autocmd")
+	augroup WHITESPACE " {{{
+		autocmd!
+		autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * if match(expand('%'), 'fugitive://') != 0 | :call TrimWhiteSpace()
+	augroup END " }}}
+	augroup TEMPLATES " {{{
+		autocmd!
+		autocmd BufNewFile * call LoadTemplate()
+	augroup END " }}}
+	augroup MAN " {{{
+	autocmd!
+		autocmd FileType man exe "set nolist colorcolumn=\"\" nonu"
+	augroup END }}}
+	augroup GITCONFLICT " {{{
+		autocmd!
+		autocmd BufRead * if match(system("git diff --name-only --diff-filter=U"), expand('%')) != -1 | set foldenable foldmethod=expr foldexpr=FoldGitConflict() | /^<<<<<<< HEAD/ | normal zo | endif
+	augroup END "}}}
+	augroup reload_rc " {{{
+		autocmd!
+		autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	augroup END " }}}
+endif
+" }}}
+
+" Colours {{{
+
+highlight ColorColumn ctermbg=235
+call matchadd('ColorColumn', '\%81v', 100)
+
+"  override solarized colors for SignColumn
+"  override solarized colors for SignColumn
+"  ShowMarks hi groups. (not in solarized colourscheme.
+hi SignColumn ctermbg=0
+hi ShowMarksHLl ctermfg=166 ctermbg=0
+hi ShowMarksHLu ctermfg=160 ctermbg=0
+hi ShowMarksHLo ctermfg=33 ctermbg=0
+hi ShowMarksHLm ctermfg=64 ctermbg=0
+
 hi DIFFHEAD ctermfg=1
 hi DIFFMIDDLE ctermfg=1
 hi DIFFBRANCH ctermfg=1
@@ -334,3 +311,4 @@ hi DIFFBRANCH ctermfg=1
 call matchadd('DIFFHEAD', '^<<<<<<< HEAD')
 call matchadd('DIFFMIDDLE', '^=======')
 call matchadd('DIFFBRANCH', '^>>>>>>>.*')
+" }}}
