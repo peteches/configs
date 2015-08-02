@@ -33,7 +33,7 @@ com! -nargs=1 ManT :tabnew | set ft=man | Man <args>
 
 " }}}
 " Help windows {{{
-com! -nargs=1 Vhelp :vnew | set ft=help | help <args>
+com! -nargs=* Vhelp vert help <args>
 " }}}
 
 " }}}
@@ -153,6 +153,14 @@ nmap <LEADER>es :UltiSnipsEdit<CR>
 
 " }}}
 
+" Colour scheme switcher {{{
+let g:colorscheme_switcher_keep_background = 1
+
+" set runtime so we can use the plugin from vimrc
+runtime plugin/colorscheme-switcher.vim
+
+" }}}
+
 " }}}
 
 " usefull shortcuts {{{
@@ -162,6 +170,8 @@ nnoremap ; :
 
 "Visual block far more useful than regular visual mode
 nnoremap v <C-v>
+" for the rare occasion characterwise visuals are useful.
+nnoremap <C-v> v
 
 " auto fix common typos
 abbr slef self
@@ -170,7 +180,7 @@ abbr fro for
 abbr fiel file
 abbr teh the
 abbr fsp /usr/lib/frogshell/
-map Y y$
+nnoremap Y y$
 
 " make the <c-y> more useful by doing whole words
 inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
@@ -181,16 +191,16 @@ inoremap <expr> <c-e> matchstr(getline(line('.')+1), '\%' . virtcol('.') . 'v\%(
 inoremap <LEADER>,, <ESC>viWS'Ea
 inoremap <LEADER>.. <ESC>viWS"Ea
 
-nnoremap <LEADER>er :vsplit $MYVIMRC<CR>
+nnoremap <LEADER>er :call OpenRC()<CR>
 nnoremap <LEADER>ef :exe ":vsplit ~/.vim/ftplugin/".expand(&filetype).".vim"<CR>
 inoremap <LEADER>gf <ESC><C-W>gf
 nnoremap gf <C-W>gf
 
 " window mappings
-map <C-h> <c-w>h
-map <C-l> <c-w>l
-map <C-j> <c-w>j
-map <C-k> <c-w>k
+nnoremap <C-h> <c-w>h
+nnoremap <C-l> <c-w>l
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
 
 "file completion
 inoremap <C-f> <C-x><C-f>
@@ -233,6 +243,22 @@ endfunction
 
 function! LoadTemplate()
 	silent! 0r ~/.vim/skel/template.%:e
+endfunction
+
+function! IsBufferBlank()
+	if getline(1, '$') == [''] && ! &mod
+		return 1
+	else
+		return 0
+	endif
+endfunction
+
+function! OpenRC()
+	if IsBufferBlank()
+		:edit $MYVIMRC
+	else
+		:vnew $MYVIMRC
+	endif
 endfunction
 
 """""""""""""""""""""""""""""
@@ -308,15 +334,6 @@ endif
 
 highlight ColorColumn ctermbg=235
 call matchadd('ColorColumn', '\%81v', 100)
-
-"  override solarized colors for SignColumn
-"  override solarized colors for SignColumn
-"  ShowMarks hi groups. (not in solarized colourscheme.
-hi SignColumn ctermbg=0
-hi ShowMarksHLl ctermfg=166 ctermbg=0
-hi ShowMarksHLu ctermfg=160 ctermbg=0
-hi ShowMarksHLo ctermfg=33 ctermbg=0
-hi ShowMarksHLm ctermfg=64 ctermbg=0
 
 hi DIFFHEAD ctermfg=1
 hi DIFFMIDDLE ctermfg=1
