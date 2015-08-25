@@ -1,1 +1,2 @@
 CV|pdf --latex-engine=pdflatex -Vgeometry:margin=1in -o CV.pdf
+payplan|pdf --latex-engine=pdflatex -Vgeometry:margin=1in -o payplan.pdf
