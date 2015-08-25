@@ -1,6 +1,8 @@
 [Appearance]
+AntiAliasFonts=true
+BoldIntense=true
 ColorScheme=Solarized
-Font=Inconsolata-dz for Powerline,9,-1,5,50,0,0,0,0,0
+Font=Andale Mono,9,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/usr/bin/tmux -2u new-session -A -s konsole

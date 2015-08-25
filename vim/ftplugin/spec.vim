@@ -1,4 +1,4 @@
-map <F5> <ESC>/%changelog<CR>:r! date "+* \%a \%b \%d \%Y - Pete McCabe <pete.mccabe@frogtrade.com>"<CR>:/^Version:[[:blank:]]*/,//+1 yank<CR>:put<CR>k:.,+1!awk '{print $NF}'<CR>Jr-0i- <ESC>o- <CR><ESC>kA
+noremap <F5> <ESC>/%changelog<CR>:r! date "+* \%a \%b \%d \%Y - Pete McCabe <pete.mccabe@skybettingandgaming.com>"<CR>:/^Version:[[:blank:]]*/,//+1 yank<CR>:put<CR>k:.,+1!awk '{print $NF}'<CR>Jr-0i- <ESC>o- <CR><ESC>kA
 noremap <F6> <Esc>:call ValidateSpec()<CR>
 noremap <F7> <Esc>:call SvnDiff()<CR>
 

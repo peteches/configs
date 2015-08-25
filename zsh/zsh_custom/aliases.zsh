@@ -46,6 +46,8 @@ alias snow='clear;while' ':;do' 'echo' '$LINES' '$COLUMNS' '$(($RANDOM%$COLUMNS)
 alias gma='git merge --abort'
 alias ggpush='git push origin $(current_branch) && openJenkinsJob $(current_branch) &>/dev/null &'
 alias gmnff='git merge --no-ff'
+alias gs='echo "Did you really mean to invoke ghostscript?"; read; if [[ $REPLY == "y" ]]; then gs; else echo "I didn''t think so.";fi'
+alias gsb='git show-branch'
 
 
 ####################
@@ -58,3 +60,4 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g L='| less'
 alias -g DN='/dev/null'
+alias -g A=' | awk'
