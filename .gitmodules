@@ -475,3 +475,6 @@
 [submodule "vim/bundle/vim-interestingwords"]
 	path = vim/bundle/vim-interestingwords
 	url = https://github.com/vasconcelloslf/vim-interestingwords.git
+[submodule "vim/bundle/vim-tmux-runner"]
+	path = vim/bundle/vim-tmux-runner
+	url = https://github.com/christoomey/vim-tmux-runner.git
