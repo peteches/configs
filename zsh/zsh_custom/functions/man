@@ -5,7 +5,11 @@ if [[ -z $manpage ]]; then
 fi
 
 if [[ -n $TMUX_PANE ]]; then
-	tmux split-window -h "man $manpage"; tmux last-pane
+	tmux split-window -hd "man $manpage"
+	MAN_PANE=$( tmux list-pane -F '#{pane_id} #{pane_start_command}' | awk -v manpage=$manpage '$NF == manpage { print $1 }' )
+	def _killman(){ tmux kill-pane -t $MAN_PANE }
+	zle -N killman _killman
+	bindkey "^q" killman
 else
 	man $manpage
 fi
