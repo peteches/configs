@@ -1,0 +1,11 @@
+manpage=$1
+
+if [[ -z $manpage ]]; then
+	manpage=$( find /usr/share/man/man[0-9] -type f | shuf -n 1 )
+fi
+
+if [[ -n $TMUX_PANE ]]; then
+	tmux split-window -h "man $manpage"; tmux last-pane
+else
+	man $manpage
+fi
