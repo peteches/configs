@@ -15,3 +15,6 @@
 	stash-unapply = !git stash show -p|git apply -R
 [tig]
 	commit-order = topo
+[diff]
+	context = 5
+	algorithm = patience
