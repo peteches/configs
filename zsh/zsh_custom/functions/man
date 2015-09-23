@@ -41,9 +41,12 @@ if [[ -n $TMUX_PANE ]]; then
 
 	def manpgdown() { tmux send-keys -t $MAN_PANE $"${pagedown}" }
 	def manpgup() { tmux send-keys -t $MAN_PANE "${pageup}" }
-	def manfind() { tmux command-prompt -p "Search man page: " "send-keys -t $MAN_PANE /%1 c-m" }
 	def manfnext() { tmux send-keys -t $MAN_PANE "n" }
 	def manfNext() { tmux send-keys -t $MAN_PANE "N" }
+	def manfind() {
+		mp=$(tmux list-panes -F '#{session_name}:#{window_index}.#{pane_index} #{pane_start_command}' | awk -v manpage=$manpage '$NF == manpage {print $1}')
+		tmux command-prompt -p "Search man page: " "send-keys -t $mp /%1 c-m"
+	}
 
 	# bind functions to zle widgets
 	zle -N killman killman
