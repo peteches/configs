@@ -115,7 +115,7 @@ for file in $( find ${config_dir}/kde -type f -printf "%P "); do
     config_matrix+=( "${config_dir}/kde/${file} ${HOME}/.kde/${file}")
 done
 
-# and the same for firefox things, although more complicated as the 
+# and the same for firefox things, although more complicated as the
 # profile directory will have a random 8 character string infrom of the
 # profile name.
 
@@ -136,14 +136,14 @@ for file in $( find "${config_dir}/firefox" -type f -printf "%P "); do
             # here we chaeck to see which is newer and assume that the most
             # recent is the correct one.
             if [[ ${dst_paths[$i]} -nt ${dst_paths[$i+1]} ]]; then
-                dst=${dst_paths[$i]} 
+                dst=${dst_paths[$i]}
             else
-                dst=${dst_paths[$i+1]} 
+                dst=${dst_paths[$i+1]}
             fi
         done
     else
         dst=${dst_paths[0]}
-    fi 
+    fi
 
     dst_path=${dst}/${file#*/} #strip profile name
 
@@ -154,6 +154,15 @@ done
 for args in "${config_matrix[@]}"; do
     install_config $args
 done
+
+# install fonts
+if [[ -x ${config_dir}/fonts/install.sh ]]; then
+    # subshell used to auto return to cwd.
+    (
+        cd ${config_dir}/fonts
+        ${config_dir}/fonts/install.sh
+    )
+fi
 
 if [[ $_action == install ]]; then
     echo "initialising submodules"
