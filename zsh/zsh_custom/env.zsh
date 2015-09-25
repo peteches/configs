@@ -49,7 +49,10 @@ EDITOR=/usr/bin/vim
 # 105 = light purple background
 # 106 = turquoise background
 #
-LS_COLORS='di=34:fi=0:ln=32:so=35:bd=36:cd=95:or=41;90:mi=41;90:'
+export LS_COLORS='di=34:fi=0:ln=32:so=35:bd=36:cd=95:or=41;90:mi=41;90:'
 
 # set a nice debug prompt for bash scripts
 export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
+
+# set a keytimeout for when multi-key keybindings are used
+export KEYTIMEOUT=500
