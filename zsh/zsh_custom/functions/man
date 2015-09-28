@@ -1,8 +1,40 @@
+#  vim: filetype=zsh
+
 manpage=$1
 
+# give page up and page down clearer variable names.
+export pageup=${terminfo[kpp]}
+export pagedown=${terminfo[knp]}
+export manpref="^w"
+
+typeset -A bind_func_map
+typeset "bind_func_map[killman]"="${manpref}q"
+typeset "bind_func_map[manpgup]"="${manpref}${pageup}"
+typeset "bind_func_map[manpgdown]"="${manpref}${pagedown}"
+typeset "bind_func_map[manfind]"="${manpref}/"
+typeset "bind_func_map[manfnext]"="${manpref}n"
+typeset "bind_func_map[manfNext]"="${manpref}N"
+
+def __bind() {
+	func=$1
+	binding=$2
+
+	zle -N $func $func
+	bindkey $binding $func
+}
+
+def __unbind() {
+	func=$1
+	binding=$2
+
+	bindkey -r $binding
+	unset -f $func
+	zle -D $i
+}
+
 if [[ -z $manpage ]]; then
-	# Mac compatibility alert, macs don't do shuf. cos they ain't as cool as they pretend to be.`
-	manpage=$( find /usr/share/man/man[0-9] -type f | shuf -n 1 )
+# Mac compatibility alert, macs don't do shuf. cos they ain't as cool as they pretend to be.`
+manpage=$( find /usr/share/man/man[0-9] -type f | shuf -n 1 )
 fi
 
 if [[ -n $TMUX_PANE ]]; then
@@ -13,25 +45,13 @@ if [[ -n $TMUX_PANE ]]; then
 	MAN_PANE=$( tmux list-pane -F '#{pane_id} #{pane_start_command}' | awk -v manpage=$manpage '$NF == manpage { print $1 }' )
 
 
-	# give page up and page down clearer variable names.
-	export pageup=${terminfo[kpp]}
-	export pagedown=${terminfo[knp]}
-	export manpref="^w"
-
 	# define some functions for interacting with the man page
 	def killman(){
 		tmux kill-pane -t $MAN_PANE
 
-		# reset the key bindings
-		for i in / f n N q ${pageup} ${pagedown}; do
-			bindkey -r "${manpref}$i"
+		for x in ${(k)bind_func_map[@]}; do
+			__unbind "$x" "${bind_func_map[$x]}"
 		done
-
- 		# clean up the function space
- 		for i in manpgdown manpgup manfind manfnext manfNext; do
- 			unset -f $i
- 			zle -D $i
- 		done
  	}
 
 # 	# set a trap so when the spawning pane exits, so does the man page.
@@ -39,7 +59,7 @@ if [[ -n $TMUX_PANE ]]; then
 # 		killman
 # 	}
 
-	def manpgdown() { tmux send-keys -t $MAN_PANE $"${pagedown}" }
+	def manpgdown() { tmux send-keys -t $MAN_PANE "${pagedown}" }
 	def manpgup() { tmux send-keys -t $MAN_PANE "${pageup}" }
 	def manfnext() { tmux send-keys -t $MAN_PANE "n" }
 	def manfNext() { tmux send-keys -t $MAN_PANE "N" }
@@ -48,24 +68,9 @@ if [[ -n $TMUX_PANE ]]; then
 		tmux command-prompt -p "Search man page: " "send-keys -t $mp /%1 c-m"
 	}
 
-	# bind functions to zle widgets
-	zle -N killman killman
-	zle -N manpgdown manpgdown
-	zle -N manpgup manpgup
-	zle -N manfind manfind
-	zle -N manfnext manfnext
-	zle -N manfNext manfNext
-
-	# Set key timeout for when the prefix has been entered waiting for next key press
-	export KEYTIMEOUT=500
-	# bind zle widgets to keys
-	# try to keep the same keys as would be used in man.
-	bindkey "${manpref}q" killman
-	bindkey "${manpref}${pageup}" manpgup
-	bindkey "${manpref}${pagedown}" manpgdown
-	bindkey "${manpref}/" manfind
-	bindkey "${manpref}n" manfnext
-	bindkey "${manpref}N" manfNext
+	for x in ${(k)bind_func_map[@]}; do
+		__bind "$x" "${bind_func_map[$x]}"
+	done
 else
 	man $manpage
 fi
