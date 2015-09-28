@@ -14,6 +14,8 @@ typeset "bind_func_map[manpgdown]"="${manpref}${pagedown}"
 typeset "bind_func_map[manfind]"="${manpref}/"
 typeset "bind_func_map[manfnext]"="${manpref}n"
 typeset "bind_func_map[manfNext]"="${manpref}N"
+typeset "bind_func_map[manlineup]"="${manpref}k"
+typeset "bind_func_map[manlinedown]"="${manpref}j"
 
 def __bind() {
 	func=$1
@@ -59,6 +61,8 @@ if [[ -n $TMUX_PANE ]]; then
 # 		killman
 # 	}
 
+	def manlineup() { tmux send-keys -t $MAN_PANE "kkkkk" }
+	def manlinedown() { tmux send-keys -t $MAN_PANE "jjjjj" }
 	def manpgdown() { tmux send-keys -t $MAN_PANE "${pagedown}" }
 	def manpgup() { tmux send-keys -t $MAN_PANE "${pageup}" }
 	def manfnext() { tmux send-keys -t $MAN_PANE "n" }
