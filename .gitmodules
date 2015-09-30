@@ -478,3 +478,9 @@
 [submodule "vim/bundle/vim-tmux-runner"]
 	path = vim/bundle/vim-tmux-runner
 	url = https://github.com/christoomey/vim-tmux-runner.git
+[submodule "vim/bundle/vim-dispatch"]
+	path = vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim/bundle/vim-ferret"]
+	path = vim/bundle/vim-ferret
+	url = https://github.com/wincent/ferret.git
