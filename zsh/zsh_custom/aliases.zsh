@@ -41,7 +41,7 @@ alias door='clear;x=$(($COLUMNS/2));y=$(($LINES/2));c=0;n=1;a=90;while :;do bgc=
 
 alias worm='a=1;x=1;y=1;xd=1;yd=1;while true;do if [[ $x == $LINES || $x == 0 ]]; then xd=$(( $xd *-1 )) ; fi ; if [[ $y == $COLUMNS || $y == 0 ]]; then yd=$(( $yd * -1 )) ; fi ; x=$(( $x + $xd )); y=$(( $y + $yd )); printf "\33[%s;%sH\33[48;5;%sm \33[0m" $x $y $(($a%199+16)) ;a=$(( $a + 1 )) ; sleep 0.001 ;done'
 
-alias snow='clear;while' ':;do' 'echo' '$LINES' '$COLUMNS' '$(($RANDOM%$COLUMNS))' '$(printf' '"\u2743\n");sleep' '0.1;done|gawk' ''\''{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH%s \033[0;0H",a[x],x,$4;}}'\'''
+alias snow='clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS)) $(printf "\u2743\n");sleep 0.1;done|gawk '\''{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH%s \033[0;0H",a[x],x,$4;}}'\'''
 
 alias gma='git merge --abort'
 alias ggpush='git push origin --set-upstream $(current_branch) && openJenkinsJob $(current_branch) &>/dev/null &'

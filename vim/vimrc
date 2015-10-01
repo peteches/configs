@@ -86,6 +86,24 @@ endif
 
 " Plugin Settings {{{
 
+" tmux runner (VTR)
+let g:VtrPercentage = 20
+let g:VtrOrientation = "v"
+let g:VtrInitialCommand = ""
+let g:VtrGitCdUpOnOpen = 1
+let g:VtrClearBeforeSend = 1
+let g:VtrPrompt = "Command to run: "
+let g:VtrUseVtrMaps = 1
+let g:VtrClearOnResize = 0
+let g:VtrClearOnReorient = 1
+let g:VtrClearOnReattach = 1
+let g:VtrDetachedName = "VTR_Pane"
+let g:VtrClearSequence = ""
+let g:VtrStripLeadingWhitespace = 1
+let g:VtrClearEmptyLines = 1
+let g:VtrAppendNewLine = 0
+
+
 " Switch {{{
 
 " set switch
