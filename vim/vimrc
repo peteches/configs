@@ -86,7 +86,7 @@ endif
 
 " Plugin Settings {{{
 
-" tmux runner (VTR)
+" tmux runner (VTR) {{{
 let g:VtrPercentage = 20
 let g:VtrOrientation = "v"
 let g:VtrInitialCommand = ""
@@ -102,7 +102,7 @@ let g:VtrClearSequence = ""
 let g:VtrStripLeadingWhitespace = 1
 let g:VtrClearEmptyLines = 1
 let g:VtrAppendNewLine = 0
-
+" }}}
 
 " Switch {{{
 
